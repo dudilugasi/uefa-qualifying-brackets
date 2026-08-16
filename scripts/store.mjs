@@ -8,7 +8,8 @@ import { orderBracket, derivePaths } from "./bracket.mjs";
 import { COMPETITIONS } from "./competitions.mjs";
 import { resolveReferences } from "./references.mjs";
 
-export const ROOT = fileURLToPath(new URL(".", import.meta.url));
+/** Web root — the project directory, one level up from scripts/. */
+export const ROOT = fileURLToPath(new URL("..", import.meta.url));
 export const DATA_FILE = join(ROOT, "data.json");
 
 /** Temp file + rename, so a crash mid-write can't truncate data.json. */

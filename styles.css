@@ -1,0 +1,229 @@
+  :root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --line: #d8dbe2;
+    --text: #14161c;
+    --muted: #6b7280;
+    --accent: #1b2b6b;
+    --accent-soft: #e8ecfb;
+    --win: #0f7b4f;
+    --win-soft: #e3f4ec;
+    --wire: #9aa3b2;
+    --trace: #c2410c;
+    --trace-soft: #fdf0e4;
+    --trace-glow: rgba(194, 65, 12, 0.45);
+    --err: #b3261e;
+    --err-soft: #fdecea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1116; --panel: #181b22; --line: #2c313c;
+      --text: #e8eaf0; --muted: #949cad;
+      --accent: #8fa5ff; --accent-soft: #1e2540;
+      --win: #4ade9b; --win-soft: #16301f;
+      --wire: #5c6577;
+      --trace: #fbbf24; --trace-soft: #33270d;
+      --trace-glow: rgba(251, 191, 36, 0.5);
+      --err: #ff8a80; --err-soft: #2e1a18;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1116; --panel: #181b22; --line: #2c313c;
+    --text: #e8eaf0; --muted: #949cad;
+    --accent: #8fa5ff; --accent-soft: #1e2540;
+    --win: #4ade9b; --win-soft: #16301f;
+    --wire: #5c6577;
+    --trace: #fbbf24; --trace-soft: #33270d;
+    --trace-glow: rgba(251, 191, 36, 0.5);
+    --err: #ff8a80; --err-soft: #2e1a18;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header, main { max-width: 1500px; margin: 0 auto; }
+  header { padding: 28px 24px 16px; }
+  main { padding: 8px 24px 48px; }
+
+  .title-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
+  .season { color: var(--muted); font-size: 15px; font-weight: 600; }
+
+  .meta {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin-top: 8px; color: var(--muted); font-size: 13px;
+  }
+  .meta a { color: var(--accent); }
+
+  .btn {
+    appearance: none; border: 1px solid var(--line);
+    background: var(--panel); color: var(--text);
+    padding: 7px 14px; border-radius: 8px;
+    font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .btn:disabled { opacity: 0.55; cursor: progress; }
+
+  .banner {
+    margin: 14px 0 0; padding: 10px 14px; border-radius: 8px;
+    background: var(--err-soft); color: var(--err);
+    border: 1px solid currentColor; font-size: 13.5px;
+  }
+  .banner[hidden] { display: none; }
+
+  /* Competition switch sits above the path tabs, styled as a stronger control. */
+  .comp-tabs { display: flex; gap: 4px; margin: 18px 0 0; flex-wrap: wrap; }
+  .comp-tab {
+    appearance: none; background: none; border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--muted); cursor: pointer;
+    font: inherit; font-size: 16px; font-weight: 700;
+    padding: 6px 12px 7px;
+  }
+  .comp-tab:hover { color: var(--text); }
+  .comp-tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .comp-tab .stale-dot { color: var(--err); margin-left: 5px; }
+
+  .tabs { display: flex; gap: 8px; margin: 14px 0 0; flex-wrap: wrap; }
+  .tabs[hidden] { display: none; }
+  .tab {
+    appearance: none; border: 1px solid var(--line);
+    background: var(--panel); color: var(--text);
+    padding: 8px 16px; border-radius: 999px;
+    font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .tab[aria-selected="true"] {
+    background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
+  }
+
+  .bracket-scroll { overflow-x: auto; padding-bottom: 12px; }
+  .canvas { position: relative; min-width: min-content; }
+  /* Arrows sit under the cards so they can run edge-to-edge behind gaps. */
+  .wires {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0;
+  }
+  .bracket { position: relative; z-index: 1; display: flex; gap: 56px; align-items: stretch; }
+  /* Columns stretch to the tallest round so shorter ones can centre. */
+  .round { flex: 0 0 290px; display: flex; flex-direction: column; }
+  .round-head {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 700; color: var(--muted); padding: 6px 2px 10px;
+  }
+  .round-head span {
+    display: block; text-transform: none; letter-spacing: 0;
+    font-weight: 500; font-size: 11.5px;
+  }
+
+  /* Ties feeding the same next-round tie are grouped tightly; groups sit apart. */
+  .groups { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+  .pair { display: flex; flex-direction: column; gap: 8px; }
+
+  .tie {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; overflow: hidden;
+  }
+  .team {
+    display: grid; grid-template-columns: auto 1fr auto auto auto;
+    align-items: center; gap: 8px; padding: 8px 10px; font-size: 14px;
+  }
+  .team + .team { border-top: 1px solid var(--line); }
+  .team.winner { background: var(--win-soft); }
+  .team.winner .name { font-weight: 700; }
+  .flag { font-size: 15px; line-height: 1; width: 1.35em; text-align: center; }
+  .flag.code {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.02em;
+    color: var(--muted); width: 1.35em;
+  }
+  .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .leg { width: 20px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 13px; }
+  .agg { width: 24px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .team.winner .agg { color: var(--win); }
+  .tie-foot {
+    padding: 5px 10px; border-top: 1px dashed var(--line);
+    font-size: 12px; color: var(--muted);
+  }
+  .tie.pending .team { color: var(--muted); }
+  .tie.pending .name { font-style: italic; }
+  /* A slot whose feeder tie hasn't been played ("Winner of CP match 3"). */
+  .team.placeholder .name { font-style: italic; color: var(--muted); }
+  .team.bye .name { font-style: italic; color: var(--muted); opacity: 0.75; }
+
+  /* Path badge, used where a round states its path but the bracket isn't split. */
+  .tie-group {
+    padding: 3px 10px;
+    border-bottom: 1px solid var(--line);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* Hover trace: mark one team's route across every round. */
+  .team { cursor: pointer; transition: background-color 120ms ease, color 120ms ease; }
+  .tie { transition: border-color 140ms ease, box-shadow 140ms ease; }
+  .tie.trace {
+    border-color: var(--trace);
+    box-shadow: 0 0 0 1px var(--trace), 0 0 18px -2px var(--trace-glow);
+  }
+  .team.trace, .tie.trace .team.trace {
+    background: var(--trace-soft);
+    color: var(--trace);
+  }
+  .team.trace .name { font-weight: 700; }
+  .team.trace .agg, .team.trace .leg { color: var(--trace); }
+  /* Non-traced rows in a traced box stay legible but recede. */
+  .tie.trace .team:not(.trace) { opacity: 0.55; }
+
+  .wires path { transition: stroke 140ms ease, stroke-width 140ms ease; }
+  /* Dashed: the feeding tie is drawn but not yet played. */
+  .wires path.tbd { stroke-dasharray: 5 4; opacity: 0.8; }
+  .wires path.trace {
+    stroke: var(--trace);
+    stroke-width: 2.75;
+    filter: drop-shadow(0 0 5px var(--trace-glow));
+  }
+  /* Traced wires must clear the cards, which sit above the svg by default. */
+  .canvas.tracing .wires { z-index: 2; }
+  .canvas.tracing .wires path:not(.trace) { opacity: 0.35; }
+
+  .pin-hint { color: var(--muted); font-size: 12px; }
+  .pin-hint b { color: var(--trace); }
+
+  /* How-they-qualified panel, parked in the corner so it never covers the tree. */
+  .entry-card {
+    position: fixed; z-index: 30;
+    top: 14px; right: 14px;
+    width: 232px; padding: 9px 12px;
+    background: var(--panel);
+    border: 1px solid var(--trace);
+    border-radius: 9px;
+    box-shadow: 0 10px 26px -8px rgba(0, 0, 0, 0.4), 0 0 16px -6px var(--trace-glow);
+    font-size: 13px; line-height: 1.4;
+    pointer-events: none;
+    opacity: 0; transform: translateY(-4px);
+    transition: opacity 110ms ease, transform 110ms ease;
+  }
+  .entry-card.show { opacity: 1; transform: translateY(0); }
+  .entry-card .ec-team { font-weight: 700; margin-bottom: 3px; }
+  .entry-card .ec-how { color: var(--trace); font-weight: 600; }
+  .entry-card .ec-sub { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .entry-card .ec-none { color: var(--muted); font-style: italic; }
+
+  .legend {
+    display: flex; gap: 18px; flex-wrap: wrap;
+    margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 13px;
+  }
+  .legend b { color: var(--text); }
+
+  @media (max-width: 700px) {
+    .round { flex: 0 0 262px; }
+    .bracket { gap: 40px; }
+    header, main { padding-left: 14px; padding-right: 14px; }
+    /* No room beside the header on narrow screens; sit it at the bottom. */
+    .entry-card { top: auto; bottom: 14px; right: 10px; left: 10px; width: auto; }
+  }
