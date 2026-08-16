@@ -1,0 +1,11 @@
+{
+  "name": "ucl-qualifying-bracket",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Champions League qualifying bracket, scraped on demand",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "refresh": "node refresh.mjs"
+  }
+}
