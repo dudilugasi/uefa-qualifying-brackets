@@ -419,6 +419,10 @@ function buildAllPath(competition) {
           }
           ties.push({
             ...tie,
+            // In the combined view the tabs no longer say which path a tie is
+            // in, so badge it. A tie already labelled (the merged UEL play-off,
+            // "Champions + Main Path") keeps its own wording.
+            group: tie.group ?? path.label,
             feeds: tie.feeds == null ? null : `${path.id}:${tie.feeds}`,
           });
         }
