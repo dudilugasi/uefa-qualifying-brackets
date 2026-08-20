@@ -941,15 +941,25 @@ function showError(msg) {
 const clearError = () => (document.getElementById("banner").hidden = true);
 
 async function loadLocal() {
+  let data;
+  // Only the read is reported as a read failure: a render that throws used to
+  // surface as "could not read data.json", pointing at the wrong thing.
   try {
     const res = await fetch("data.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`data.json ${res.status}`);
-    render(await res.json());
+    data = await res.json();
   } catch (e) {
     showError(
       "Could not read data.json — " + e.message +
       ". Serve this page with `node server.mjs` (opening the file directly blocks fetch)."
     );
+    return;
+  }
+
+  try {
+    render(data);
+  } catch (e) {
+    showError(`Could not render the bracket — ${e.message}. Try a hard reload (a stale app.js does this).`);
   }
 }
 
