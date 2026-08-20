@@ -39,6 +39,9 @@
   }
 
   * { box-sizing: border-box; }
+  /* Mobile browsers flash a blue box over whatever is tapped; the row's own
+     trace styling is the feedback here. */
+  html { -webkit-tap-highlight-color: transparent; }
   body {
     margin: 0; background: var(--bg); color: var(--text);
     font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
