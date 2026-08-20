@@ -297,13 +297,6 @@
   .lp-row.trace .lp-club { color: var(--trace); }
   .lp-pending .lp-club { font-style: italic; font-weight: 500; color: var(--muted); }
 
-  .legend {
-    display: flex; gap: 18px; flex-wrap: wrap;
-    margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 13px;
-  }
-  .legend b { color: var(--text); }
-
   @media (max-width: 700px) {
     .round { flex: 0 0 262px; }
     .bracket { gap: 40px; }

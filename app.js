@@ -687,19 +687,6 @@ function renderLayoutSwitch() {
   }
 }
 
-function renderSource(competition) {
-  const src = document.getElementById("source");
-  src.replaceChildren();
-  if (!competition?.source?.url) return;
-
-  src.append("· source: ");
-  const a = el("a", null, competition.source.article || competition.source.name);
-  a.href = competition.source.url;
-  a.target = "_blank";
-  a.rel = "noopener";
-  src.append(a);
-}
-
 const ROUND_SEQUENCE = [
   "First qualifying round",
   "Second qualifying round",
@@ -883,7 +870,6 @@ function leaguePhaseColumn(competition, roundIndex) {
 function renderCompetition(competition) {
   selection.competitionId = competition.id;
   document.getElementById("season").textContent = competition.season ?? "";
-  renderSource(competition);
   renderPathTabs(competition);
 }
 
