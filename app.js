@@ -195,10 +195,12 @@ function renderSubBrackets(path, bracket) {
       node.feeders.forEach(walk);
     })(root);
 
+    // Every box spans every round, empty where this tree has no tie, so a round
+    // sits in the same column whichever box you are reading.
     const sub = el("div", "sub");
-    for (const roundIndex of [...byRound.keys()].sort((a, b) => a - b)) {
-      sub.append(roundColumn(path.rounds[roundIndex].name, byRound.get(roundIndex), roundIndex));
-    }
+    path.rounds.forEach((round, roundIndex) => {
+      sub.append(roundColumn(round.name, byRound.get(roundIndex) ?? [], roundIndex));
+    });
     bracket.append(sub);
   }
 }
