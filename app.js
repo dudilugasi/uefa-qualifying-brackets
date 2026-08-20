@@ -318,6 +318,8 @@ function setTrace(name) {
 
 const ORDINAL_WORD = { "1st": "champions", "2nd": "runners-up" };
 const COMP_NAMES = { ucl: "Champions League", uel: "Europa League", uecl: "Conference League" };
+/** UCL -> UEL -> UECL, so a drop-in chain can't be longer than this. */
+const COMPETITION_HOPS = 3;
 
 /**
  * A club that dropped in from another competition only carries its transfer
@@ -325,33 +327,76 @@ const COMP_NAMES = { ucl: "Champions League", uel: "Europa League", uecl: "Confe
  * fell out of, where the same club is listed with its real entry.
  */
 const originCache = new Map();
-function originEntry(team) {
-  const entry = team.entry;
-  if (entry?.kind !== "transfer" || !payload) return null;
 
-  const key = `${entry.competition}|${team.name}`;
-  if (originCache.has(key)) return originCache.get(key);
+const competitionNamed = (name) =>
+  (payload?.competitions ?? []).find((c) => c.label === name || COMP_NAMES[c.id] === name) ?? null;
 
-  const source = (payload.competitions ?? []).find(
-    (c) => c.label === entry.competition || COMP_NAMES[c.id] === entry.competition
-  );
-
-  let found = null;
-  outer: for (const path of source?.paths ?? []) {
+/** The first listing of a club in a competition; its entry is the same in each. */
+function clubIn(competition, name) {
+  for (const path of competition?.paths ?? []) {
     for (const round of path.rounds) {
       for (const tie of round.ties) {
         for (const raw of [tie.home, tie.away]) {
           const side = normalizeTeam(raw);
-          if (side.name === team.name && side.entry && side.entry.kind !== "transfer") {
-            found = { competition: source, entry: side.entry };
-            break outer;
-          }
+          if (side.name === name) return side;
         }
       }
     }
   }
+  return null;
+}
 
+function originEntry(team) {
+  if (team.entry?.kind !== "transfer" || !payload) return null;
+
+  const key = `${team.entry.competition}|${team.name}`;
+  if (originCache.has(key)) return originCache.get(key);
+
+  // The competition it fell out of — where the card's link goes.
+  const competition = competitionNamed(team.entry.competition);
+  const side = competition && clubIn(competition, team.name);
+
+  // The domestic route can be a further competition back: Hearts reach the UECL
+  // play-off out of the UEL, having entered the UCL as Scottish runners-up. Keep
+  // hopping while the club is still a drop-in there.
+  let entry = side?.entry ?? null;
+  for (let hop = 0; entry?.kind === "transfer" && hop < COMPETITION_HOPS; hop++) {
+    const back = competitionNamed(entry.competition);
+    entry = (back ? clubIn(back, team.name) : null)?.entry ?? null;
+  }
+
+  // A club with no domestic entry anywhere still links; it just has no route line.
+  const found = side ? { competition, entry: entry?.kind === "transfer" ? null : entry } : null;
   originCache.set(key, found);
+  return found;
+}
+
+/**
+ * The other end of the same move: the competition this club drops into after
+ * the one on screen, found by the transfer entry there naming this one.
+ */
+const onwardCache = new Map();
+function onwardEntry(team) {
+  const current = payload?.competitions?.find((c) => c.id === selection.competitionId);
+  if (!current) return null;
+
+  const key = `${current.id}|${team.name}`;
+  if (onwardCache.has(key)) return onwardCache.get(key);
+
+  let found = null;
+  for (const competition of payload.competitions) {
+    if (competition === current) continue;
+    const entry = clubIn(competition, team.name)?.entry;
+    if (
+      entry?.kind === "transfer" &&
+      (entry.competition === current.label || entry.competition === COMP_NAMES[current.id])
+    ) {
+      found = { competition, entry };
+      break;
+    }
+  }
+
+  onwardCache.set(key, found);
   return found;
 }
 
@@ -481,12 +526,27 @@ function showEntryCard(row) {
     if (team.via) {
       card.append(el("div", "ec-sub", `Reached here as ${team.via.kind} of ${team.via.fixture}`));
     }
+    appendOnwardLink(card, team);
   } else {
     card.append(el("div", "ec-none", "qualification route unknown"));
+    appendOnwardLink(card, team);
   }
 
   card.classList.add("show");
   card.setAttribute("aria-hidden", "false");
+}
+
+/** Where the club goes next, if it drops into another competition from here. */
+function appendOnwardLink(card, team) {
+  const onward = onwardEntry(team);
+  if (!onward) return;
+
+  const round = onward.entry.entryRound ? `, ${onward.entry.entryRound.toLowerCase()}` : "";
+  const link = el("button", "ec-link", `Dropped to the ${onward.competition.label}${round}`);
+  link.type = "button";
+  link.title = `Show ${team.name} in the ${onward.competition.label}`;
+  link.addEventListener("click", () => showInCompetition(team.name, onward.competition));
+  card.append(link);
 }
 
 function unpin() {
@@ -708,6 +768,7 @@ function renderCompetition(competition) {
 function render(data) {
   payload = data; // kept for lookups that cross competitions
   originCache.clear();
+  onwardCache.clear();
 
   const competitions = data.competitions ?? [];
   const status = document.getElementById("status");
