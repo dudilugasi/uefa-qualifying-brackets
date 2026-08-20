@@ -97,7 +97,13 @@ export async function refresh(season) {
   const entryWarnings = [];
   for (const c of competitions) {
     if (!c.source.entries?.error) continue;
-    const carried = carryEntries(c, old?.competitions?.find((x) => x.id === c.id));
+    const previousCompetition = old?.competitions?.find((x) => x.id === c.id);
+    // The league-phase entrants come from the same article, so they are missing
+    // for the same reason; the previous run's list is better than none.
+    if (!c.leaguePhase && previousCompetition?.leaguePhase) {
+      c.leaguePhase = previousCompetition.leaguePhase;
+    }
+    const carried = carryEntries(c, previousCompetition);
     entryWarnings.push({
       competition: c.id,
       error: c.source.entries.error,

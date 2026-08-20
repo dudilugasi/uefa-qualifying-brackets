@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-20T06:29:10.218Z",
+  "fetchedAt": "2026-08-20T08:33:03.456Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -2172,7 +2172,389 @@
             }
           ]
         }
-      ]
+      ],
+      "leaguePhase": {
+        "name": "League phase",
+        "entrants": [
+          {
+            "name": "Paris Saint-Germain",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "Aston Villa",
+            "entry": {
+              "token": "4th",
+              "kind": "league",
+              "position": "4th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Arsenal",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Manchester City",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Manchester United",
+            "entry": {
+              "token": "3rd",
+              "kind": "league",
+              "position": "3rd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Liverpool",
+            "entry": {
+              "token": "5th",
+              "kind": "league",
+              "position": "5th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Inter Milan",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Napoli",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Roma",
+            "entry": {
+              "token": "3rd",
+              "kind": "league",
+              "position": "3rd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Como",
+            "entry": {
+              "token": "4th",
+              "kind": "league",
+              "position": "4th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Barcelona",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Real Madrid",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Villarreal",
+            "entry": {
+              "token": "3rd",
+              "kind": "league",
+              "position": "3rd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Atlético Madrid",
+            "entry": {
+              "token": "4th",
+              "kind": "league",
+              "position": "4th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Real Betis",
+            "entry": {
+              "token": "5th",
+              "kind": "league",
+              "position": "5th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Bayern Munich",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "Borussia Dortmund",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "RB Leipzig",
+            "entry": {
+              "token": "3rd",
+              "kind": "league",
+              "position": "3rd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "VfB Stuttgart",
+            "entry": {
+              "token": "4th",
+              "kind": "league",
+              "position": "4th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "Lens",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "Lille",
+            "entry": {
+              "token": "3rd",
+              "kind": "league",
+              "position": "3rd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "PSV Eindhoven",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Netherlands",
+            "code": "NL",
+            "flag": "🇳🇱"
+          },
+          {
+            "name": "Feyenoord",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Netherlands",
+            "code": "NL",
+            "flag": "🇳🇱"
+          },
+          {
+            "name": "Porto",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Portugal",
+            "code": "PT",
+            "flag": "🇵🇹"
+          },
+          {
+            "name": "Sporting CP",
+            "entry": {
+              "token": "2nd",
+              "kind": "league",
+              "position": "2nd",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Portugal",
+            "code": "PT",
+            "flag": "🇵🇹"
+          },
+          {
+            "name": "Club Brugge",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Belgium",
+            "code": "BE",
+            "flag": "🇧🇪"
+          },
+          {
+            "name": "Slavia Prague",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Czech Republic",
+            "code": "CZ",
+            "flag": "🇨🇿"
+          },
+          {
+            "name": "Galatasaray",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Turkey",
+            "code": "TR",
+            "flag": "🇹🇷"
+          },
+          {
+            "name": "Shakhtar Donetsk",
+            "entry": {
+              "token": "1st",
+              "kind": "league",
+              "position": "1st",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Ukraine",
+            "code": "UA",
+            "flag": "🇺🇦"
+          }
+        ]
+      }
     },
     {
       "id": "uel",
@@ -4240,7 +4622,322 @@
             }
           ]
         }
-      ]
+      ],
+      "leaguePhase": {
+        "name": "League phase",
+        "entrants": [
+          {
+            "name": "Crystal Palace",
+            "entry": {
+              "token": "CON",
+              "kind": "holder",
+              "competition": "Conference League",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Bournemouth",
+            "entry": {
+              "token": "6th",
+              "kind": "league",
+              "position": "6th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Sunderland",
+            "entry": {
+              "token": "7th",
+              "kind": "league",
+              "position": "7th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "England",
+            "code": "gb-eng",
+            "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+          },
+          {
+            "name": "Milan",
+            "entry": {
+              "token": "5th",
+              "kind": "league",
+              "position": "5th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Juventus",
+            "entry": {
+              "token": "6th",
+              "kind": "league",
+              "position": "6th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Italy",
+            "code": "IT",
+            "flag": "🇮🇹"
+          },
+          {
+            "name": "Real Sociedad",
+            "entry": {
+              "token": "CW",
+              "kind": "cup",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "Celta Vigo",
+            "entry": {
+              "token": "6th",
+              "kind": "league",
+              "position": "6th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Spain",
+            "code": "ES",
+            "flag": "🇪🇸"
+          },
+          {
+            "name": "TSG Hoffenheim",
+            "entry": {
+              "token": "5th",
+              "kind": "league",
+              "position": "5th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "Bayer Leverkusen",
+            "entry": {
+              "token": "6th",
+              "kind": "league",
+              "position": "6th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Germany",
+            "code": "DE",
+            "flag": "🇩🇪"
+          },
+          {
+            "name": "Marseille",
+            "entry": {
+              "token": "5th",
+              "kind": "league",
+              "position": "5th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "Rennes",
+            "entry": {
+              "token": "6th",
+              "kind": "league",
+              "position": "6th",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
+          },
+          {
+            "name": "AZ",
+            "entry": {
+              "token": "CW",
+              "kind": "cup",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Netherlands",
+            "code": "NL",
+            "flag": "🇳🇱"
+          },
+          {
+            "name": "Torreense",
+            "entry": {
+              "token": "CW",
+              "kind": "cup",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Portugal",
+            "code": "PT",
+            "flag": "🇵🇹"
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL LP PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "CL LP PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "name": "Union Saint-Gilloise",
+            "entry": {
+              "token": "CL LP Q3",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "third qualifying round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Belgium",
+            "code": "BE",
+            "flag": "🇧🇪"
+          },
+          {
+            "name": "Sparta Prague",
+            "entry": {
+              "token": "CL LP Q3",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "third qualifying round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Czech Republic",
+            "code": "CZ",
+            "flag": "🇨🇿"
+          },
+          {
+            "name": "Olympiacos",
+            "entry": {
+              "token": "CL LP Q3",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "third qualifying round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Greece",
+            "code": "GR",
+            "flag": "🇬🇷"
+          },
+          {
+            "name": "Sturm Graz",
+            "entry": {
+              "token": "CL LP Q3",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "League Path",
+              "round": "third qualifying round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Austria",
+            "code": "AT",
+            "flag": "🇦🇹"
+          }
+        ]
+      }
     },
     {
       "id": "uecl",
@@ -10305,7 +11002,156 @@
             }
           ]
         }
-      ]
+      ],
+      "leaguePhase": {
+        "name": "League phase",
+        "entrants": [
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          },
+          {
+            "placeholder": true,
+            "entry": {
+              "token": "EL PO",
+              "kind": "transfer",
+              "competition": "Europa League",
+              "fromPath": null,
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            }
+          }
+        ]
+      }
     }
   ]
 }

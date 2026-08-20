@@ -165,7 +165,10 @@ function sectionAfter(html, headingText) {
  * as "Aston Villa (4th)", grouped by entry round and path (CH / LP). The
  * qualifying article only carries coefficients, so entry info comes from here.
  */
-export function parseEntries(html) {
+const PATH_IDS = { CH: "champions", LP: "league", MP: "main" };
+
+/** Each club cell of the Teams table, with the round and path headers in force. */
+function* teamsTableCells(html) {
   const section = sectionAfter(html, "Teams");
   if (!section) throw new Error("no Teams section in season article");
 
@@ -175,7 +178,6 @@ export function parseEntries(html) {
     .find((t) => /\((?:1st|2nd|3rd|\d+th|CW|CON)\)/i.test(cellText(t)));
   if (!table) throw new Error("no positions table in Teams section");
 
-  const entries = new Map();
   let round = null;
   let path = null;
 
@@ -197,26 +199,58 @@ export function parseEntries(html) {
     for (; i < cells.length; i++) {
       const m = cells[i].text.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
       if (!m) continue;
-      const name = m[1].trim();
-      if (!name) continue; // "(CL CH PO)" with no club yet — slot still undecided
-      const token = m[2].trim();
-      const PATH_IDS = { CH: "champions", LP: "league", MP: "main" };
-      entries.set(name, {
-        token,
-        ...interpretEntry(token),
-        entryRound: round,
-        path: PATH_IDS[path] ?? null,
-      });
+      // An empty name is a slot the draw hasn't filled: "(CL CH PO)".
+      yield { name: m[1].trim(), token: m[2].trim(), round, path, html: cells[i].html };
     }
+  }
+}
+
+export function parseEntries(html) {
+  const entries = new Map();
+
+  for (const cell of teamsTableCells(html)) {
+    if (!cell.name) continue;
+    entries.set(cell.name, {
+      token: cell.token,
+      ...interpretEntry(cell.token),
+      entryRound: cell.round,
+      path: PATH_IDS[cell.path] ?? null,
+    });
   }
 
   if (!entries.size) throw new Error("Teams table held no positions");
   return entries;
 }
 
-export async function fetchEntries(season, competition) {
-  const { html } = await fetchParsed(competition.seasonArticle(season));
-  return parseEntries(html);
+/**
+ * Clubs the article lists as entering at the league phase, plus the slots there
+ * still waiting on another competition ("(EL PO)"). Qualifying has no table for
+ * this round, so it is the one part of the bracket that has to come from here;
+ * the play-off winners that fill the rest are derived from the ties themselves.
+ */
+export function parseLeaguePhase(html) {
+  const slots = [];
+
+  for (const cell of teamsTableCells(html)) {
+    if (!/^league phase/i.test(cell.round ?? "")) continue;
+
+    const country = flagCountry(cell.html);
+    const { code, flag } = lookup(country);
+    slots.push({
+      ...(cell.name ? { name: cell.name } : { placeholder: true }),
+      entry: {
+        token: cell.token,
+        ...interpretEntry(cell.token),
+        entryRound: cell.round,
+        path: PATH_IDS[cell.path] ?? null,
+      },
+      ...(country ? { country } : {}),
+      ...(code ? { code } : {}),
+      ...(flag ? { flag } : {}),
+    });
+  }
+
+  return slots;
 }
 
 export async function fetchArticleHtml(season, competition) {
@@ -512,7 +546,9 @@ export async function load(season, competition) {
 
   // Entry positions are a nice-to-have: never fail a refresh over them.
   try {
-    const match = entryMatcher(await fetchEntries(season, competition));
+    const { html: seasonHtml } = await fetchParsed(competition.seasonArticle(season));
+    const match = entryMatcher(parseEntries(seasonHtml));
+    data.leaguePhase = { name: "League phase", entrants: parseLeaguePhase(seasonHtml) };
     const missing = [];
     let matched = 0;
     let placeholders = 0;

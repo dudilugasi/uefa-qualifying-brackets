@@ -1,5 +1,8 @@
 const SVG_NS = "http://www.w3.org/2000/svg";
 
+/** Rows that trace a club: tie rows, and the league phase table's rows. */
+const HOVERABLE = ".team, .lp-row";
+
 const el = (tag, cls, text) => {
   const n = document.createElement(tag);
   if (cls) n.className = cls;
@@ -23,6 +26,9 @@ const sumLegs = (legs) =>
 /** Prefer the source's own winner marking; fall back to aggregate, then pens. */
 function decide(tie) {
   if (tie.winner === "home" || tie.winner === "away") return tie.winner;
+  // A two-legged tie is not settled by the first leg, whatever the scoreline:
+  // judge it only on the article's own aggregate, or once both legs are in.
+  if (tie.agg == null && (tie.legs?.length ?? 0) < 2) return null;
   const agg = tie.agg ?? sumLegs(tie.legs);
   if (!agg) return null;
   if (agg[0] !== agg[1]) return agg[0] > agg[1] ? "home" : "away";
@@ -212,12 +218,21 @@ function renderPath(path) {
   bracket.className = layout === "sub" ? "bracket subs" : "bracket";
 
   if (layout === "sub") {
-    renderSubBrackets(path, bracket);
+    // The boxes stack in their own column, so the league phase can sit beside
+    // them rather than being pushed below the whole pile.
+    const stack = el("div", "subs-stack");
+    renderSubBrackets(path, stack);
+    bracket.append(stack);
   } else {
     path.rounds.forEach((round, roundIndex) => {
       bracket.append(roundColumn(round.name, round.ties, roundIndex));
     });
   }
+
+  // The round after qualifying, sitting where the play-off winners land.
+  const competition = payload?.competitions?.find((c) => c.id === selection.competitionId);
+  const leaguePhase = competition && leaguePhaseColumn(competition, path.rounds.length);
+  if (leaguePhase) bracket.append(leaguePhase);
 
   drawWires();
   resyncTrace();
@@ -255,11 +270,13 @@ function drawWires() {
     svg.append(path);
   };
 
-  // Decided ties: row of the advancing club -> that club's row next round.
+  // Decided ties: row of the advancing club -> that club's row next round. The
+  // target is matched on the data attributes alone, so the last round wires into
+  // the league phase table the same way it wires into a tie.
   for (const from of canvas.querySelectorAll(".team[data-advances]")) {
     const nextRound = Number(from.dataset.round) + 1;
     const to = canvas.querySelector(
-      `.team[data-round="${nextRound}"][data-team="${CSS.escape(from.dataset.team)}"]`
+      `[data-round="${nextRound}"][data-team="${CSS.escape(from.dataset.team)}"]`
     );
     if (!to) continue;
     wire(from.getBoundingClientRect(), to.getBoundingClientRect(), {
@@ -270,7 +287,7 @@ function drawWires() {
   // Undecided ties: the whole feeding tie -> the "Winner of A v B" slot. Drawn
   // from the tie box because which of the two advances isn't known yet. Skipped
   // when the feeder lives in another tab (a different path or competition).
-  for (const slot of canvas.querySelectorAll(".team[data-ref-tie]")) {
+  for (const slot of canvas.querySelectorAll("[data-ref-tie]")) {
     const source = canvas.querySelector(
       `.tie[data-tie-key="${CSS.escape(slot.dataset.refTie)}"]`
     );
@@ -287,6 +304,8 @@ function drawWires() {
 /** Name of the team whose route is currently marked. */
 let traced = null;
 let pinned = false;
+/** The row the entry bar currently describes, so it isn't rebuilt under the pointer. */
+let cardRow = null;
 
 function applyTrace(name) {
   const canvas = document.getElementById("canvas");
@@ -297,7 +316,7 @@ function applyTrace(name) {
   if (!name) return;
 
   const sel = `[data-team="${CSS.escape(name)}"]`;
-  for (const row of canvas.querySelectorAll(`.team${sel}`)) {
+  for (const row of canvas.querySelectorAll(`.team${sel}, .lp-row${sel}`)) {
     row.classList.add("trace");
     row.closest(".tie")?.classList.add("trace");
     // Tracing a "Winner of A v B" slot also lights up the tie that decides it.
@@ -484,6 +503,10 @@ function showEntryCard(row) {
   const card = document.getElementById("entry-card");
   const team = row.team;
   if (!team) return;
+  // pointerover fires again for every cell within one row, and rebuilding the
+  // bar would destroy the link under the pointer mid-hover.
+  if (cardRow === row && card.classList.contains("show")) return;
+  cardRow = row;
 
   card.replaceChildren();
   const heading = team.bye ? "Bye" : team.label || team.name;
@@ -557,6 +580,7 @@ function unpin() {
 
 function hideEntryCard() {
   const card = document.getElementById("entry-card");
+  cardRow = null;
   card.classList.remove("show");
   card.setAttribute("aria-hidden", "true");
 }
@@ -565,6 +589,19 @@ function initTraceEvents() {
   const bracket = document.getElementById("bracket");
   const card = document.getElementById("entry-card");
   const inside = (node, root) => root.contains(node instanceof Node ? node : null);
+  const hits = (node, x, y) => {
+    const r = node.getBoundingClientRect();
+    return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+  };
+  /**
+   * Is the pointer heading into `root`? relatedTarget is null when the hit
+   * target changed because an element moved under a still pointer — the bar
+   * sliding up over the row you are hovering — and reading that as "the pointer
+   * left" hid the bar, which uncovered the row, which showed the bar again.
+   */
+  const towards = (ev, root) =>
+    inside(ev.relatedTarget, root) ||
+    (!ev.relatedTarget && hits(root, ev.clientX, ev.clientY));
 
   // While a route is pinned, hovering elsewhere changes neither the arrows nor
   // the card — both stay on the pinned team until it's unpinned.
@@ -572,7 +609,7 @@ function initTraceEvents() {
   // between columns has to clear the trace, not wait for the bracket's edge.
   bracket.addEventListener("pointerover", (ev) => {
     if (pinned) return;
-    const row = ev.target.closest(".team");
+    const row = ev.target.closest(HOVERABLE);
     if (!row) {
       setTrace(null);
       hideEntryCard();
@@ -585,21 +622,22 @@ function initTraceEvents() {
   // Moving down onto the bar isn't leaving the row it describes, so the route
   // survives; leaving the bar for anywhere but the tree clears it.
   bracket.addEventListener("pointerleave", (ev) => {
-    if (pinned || inside(ev.relatedTarget, card)) return;
+    if (pinned || towards(ev, card)) return;
     setTrace(null);
     hideEntryCard();
   });
 
   card.addEventListener("pointerleave", (ev) => {
-    if (pinned || inside(ev.relatedTarget, bracket)) return;
+    if (pinned || towards(ev, bracket)) return;
     setTrace(null);
     hideEntryCard();
   });
 
-  // Hover doesn't exist on touch, so a tap pins the route instead.
+  // Hover doesn't exist on touch, so a tap pins the route instead. The bar is
+  // pointer-transparent, so a click on it lands on the row behind: drop those.
   bracket.addEventListener("click", (ev) => {
-    const row = ev.target.closest(".team");
-    if (!row) return;
+    const row = ev.target.closest(HOVERABLE);
+    if (!row || (card.classList.contains("show") && hits(card, ev.clientX, ev.clientY))) return;
     if (pinned && traced === row.dataset.team) {
       unpin();
     } else {
@@ -756,6 +794,90 @@ function renderPathTabs(competition) {
   });
 
   if (active) renderPath(active);
+}
+
+/**
+ * The round after qualifying, which no bracket table covers: the clubs the
+ * season article lists as entering there, plus the play-off winners that fill
+ * the rest of the slots. A tie merged across paths is listed under both, so the
+ * play-off pass dedupes by key.
+ */
+function leaguePhaseSlots(competition) {
+  const slots = [...(competition.leaguePhase?.entrants ?? [])];
+
+  const seen = new Set();
+  for (const path of competition.paths ?? []) {
+    const round = path.rounds[path.rounds.length - 1];
+    for (const tie of round?.ties ?? []) {
+      if (tie.key) {
+        if (seen.has(tie.key)) continue;
+        seen.add(tie.key);
+      }
+      const side = decide(tie);
+      if (side) {
+        slots.push(normalizeTeam(side === "home" ? tie.home : tie.away));
+      } else {
+        const home = normalizeTeam(tie.home);
+        const away = normalizeTeam(tie.away);
+        const label = `Winner of ${home.label || home.name} v ${away.label || away.name}`;
+        slots.push({ placeholder: true, name: label, label, tieKey: tie.key });
+      }
+    }
+  }
+
+  // A slot the article knows only as a token — "(EL PO)" — reads off its entry.
+  for (const slot of slots) {
+    if (slot.name || !slot.entry) continue;
+    const { competition: from, round } = slot.entry;
+    slot.label = from ? `${from}${round ? ` ${round}` : ""}` : slot.entry.token;
+    slot.name = slot.label;
+  }
+
+  // Decided first, whatever order they were found in; undecided slots last.
+  return [...slots.filter((s) => !s.placeholder), ...slots.filter((s) => s.placeholder)];
+}
+
+const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts"];
+
+/** The league phase as a final column of the bracket, one row per slot. */
+function leaguePhaseColumn(competition, roundIndex) {
+  const slots = leaguePhaseSlots(competition);
+  if (!slots.length) return null;
+
+  const col = el("div", "round league-round");
+  col.append(el("div", "round-head", competition.leaguePhase?.name ?? "League phase"));
+
+  const table = el("table", "lp-table");
+  const thead = el("thead");
+  const headRow = el("tr");
+  LEAGUE_PHASE_COLUMNS.forEach((label) => headRow.append(el("th", null, label)));
+  thead.append(headRow);
+  table.append(thead);
+
+  const body = el("tbody");
+  slots.forEach((slot) => {
+    const tr = el("tr", "lp-row" + (slot.placeholder ? " lp-pending" : ""));
+    // Same hooks a tie row carries, so hover, tracing, the card and the wires
+    // all reach into this column too.
+    tr.team = slot;
+    tr.dataset.team = slot.name ?? "";
+    tr.dataset.round = String(roundIndex);
+    if (slot.tieKey) tr.dataset.refTie = slot.tieKey;
+    // No standings until the league phase kicks off; the article has no table yet.
+    tr.append(el("td", "lp-place", "–"));
+
+    const name = el("td", "lp-name");
+    if (slot.flag) name.append(el("span", "flag", slot.flag));
+    else if (slot.code) name.append(el("span", "flag code", slot.code.replace("gb-", "").toUpperCase()));
+    name.append(el("span", "lp-club", slot.placeholder ? slot.label ?? "Undecided slot" : slot.name));
+    tr.append(name);
+
+    for (let i = 0; i < 4; i++) tr.append(el("td", "lp-stat", "–"));
+    body.append(tr);
+  });
+  table.append(body);
+  col.append(table);
+  return col;
 }
 
 function renderCompetition(competition) {

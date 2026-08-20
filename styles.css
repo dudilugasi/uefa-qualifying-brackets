@@ -120,7 +120,8 @@
 
   /* Sub-bracket layout: each tree is its own bracket, so the page wraps them
      instead of running one column the full height of the deepest round. */
-  .bracket.subs { flex-wrap: wrap; align-items: flex-start; gap: 22px 34px; }
+  .bracket.subs { align-items: flex-start; gap: 34px; }
+  .subs-stack { display: flex; flex-direction: column; gap: 22px; }
   .sub {
     display: flex; gap: 34px; align-items: stretch;
     padding: 10px 16px 14px;
@@ -224,15 +225,15 @@
     border-top: 1px solid var(--trace);
     box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.4), 0 0 16px -6px var(--trace-glow);
     font-size: 13px; line-height: 1.4; cursor: default;
-    /* Hidden, it spans the foot of the page, so it must not take the pointer. */
+    /* Never takes the pointer: it slides in under the cursor, and if it took
+       hover the row behind would flick in and out of its hover state. Only its
+       links opt back in; stray clicks on it are dropped in app.js. */
     pointer-events: none;
     opacity: 0; transform: translateY(100%);
     transition: opacity 110ms ease, transform 110ms ease;
   }
-  /* Shown, it takes the pointer: the row behind it must not receive the click,
-     nor lend it a pointer cursor. Moving onto it doesn't drop the trace — see
-     initTraceEvents. */
-  .entry-card.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .entry-card.show { opacity: 1; transform: translateY(0); }
+  .entry-card.show .ec-link { pointer-events: auto; }
   .entry-card > * + *::before {
     content: "·"; color: var(--line); margin-right: 8px;
   }
@@ -246,8 +247,55 @@
     text-decoration-thickness: 1px;
   }
   .entry-card .ec-link:hover { text-decoration-thickness: 2px; }
+  /* inline-block, so the separator bullet sits outside the underline. */
+  .entry-card .ec-link::before { display: inline-block; text-decoration: none; }
   .entry-card .ec-sub { color: var(--muted); }
   .entry-card .ec-none { color: var(--muted); font-style: italic; }
+
+  /* The round after qualifying: a standings table rather than ties, so it needs
+     a wider column than the tie rounds and sits flush with their tops. */
+  .league-round { flex: 0 0 430px; }
+  .subs .league-round { flex: 0 0 430px; }
+  .bracket.subs .league-round {
+    padding: 10px 16px 14px;
+    border: 1px solid var(--line); border-radius: 12px;
+  }
+
+  .lp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .lp-table th {
+    text-align: left; padding: 8px 10px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted); border-bottom: 1px solid var(--line);
+  }
+  .lp-table th:first-child { text-align: right; }
+  .lp-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  .lp-table tr:last-child td { border-bottom: none; }
+  .lp-place, .lp-stat {
+    width: 44px;
+    color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .lp-place {
+    text-align: right;
+  }
+  .lp-stat {
+    text-align: left;
+  }
+  /* Left as a plain table cell: a td with display:flex leaves the table layout,
+     which breaks the collapsed row borders. */
+  .lp-name .flag { display: inline-block; margin-right: 7px; }
+  .lp-club { font-weight: 600; }
+  .lp-row { cursor: pointer; transition: background-color 120ms ease; }
+  .lp-row:hover { background: var(--accent-soft); }
+  .lp-row.trace { background: var(--trace-soft); }
+  .lp-row.trace .lp-club { color: var(--trace); }
+  .lp-pending .lp-club { font-style: italic; font-weight: 500; color: var(--muted); }
 
   .legend {
     display: flex; gap: 18px; flex-wrap: wrap;
