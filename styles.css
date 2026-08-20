@@ -300,7 +300,7 @@
   @media (max-width: 700px) {
     .round { flex: 0 0 262px; }
     .bracket { gap: 40px; }
-    header, main { padding-left: 14px; padding-right: 14px; }
+    header, main { padding-left: 14px; padding-right: 14px; padding-bottom: 14px; }
     .entry-card { padding-left: 14px; padding-right: 14px; }
 
     /* Box the tree so it owns both axes: one finger then pans it diagonally,
