@@ -310,7 +310,7 @@
        instead of the drag being split between this scroller and the page. */
     .bracket-scroll {
       overflow: auto;
-      max-height: 72dvh;
+      max-height: 97dvh;
       overscroll-behavior: contain;
       border: 1px solid var(--line);
       border-radius: 10px;
