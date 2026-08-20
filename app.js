@@ -97,26 +97,128 @@ function groupTies(ties) {
   return groups;
 }
 
-function renderPath(path) {
-  const bracket = document.getElementById("bracket");
-  bracket.replaceChildren();
+/** Builds one round column: the header plus its ties, grouped by what they feed. */
+function roundColumn(name, ties, roundIndex) {
+  const col = el("div", "round");
+  col.append(el("div", "round-head", name));
 
-  path.rounds.forEach((round, roundIndex) => {
-    const col = el("div", "round");
-    const head = el("div", "round-head", round.name);
-    col.append(head);
+  const groups = el("div", "groups");
+  for (const group of groupTies(ties)) {
+    const pair = el("div", "pair");
+    group.ties.forEach((t) => pair.append(tieCard(t, roundIndex)));
+    groups.append(pair);
+  }
+  col.append(groups);
+  return col;
+}
 
-    const groups = el("div", "groups");
-    for (const group of groupTies(round.ties)) {
-      const pair = el("div", "pair");
-      group.ties.forEach((t) => pair.append(tieCard(t, roundIndex)));
-      groups.append(pair);
-    }
-    col.append(groups);
-    bracket.append(col);
+/** The club a tie sent through, if it's decided and not a placeholder slot. */
+function advancingName(tie) {
+  const side = decide(tie);
+  if (!side) return null;
+  const team = normalizeTeam(side === "home" ? tie.home : tie.away);
+  return team.placeholder ? null : team.name;
+}
+
+/**
+ * Which tie in the next round each tie leads into, keyed by position. The tie's
+ * own `feeds` is not usable here: in the combined "All" view it is namespaced
+ * per path ("champions:3") and indexes that path's round, not the merged one.
+ * Linkage is recovered the same way the wires are — the winner turning up a
+ * round later, or an undecided slot naming this tie's key.
+ */
+function successors(rounds) {
+  return rounds.map((round, r) => {
+    const links = new Map();
+    const next = rounds[r + 1]?.ties;
+    if (!next) return links;
+
+    round.ties.forEach((tie, i) => {
+      const advanced = advancingName(tie);
+      const j = next.findIndex((n) =>
+        [n.home, n.away].some((raw) => {
+          const side = normalizeTeam(raw);
+          return (
+            (advanced != null && side.name === advanced) ||
+            (tie.key != null && side.ref?.tieKey === tie.key)
+          );
+        })
+      );
+      if (j !== -1) links.set(i, j);
+    });
+    return links;
+  });
+}
+
+/**
+ * One tree per tie nothing feeds out of — a final-round tie, or a mid-bracket
+ * tie whose winner never reappears (both sides went out, or the next round is
+ * undrawn) — carrying everything that feeds it, recursively.
+ */
+function feederTrees(path) {
+  const rounds = path.rounds;
+  const leadsTo = successors(rounds);
+
+  const node = (r, i) => ({
+    tie: rounds[r].ties[i],
+    roundIndex: r,
+    feeders:
+      r === 0
+        ? []
+        : rounds[r - 1].ties.flatMap((_, j) =>
+            leadsTo[r - 1].get(j) === i ? [node(r - 1, j)] : []
+          ),
   });
 
+  const roots = [];
+  for (let r = rounds.length - 1; r >= 0; r--) {
+    rounds[r].ties.forEach((_, i) => {
+      if (!leadsTo[r].has(i)) roots.push(node(r, i));
+    });
+  }
+  return roots;
+}
+
+/**
+ * "sub" — each tree as its own small bracket, wrapped across the page, so a
+ * deep round (UECL main path Q2 is 43 ties) never becomes one endless column
+ * and every wire stays inside its own box.
+ */
+function renderSubBrackets(path, bracket) {
+  for (const root of feederTrees(path)) {
+    // Ties bucketed by round in the order the walk meets them, so a feeder
+    // still sits beside the tie it feeds.
+    const byRound = new Map();
+    (function walk(node) {
+      if (!byRound.has(node.roundIndex)) byRound.set(node.roundIndex, []);
+      byRound.get(node.roundIndex).push(node.tie);
+      node.feeders.forEach(walk);
+    })(root);
+
+    const sub = el("div", "sub");
+    for (const roundIndex of [...byRound.keys()].sort((a, b) => a - b)) {
+      sub.append(roundColumn(path.rounds[roundIndex].name, byRound.get(roundIndex), roundIndex));
+    }
+    bracket.append(sub);
+  }
+}
+
+function renderPath(path) {
+  const bracket = document.getElementById("bracket");
+  activePath = path;
+  bracket.replaceChildren();
+  bracket.className = layout === "sub" ? "bracket subs" : "bracket";
+
+  if (layout === "sub") {
+    renderSubBrackets(path, bracket);
+  } else {
+    path.rounds.forEach((round, roundIndex) => {
+      bracket.append(roundColumn(round.name, round.ties, roundIndex));
+    });
+  }
+
   drawWires();
+  resyncTrace();
 }
 
 /** Curve from each advancing team's row to that same team's row one round on. */
@@ -128,38 +230,24 @@ function drawWires() {
   const base = canvas.getBoundingClientRect();
   svg.setAttribute("viewBox", `0 0 ${canvas.offsetWidth} ${canvas.offsetHeight}`);
 
-  // Two markers, since a marker can't inherit the referencing path's class.
-  const defs = document.createElementNS(SVG_NS, "defs");
-  for (const [id, fill] of [["arrow", "var(--wire)"], ["arrow-trace", "var(--trace)"]]) {
-    const marker = document.createElementNS(SVG_NS, "marker");
-    marker.setAttribute("id", id);
-    marker.setAttribute("viewBox", "0 0 10 10");
-    marker.setAttribute("refX", "9");
-    marker.setAttribute("refY", "5");
-    marker.setAttribute("markerWidth", "5");
-    marker.setAttribute("markerHeight", "5");
-    marker.setAttribute("orient", "auto-start-reverse");
-    const head = document.createElementNS(SVG_NS, "path");
-    head.setAttribute("d", "M 0 1 L 10 5 L 0 9 z");
-    head.setAttribute("fill", fill);
-    marker.append(head);
-    defs.append(marker);
-  }
-  svg.append(defs);
-
   const wire = (fromRect, toRect, { team, tbd }) => {
     const x1 = fromRect.right - base.left;
     const y1 = fromRect.top + fromRect.height / 2 - base.top;
     const x2 = toRect.left - base.left;
     const y2 = toRect.top + toRect.height / 2 - base.top;
     const bend = Math.max(18, (x2 - x1) * 0.45);
+    // The end handle runs back along the straight line between the two rows, so
+    // a steep wire arrives at the angle it travels at rather than flattening to
+    // horizontal in its last few pixels.
+    const len = Math.hypot(x2 - x1, y2 - y1) || 1;
+    const cx = x2 - ((x2 - x1) / len) * bend;
+    const cy = y2 - ((y2 - y1) / len) * bend;
 
     const path = document.createElementNS(SVG_NS, "path");
-    path.setAttribute("d", `M ${x1} ${y1} C ${x1 + bend} ${y1}, ${x2 - bend} ${y2}, ${x2} ${y2}`);
+    path.setAttribute("d", `M ${x1} ${y1} C ${x1 + bend} ${y1}, ${cx} ${cy}, ${x2} ${y2}`);
     path.setAttribute("fill", "none");
     path.setAttribute("stroke", "var(--wire)");
     path.setAttribute("stroke-width", "1.5");
-    path.setAttribute("marker-end", "url(#arrow)");
     if (tbd) path.classList.add("tbd");
     path.dataset.team = team;
     svg.append(path);
@@ -203,9 +291,6 @@ function applyTrace(name) {
   const svg = document.getElementById("wires");
 
   for (const n of canvas.querySelectorAll(".trace")) n.classList.remove("trace");
-  for (const p of svg.querySelectorAll("path")) {
-    p.setAttribute("marker-end", "url(#arrow)");
-  }
   canvas.classList.toggle("tracing", Boolean(name));
   if (!name) return;
 
@@ -220,10 +305,7 @@ function applyTrace(name) {
         ?.classList.add("trace");
     }
   }
-  for (const p of svg.querySelectorAll(`path${sel}`)) {
-    p.classList.add("trace");
-    p.setAttribute("marker-end", "url(#arrow-trace)");
-  }
+  for (const p of svg.querySelectorAll(`path${sel}`)) p.classList.add("trace");
 }
 
 function setTrace(name) {
@@ -233,6 +315,81 @@ function setTrace(name) {
 }
 
 const ORDINAL_WORD = { "1st": "champions", "2nd": "runners-up" };
+const COMP_NAMES = { ucl: "Champions League", uel: "Europa League", uecl: "Conference League" };
+
+/**
+ * A club that dropped in from another competition only carries its transfer
+ * token here ("CL Q1"), so its domestic route is read off the competition it
+ * fell out of, where the same club is listed with its real entry.
+ */
+const originCache = new Map();
+function originEntry(team) {
+  const entry = team.entry;
+  if (entry?.kind !== "transfer" || !payload) return null;
+
+  const key = `${entry.competition}|${team.name}`;
+  if (originCache.has(key)) return originCache.get(key);
+
+  const source = (payload.competitions ?? []).find(
+    (c) => c.label === entry.competition || COMP_NAMES[c.id] === entry.competition
+  );
+
+  let found = null;
+  outer: for (const path of source?.paths ?? []) {
+    for (const round of path.rounds) {
+      for (const tie of round.ties) {
+        for (const raw of [tie.home, tie.away]) {
+          const side = normalizeTeam(raw);
+          if (side.name === team.name && side.entry && side.entry.kind !== "transfer") {
+            found = { competition: source, entry: side.entry };
+            break outer;
+          }
+        }
+      }
+    }
+  }
+
+  originCache.set(key, found);
+  return found;
+}
+
+/** Every row for a club in the current view, earliest round first. */
+const teamRows = (name) =>
+  [...document.querySelectorAll(`#canvas .team[data-team="${CSS.escape(name)}"]`)].sort(
+    (a, b) => Number(a.dataset.round) - Number(b.dataset.round)
+  );
+
+/**
+ * A re-render can change what a marked route means: another competition lists
+ * the same club with its own entry data, and a path filter may not list it at
+ * all. Re-read the card from what's on screen now, or drop the pin.
+ */
+function resyncTrace() {
+  if (!traced) return;
+  const row = teamRows(traced)[0];
+  if (!row) unpin();
+  else if (pinned) showEntryCard(row);
+}
+
+/**
+ * Follows a drop-in back to where the club came from: switch competition, then
+ * pin the club at the earliest round it appears in there, which re-reads the
+ * card off that competition's own entry data.
+ */
+function showInCompetition(name, competition) {
+  selection.competitionId = competition.id;
+  selection.pathId = null; // paths don't carry across competitions
+  render(payload);
+
+  const row = teamRows(name)[0];
+  if (!row) return;
+
+  pinned = true;
+  traced = null;
+  setTrace(name);
+  showEntryCard(row);
+  row.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+}
 
 /** Prose for a club's route in, from its league finish or transfer token. */
 function howQualified(team) {
@@ -285,7 +442,6 @@ function showEntryCard(row) {
   const heading = team.bye ? "Bye" : team.label || team.name;
   card.append(el("div", "ec-team", `${team.flag ? team.flag + " " : ""}${heading}`));
 
-  const COMP_NAMES = { ucl: "Champions League", uel: "Europa League", uecl: "Conference League" };
   const info = howQualified(team);
 
   if (team.bye) {
@@ -305,7 +461,20 @@ function showEntryCard(row) {
       card.append(el("div", "ec-none", `Slot filled by an unplayed tie (${team.name})`));
     }
   } else if (info) {
-    card.append(el("div", "ec-how", info.how));
+    // For a drop-in, that line only says where the club fell from: make it a
+    // link into that competition, and spell out the domestic route beneath it.
+    const origin = originEntry(team);
+    if (origin) {
+      const link = el("button", "ec-how ec-link", info.how);
+      link.type = "button";
+      link.title = `Show ${team.name} in the ${origin.competition.label}`;
+      link.addEventListener("click", () => showInCompetition(team.name, origin.competition));
+      card.append(link);
+      const originHow = howQualified({ country: team.country, entry: origin.entry })?.how;
+      if (originHow) card.append(el("div", "ec-sub", originHow));
+    } else {
+      card.append(el("div", "ec-how", info.how));
+    }
     if (info.sub) card.append(el("div", "ec-sub", info.sub));
     if (team.via) {
       card.append(el("div", "ec-sub", `Reached here as ${team.via.kind} of ${team.via.fixture}`));
@@ -318,6 +487,12 @@ function showEntryCard(row) {
   card.setAttribute("aria-hidden", "false");
 }
 
+function unpin() {
+  pinned = false;
+  setTrace(null);
+  hideEntryCard();
+}
+
 function hideEntryCard() {
   const card = document.getElementById("entry-card");
   card.classList.remove("show");
@@ -326,45 +501,91 @@ function hideEntryCard() {
 
 function initTraceEvents() {
   const bracket = document.getElementById("bracket");
+  const card = document.getElementById("entry-card");
+  const inside = (node, root) => root.contains(node instanceof Node ? node : null);
 
+  // While a route is pinned, hovering elsewhere changes neither the arrows nor
+  // the card — both stay on the pinned team until it's unpinned.
+  // pointerover, not pointerenter: moving off a row onto tie chrome or the gaps
+  // between columns has to clear the trace, not wait for the bracket's edge.
   bracket.addEventListener("pointerover", (ev) => {
+    if (pinned) return;
     const row = ev.target.closest(".team");
-    if (!row) return;
-    if (!pinned) setTrace(row.dataset.team);
+    if (!row) {
+      setTrace(null);
+      hideEntryCard();
+      return;
+    }
+    setTrace(row.dataset.team);
     showEntryCard(row);
   });
 
-  bracket.addEventListener("pointerleave", () => {
-    if (!pinned) setTrace(null);
+  // Moving down onto the bar isn't leaving the row it describes, so the route
+  // survives; leaving the bar for anywhere but the tree clears it.
+  bracket.addEventListener("pointerleave", (ev) => {
+    if (pinned || inside(ev.relatedTarget, card)) return;
+    setTrace(null);
     hideEntryCard();
   });
 
+  card.addEventListener("pointerleave", (ev) => {
+    if (pinned || inside(ev.relatedTarget, bracket)) return;
+    setTrace(null);
+    hideEntryCard();
+  });
 
   // Hover doesn't exist on touch, so a tap pins the route instead.
   bracket.addEventListener("click", (ev) => {
     const row = ev.target.closest(".team");
     if (!row) return;
     if (pinned && traced === row.dataset.team) {
-      pinned = false;
-      setTrace(null);
+      unpin();
     } else {
       pinned = true;
       traced = null;
       setTrace(row.dataset.team);
+      showEntryCard(row);
     }
-    
   });
 
   addEventListener("keydown", (ev) => {
-    if (ev.key === "Escape" && pinned) {
-      pinned = false;
-      setTrace(null);
-    }
+    if (ev.key === "Escape" && pinned) unpin();
   });
 }
 
 /** Survives refreshes so the view doesn't jump back to the first tab. */
 const selection = { competitionId: null, pathId: null };
+
+/** The whole loaded payload, so one competition's card can read another's. */
+let payload = null;
+
+/** "columns" — one column per round; "sub" — a small bracket per tie. */
+let layout = "columns";
+let activePath = null; // re-rendered in place when the layout switches
+
+const LAYOUTS = [
+  ["columns", "Columns", "One column per round, every tie stacked"],
+  ["sub", "Sub-brackets", "One bracket per tie, with everything that feeds it"],
+];
+
+function renderLayoutSwitch() {
+  const wrap = document.getElementById("layout-switch");
+  wrap.replaceChildren();
+
+  for (const [id, label, hint] of LAYOUTS) {
+    const btn = el("button", "tab", label);
+    btn.type = "button";
+    btn.title = hint;
+    btn.setAttribute("aria-selected", String(layout === id));
+    btn.addEventListener("click", () => {
+      if (layout === id) return;
+      layout = id;
+      renderLayoutSwitch();
+      if (activePath) renderPath(activePath);
+    });
+    wrap.append(btn);
+  }
+}
 
 function renderSource(competition) {
   const src = document.getElementById("source");
@@ -483,6 +704,9 @@ function renderCompetition(competition) {
 }
 
 function render(data) {
+  payload = data; // kept for lookups that cross competitions
+  originCache.clear();
+
   const competitions = data.competitions ?? [];
   const status = document.getElementById("status");
   status.textContent = data.fetchedAt
@@ -600,5 +824,6 @@ addEventListener("resize", drawWires);
 if (document.fonts?.ready) document.fonts.ready.then(drawWires);
 
 initTraceEvents();
+renderLayoutSwitch();
 loadLocal();
 detectRefreshSupport();

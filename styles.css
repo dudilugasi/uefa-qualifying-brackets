@@ -45,7 +45,7 @@
   }
   header, main { max-width: 1500px; margin: 0 auto; }
   header { padding: 28px 24px 16px; }
-  main { padding: 8px 24px 48px; }
+  main { padding: 8px 24px 96px; }
 
   .title-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
@@ -86,8 +86,18 @@
   .comp-tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
   .comp-tab .stale-dot { color: var(--err); margin-left: 5px; }
 
+  /* Path filters on the left, layout switch pushed to the right of the same row. */
+  .tab-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .tabs { display: flex; gap: 8px; margin: 14px 0 0; flex-wrap: wrap; }
   .tabs[hidden] { display: none; }
+
+  .layout-switch {
+    display: flex; margin: 14px 0 0 auto;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--panel); padding: 2px;
+  }
+  .layout-switch .tab { border: none; background: none; padding: 6px 14px; font-size: 13px; }
+  .layout-switch .tab[aria-selected="true"] { background: var(--accent-soft); }
   .tab {
     appearance: none; border: 1px solid var(--line);
     background: var(--panel); color: var(--text);
@@ -107,6 +117,18 @@
     pointer-events: none; z-index: 0;
   }
   .bracket { position: relative; z-index: 1; display: flex; gap: 56px; align-items: stretch; }
+
+  /* Sub-bracket layout: each tree is its own bracket, so the page wraps them
+     instead of running one column the full height of the deepest round. */
+  .bracket.subs { flex-wrap: wrap; align-items: flex-start; gap: 22px 34px; }
+  .sub {
+    display: flex; gap: 34px; align-items: stretch;
+    padding: 10px 16px 14px;
+    border: 1px solid var(--line); border-radius: 12px;
+  }
+  .subs .round { flex: 0 0 250px; }
+  .subs .round-head { padding: 2px 2px 8px; font-size: 11px; }
+  .subs .groups { gap: 14px; }
   /* Columns stretch to the tallest round so shorter ones can centre. */
   .round { flex: 0 0 290px; display: flex; flex-direction: column; }
   .round-head {
@@ -178,39 +200,53 @@
   /* Non-traced rows in a traced box stay legible but recede. */
   .tie.trace .team:not(.trace) { opacity: 0.55; }
 
-  .wires path { transition: stroke 140ms ease, stroke-width 140ms ease; }
+  .wires path { transition: stroke 140ms ease; }
   /* Dashed: the feeding tie is drawn but not yet played. */
   .wires path.tbd { stroke-dasharray: 5 4; opacity: 0.8; }
+  /* Colour and glow only — a traced wire keeps the weight it had, matching the
+     head, which is a fixed size. */
   .wires path.trace {
     stroke: var(--trace);
-    stroke-width: 2.75;
     filter: drop-shadow(0 0 5px var(--trace-glow));
   }
-  /* Traced wires must clear the cards, which sit above the svg by default. */
-  .canvas.tracing .wires { z-index: 2; }
-  .canvas.tracing .wires path:not(.trace) { opacity: 0.35; }
+  .canvas.tracing .wires path[data-team]:not(.trace) { opacity: 0.35; }
 
   .pin-hint { color: var(--muted); font-size: 12px; }
   .pin-hint b { color: var(--trace); }
 
-  /* How-they-qualified panel, parked in the corner so it never covers the tree. */
+  /* How-they-qualified bar, pinned across the foot of the screen. */
   .entry-card {
     position: fixed; z-index: 30;
-    top: 14px; right: 14px;
-    width: 232px; padding: 9px 12px;
+    left: 0; right: 0; bottom: 0;
+    display: flex; align-items: baseline; gap: 8px 16px; flex-wrap: wrap;
+    padding: 11px 24px;
     background: var(--panel);
-    border: 1px solid var(--trace);
-    border-radius: 9px;
-    box-shadow: 0 10px 26px -8px rgba(0, 0, 0, 0.4), 0 0 16px -6px var(--trace-glow);
-    font-size: 13px; line-height: 1.4;
+    border-top: 1px solid var(--trace);
+    box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.4), 0 0 16px -6px var(--trace-glow);
+    font-size: 13px; line-height: 1.4; cursor: default;
+    /* Hidden, it spans the foot of the page, so it must not take the pointer. */
     pointer-events: none;
-    opacity: 0; transform: translateY(-4px);
+    opacity: 0; transform: translateY(100%);
     transition: opacity 110ms ease, transform 110ms ease;
   }
-  .entry-card.show { opacity: 1; transform: translateY(0); }
-  .entry-card .ec-team { font-weight: 700; margin-bottom: 3px; }
+  /* Shown, it takes the pointer: the row behind it must not receive the click,
+     nor lend it a pointer cursor. Moving onto it doesn't drop the trace — see
+     initTraceEvents. */
+  .entry-card.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .entry-card > * + *::before {
+    content: "·"; color: var(--line); margin-right: 8px;
+  }
+  .entry-card .ec-team { font-weight: 700; font-size: 14px; }
   .entry-card .ec-how { color: var(--trace); font-weight: 600; }
-  .entry-card .ec-sub { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  /* Drop-in line, clickable: follows the club back to the competition it fell from. */
+  .entry-card .ec-link {
+    appearance: none; background: none; border: none; padding: 0;
+    font: inherit; font-weight: 600; color: var(--trace); cursor: pointer;
+    text-decoration: underline; text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .entry-card .ec-link:hover { text-decoration-thickness: 2px; }
+  .entry-card .ec-sub { color: var(--muted); }
   .entry-card .ec-none { color: var(--muted); font-style: italic; }
 
   .legend {
@@ -224,6 +260,16 @@
     .round { flex: 0 0 262px; }
     .bracket { gap: 40px; }
     header, main { padding-left: 14px; padding-right: 14px; }
-    /* No room beside the header on narrow screens; sit it at the bottom. */
-    .entry-card { top: auto; bottom: 14px; right: 10px; left: 10px; width: auto; }
+    .entry-card { padding-left: 14px; padding-right: 14px; }
+
+    /* Box the tree so it owns both axes: one finger then pans it diagonally,
+       instead of the drag being split between this scroller and the page. */
+    .bracket-scroll {
+      overflow: auto;
+      max-height: 72dvh;
+      overscroll-behavior: contain;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+    }
   }
