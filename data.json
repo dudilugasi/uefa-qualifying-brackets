@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-20T08:33:03.456Z",
+  "fetchedAt": "2026-08-25T21:29:25.568Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -1775,8 +1775,18 @@
                     [
                       2,
                       1
+                    ],
+                    [
+                      2,
+                      5
                     ]
                   ],
+                  "agg": [
+                    4,
+                    6
+                  ],
+                  "winner": "away",
+                  "note": "4–6 agg. · a.e.t.",
                   "pathId": "champions",
                   "matchNumber": 5,
                   "key": "ucl|champions|Play-off round|5",
@@ -2161,8 +2171,18 @@
                     [
                       1,
                       3
+                    ],
+                    [
+                      0,
+                      3
                     ]
                   ],
+                  "agg": [
+                    1,
+                    6
+                  ],
+                  "winner": "away",
+                  "note": "1–6 agg.",
                   "pathId": "league",
                   "matchNumber": 2,
                   "key": "ucl|league|Play-off round|2",
@@ -2934,7 +2954,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 2,
                   "key": "uel|main|Play-off round|2",
@@ -2970,7 +2995,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 3,
                   "key": "uel|main|Play-off round|3",
@@ -3006,7 +3036,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 4,
                   "key": "uel|main|Play-off round|4",
@@ -3041,7 +3076,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 5,
                   "key": "uel|main|Play-off round|5",
@@ -3077,7 +3117,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      4,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uel|main|Play-off round|6",
@@ -3114,7 +3159,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uel|main|Play-off round|7",
@@ -3151,7 +3201,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      3
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uel|main|Play-off round|8",
@@ -3190,7 +3245,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      7,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 9,
                   "key": "uel|main|Play-off round|9",
@@ -3226,7 +3286,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uel|main|Play-off round|10",
@@ -3263,7 +3328,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uel|main|Play-off round|11",
@@ -4394,7 +4464,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 1,
                   "key": "uel|main|Play-off round|1",
@@ -4430,7 +4505,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      4,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uel|main|Play-off round|6",
@@ -4467,7 +4547,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uel|main|Play-off round|7",
@@ -4504,7 +4589,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      3
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uel|main|Play-off round|8",
@@ -4541,7 +4631,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uel|main|Play-off round|10",
@@ -4578,7 +4673,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uel|main|Play-off round|11",
@@ -4611,7 +4711,12 @@
                       "path": null
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 12,
                   "key": "uel|main|Play-off round|12",
@@ -4841,7 +4946,7 @@
             }
           },
           {
-            "placeholder": true,
+            "name": "Hapoel Be'er Sheva",
             "entry": {
               "token": "CL CH PO",
               "kind": "transfer",
@@ -4850,7 +4955,10 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Israel",
+            "code": "IL",
+            "flag": "🇮🇱"
           },
           {
             "placeholder": true,
@@ -4865,7 +4973,7 @@
             }
           },
           {
-            "placeholder": true,
+            "name": "NEC",
             "entry": {
               "token": "CL LP PO",
               "kind": "transfer",
@@ -4874,7 +4982,10 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Netherlands",
+            "code": "NL",
+            "flag": "🇳🇱"
           },
           {
             "name": "Union Saint-Gilloise",
@@ -5585,7 +5696,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      3
+                    ]
+                  ],
                   "pathId": "champions",
                   "matchNumber": 1,
                   "key": "uecl|champions|Play-off round|1",
@@ -5622,7 +5738,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      1
+                    ]
+                  ],
                   "pathId": "champions",
                   "matchNumber": 2,
                   "key": "uecl|champions|Play-off round|2",
@@ -5658,7 +5779,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      2
+                    ]
+                  ],
                   "pathId": "champions",
                   "matchNumber": 3,
                   "key": "uecl|champions|Play-off round|3",
@@ -5695,7 +5821,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "champions",
                   "matchNumber": 4,
                   "key": "uecl|champions|Play-off round|4",
@@ -5731,7 +5862,12 @@
                       "path": "champions"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      2
+                    ]
+                  ],
                   "pathId": "champions",
                   "matchNumber": 5,
                   "key": "uecl|champions|Play-off round|5",
@@ -10377,7 +10513,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      3
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 1,
                   "key": "uecl|main|Play-off round|1",
@@ -10412,7 +10553,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      3
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 2,
                   "key": "uecl|main|Play-off round|2",
@@ -10444,7 +10590,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 3,
                   "key": "uecl|main|Play-off round|3",
@@ -10478,7 +10629,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      2
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 4,
                   "key": "uecl|main|Play-off round|4",
@@ -10513,7 +10669,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 5,
                   "key": "uecl|main|Play-off round|5",
@@ -10548,7 +10709,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      2
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uecl|main|Play-off round|6",
@@ -10583,7 +10749,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      2
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uecl|main|Play-off round|7",
@@ -10615,7 +10786,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uecl|main|Play-off round|8",
@@ -10650,7 +10826,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 9,
                   "key": "uecl|main|Play-off round|9",
@@ -10683,7 +10864,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uecl|main|Play-off round|10",
@@ -10718,7 +10904,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uecl|main|Play-off round|11",
@@ -10753,7 +10944,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 12,
                   "key": "uecl|main|Play-off round|12",
@@ -10788,7 +10984,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 13,
                   "key": "uecl|main|Play-off round|13",
@@ -10822,7 +11023,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      1,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 14,
                   "key": "uecl|main|Play-off round|14",
@@ -10854,7 +11060,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      4
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 15,
                   "key": "uecl|main|Play-off round|15",
@@ -10887,7 +11098,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      0
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 16,
                   "key": "uecl|main|Play-off round|16",
@@ -10924,7 +11140,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      0,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 17,
                   "key": "uecl|main|Play-off round|17",
@@ -10957,7 +11178,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      3,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 18,
                   "key": "uecl|main|Play-off round|18",
@@ -10992,7 +11218,12 @@
                       "path": "main"
                     }
                   },
-                  "legs": [],
+                  "legs": [
+                    [
+                      2,
+                      1
+                    ]
+                  ],
                   "pathId": "main",
                   "matchNumber": 19,
                   "key": "uecl|main|Play-off round|19",

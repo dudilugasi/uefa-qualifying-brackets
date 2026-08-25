@@ -494,7 +494,6 @@ function howQualified(team) {
 
   const PATH_LABEL = { league: "League Path", champions: "Champions Path", main: "Main Path" };
   const bits = [];
-  if (entry.entryRound) bits.push(`entered at the ${entry.entryRound.toLowerCase()}`);
   if (PATH_LABEL[entry.path]) bits.push(PATH_LABEL[entry.path]);
   return { how, sub: bits.join(" · ") };
 }
