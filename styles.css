@@ -47,7 +47,7 @@
     font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
   header, main { max-width: 1500px; margin: 0 auto; }
-  header { padding: 28px 24px 16px; }
+  header { padding: 28px 24px 0; }
   main { padding: 8px 24px 96px; }
 
   .title-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -76,6 +76,13 @@
   }
   .banner[hidden] { display: none; }
 
+  /* The competition tabs stay put on desktop, so the league can be switched
+     from anywhere down a long bracket. The path tabs scroll away with the page. */
+  .tab-bar { max-width: 1500px; margin: 0 auto; padding: 0 24px 6px; }
+  @media (min-width: 701px) {
+    .tab-bar { position: sticky; top: 0; z-index: 20; background: var(--bg); }
+  }
+
   /* Competition switch sits above the path tabs, styled as a stronger control. */
   .comp-tabs { display: flex; gap: 4px; margin: 18px 0 0; flex-wrap: wrap; }
   .comp-tab {
@@ -90,7 +97,7 @@
   .comp-tab .stale-dot { color: var(--err); margin-left: 5px; }
 
   /* Path filters on the left, layout switch pushed to the right of the same row. */
-  .tab-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .tab-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
   .tabs { display: flex; gap: 8px; margin: 14px 0 0; flex-wrap: wrap; }
   .tabs[hidden] { display: none; }
 
@@ -278,6 +285,17 @@
     color: var(--muted); border-bottom: 1px solid var(--line);
   }
   .lp-table th:first-child { text-align: right; }
+  /* Reads as a column label, not a control: the arrow sits beside "Pts" and the
+     cell never wraps it onto a second line. */
+  .lp-sort {
+    appearance: none; background: none; border: none; padding: 0;
+    font: inherit; color: inherit; cursor: pointer;
+    text-transform: inherit; letter-spacing: inherit;
+    white-space: nowrap;
+  }
+  .lp-sort:hover { color: var(--text); }
+  .lp-arrow { margin-left: 4px; font-size: 8px; vertical-align: 1px; }
+  .lp-table th:last-child, .lp-table td:last-child { width: 54px; }
   .lp-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
   .lp-table tr:last-child td { border-bottom: none; }
   .lp-place, .lp-stat {
@@ -303,7 +321,7 @@
   @media (max-width: 700px) {
     .round { flex: 0 0 262px; }
     .bracket { gap: 40px; }
-    header, main { padding-left: 14px; padding-right: 14px; padding-bottom: 14px; }
+    header, main, .tab-bar { padding-left: 14px; padding-right: 14px; padding-bottom: 14px; }
     .entry-card { padding-left: 14px; padding-right: 14px; }
 
     /* Box the tree so it owns both axes: one finger then pans it diagonally,

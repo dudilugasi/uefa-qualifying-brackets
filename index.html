@@ -20,16 +20,21 @@
     <span class="pin-hint" id="pin-hint"></span>
   </div>
   <div class="banner" id="banner" hidden></div>
-  <div class="comp-tabs" role="tablist" id="comp-tabs"></div>
-  <div class="tab-row">
-    <div class="tabs" role="tablist" id="tabs"></div>
-    <div class="layout-switch" id="layout-switch" role="group" aria-label="Layout"></div>
-  </div>
 </header>
+
+<!-- Outside the header so it can stick to the top of the page, not to the
+     bottom of a box that scrolls away after a few hundred pixels. -->
+<div class="tab-bar">
+  <div class="comp-tabs" role="tablist" id="comp-tabs"></div>
+</div>
 
 <div class="entry-card" id="entry-card" role="tooltip" aria-hidden="true"></div>
 
 <main>
+  <div class="tab-row">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="layout-switch" id="layout-switch" role="group" aria-label="Layout"></div>
+  </div>
   <div class="bracket-scroll">
     <div class="canvas" id="canvas">
       <svg class="wires" id="wires" aria-hidden="true"></svg>

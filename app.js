@@ -236,6 +236,23 @@ function renderPath(path) {
 
   drawWires();
   resyncTrace();
+  scrollToLatest();
+}
+
+/**
+ * The page opens on the far right — the latest rounds and the league phase —
+ * and stays there until the reader scrolls for themselves. The scroll event
+ * can't be the signal for that, since setting scrollLeft fires it too.
+ */
+let followLatest = true;
+for (const name of ["wheel", "pointerdown", "keydown", "touchstart"]) {
+  addEventListener(name, () => (followLatest = false), { once: true, passive: true });
+}
+
+function scrollToLatest() {
+  if (!followLatest) return;
+  const scroller = document.querySelector(".bracket-scroll");
+  if (scroller) scroller.scrollLeft = scroller.scrollWidth;
 }
 
 /** Curve from each advancing team's row to that same team's row one round on. */
@@ -362,7 +379,9 @@ function clubIn(competition, name) {
       }
     }
   }
-  return null;
+  // A club that plays no tie here still belongs to the competition if it enters
+  // at the league phase — where every drop-in from a play-off round lands.
+  return (competition?.leaguePhase?.entrants ?? []).find((s) => s.name === name) ?? null;
 }
 
 function originEntry(team) {
@@ -420,10 +439,14 @@ function onwardEntry(team) {
 }
 
 /** Every row for a club in the current view, earliest round first. */
-const teamRows = (name) =>
-  [...document.querySelectorAll(`#canvas .team[data-team="${CSS.escape(name)}"]`)].sort(
+const teamRows = (name) => {
+  const sel = `[data-team="${CSS.escape(name)}"]`;
+  // The league phase table counts: a club that dropped in from another
+  // competition may have no tie row here at all.
+  return [...document.querySelectorAll(`#canvas .team${sel}, #canvas .lp-row${sel}`)].sort(
     (a, b) => Number(a.dataset.round) - Number(b.dataset.round)
   );
+};
 
 /**
  * A re-render can change what a marked route means: another competition lists
@@ -825,6 +848,26 @@ function leaguePhaseSlots(competition) {
 
 const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts"];
 
+/**
+ * The table is sorted by points, or by country when that sort is cleared.
+ * Undecided slots stay at the bottom either way — they have neither.
+ */
+let leagueSort = "points";
+
+const LEAGUE_SORTS = {
+  points: (a, b) => (b.stats?.points ?? 0) - (a.stats?.points ?? 0),
+  country: (a, b) =>
+    (a.country ?? "").localeCompare(b.country ?? "") ||
+    (a.name ?? "").localeCompare(b.name ?? ""),
+};
+
+function sortLeagueSlots(slots) {
+  const compare = LEAGUE_SORTS[leagueSort] ?? LEAGUE_SORTS.points;
+  return [...slots].sort(
+    (a, b) => Number(Boolean(a.placeholder)) - Number(Boolean(b.placeholder)) || compare(a, b)
+  );
+}
+
 /** The league phase as a final column of the bracket, one row per slot. */
 function leaguePhaseColumn(competition, roundIndex) {
   const slots = leaguePhaseSlots(competition);
@@ -836,12 +879,30 @@ function leaguePhaseColumn(competition, roundIndex) {
   const table = el("table", "lp-table");
   const thead = el("thead");
   const headRow = el("tr");
-  LEAGUE_PHASE_COLUMNS.forEach((label) => headRow.append(el("th", null, label)));
+  LEAGUE_PHASE_COLUMNS.forEach((label) => {
+    const th = el("th");
+    if (label !== "Pts") {
+      th.textContent = label;
+    } else {
+      const sorting = leagueSort === "points";
+      const btn = el("button", "lp-sort", "Pts");
+      if (sorting) btn.append(el("span", "lp-arrow", "▼"));
+      btn.type = "button";
+      btn.title = sorting ? "Sort by country instead" : "Sort by points";
+      btn.setAttribute("aria-pressed", String(sorting));
+      btn.addEventListener("click", () => {
+        leagueSort = sorting ? "country" : "points";
+        if (activePath) renderPath(activePath);
+      });
+      th.append(btn);
+    }
+    headRow.append(th);
+  });
   thead.append(headRow);
   table.append(thead);
 
   const body = el("tbody");
-  slots.forEach((slot) => {
+  sortLeagueSlots(slots).forEach((slot) => {
     const tr = el("tr", "lp-row" + (slot.placeholder ? " lp-pending" : ""));
     // Same hooks a tie row carries, so hover, tracing, the card and the wires
     // all reach into this column too.
@@ -1001,7 +1062,12 @@ async function detectRefreshSupport() {
 
 // Card positions shift with width and with font loading; keep the wires on them.
 addEventListener("resize", drawWires);
-if (document.fonts?.ready) document.fonts.ready.then(drawWires);
+if (document.fonts?.ready) {
+  document.fonts.ready.then(() => {
+    drawWires();
+    scrollToLatest(); // the columns are wider once the real font lands
+  });
+}
 
 initTraceEvents();
 renderLayoutSwitch();

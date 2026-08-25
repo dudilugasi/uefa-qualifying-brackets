@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-25T21:29:25.568Z",
+  "fetchedAt": "2026-08-25T21:41:47.918Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -1661,8 +1661,18 @@
                     [
                       3,
                       0
+                    ],
+                    [
+                      1,
+                      5
                     ]
                   ],
+                  "agg": [
+                    4,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "4–5 agg. · a.e.t.",
                   "pathId": "champions",
                   "matchNumber": 2,
                   "key": "ucl|champions|Play-off round|2",
@@ -4934,7 +4944,7 @@
             }
           },
           {
-            "placeholder": true,
+            "name": "Celtic",
             "entry": {
               "token": "CL CH PO",
               "kind": "transfer",
@@ -4943,7 +4953,10 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Scotland",
+            "code": "gb-sct",
+            "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
           },
           {
             "name": "Hapoel Be'er Sheva",
