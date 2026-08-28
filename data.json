@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-28T10:52:05.592Z",
+  "fetchedAt": "2026-08-28T12:22:37.661Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -6158,7 +6158,548 @@
           }
         ],
         "standings": [],
-        "draw": [],
+        "draw": [
+          {
+            "club": "Bayer Leverkusen",
+            "home": [
+              "Marseille",
+              "Red Bull Salzburg",
+              "Celje",
+              "Beşiktaş"
+            ],
+            "away": [
+              "Lyon",
+              "Dinamo Zagreb",
+              "Lech Poznań",
+              "OFI"
+            ]
+          },
+          {
+            "club": "Benfica",
+            "home": [
+              "AZ",
+              "Celtic",
+              "Lech Poznań",
+              "OFI"
+            ],
+            "away": [
+              "Milan",
+              "Viktoria Plzeň",
+              "Omonia",
+              "NEC"
+            ]
+          },
+          {
+            "club": "Juventus",
+            "home": [
+              "Real Sociedad",
+              "Rennes",
+              "Omonia",
+              "NEC"
+            ],
+            "away": [
+              "AZ",
+              "Ferencváros",
+              "Celta Vigo",
+              "Hapoel Be'er Sheva"
+            ]
+          },
+          {
+            "club": "Milan",
+            "home": [
+              "Benfica",
+              "Ferencváros",
+              "Sunderland",
+              "Ararat-Armenia"
+            ],
+            "away": [
+              "Olympiacos",
+              "Red Bull Salzburg",
+              "Bournemouth",
+              "Levski Sofia"
+            ]
+          },
+          {
+            "club": "Lyon",
+            "home": [
+              "Bayer Leverkusen",
+              "Union Saint-Gilloise",
+              "Crystal Palace",
+              "Lillestrøm"
+            ],
+            "away": [
+              "Real Sociedad",
+              "Anderlecht",
+              "Jagiellonia Białystok",
+              "TSG Hoffenheim"
+            ]
+          },
+          {
+            "club": "AZ",
+            "home": [
+              "Juventus",
+              "Dinamo Zagreb",
+              "Sturm Graz",
+              "Hapoel Be'er Sheva"
+            ],
+            "away": [
+              "Benfica",
+              "Sparta Prague",
+              "Sunderland",
+              "Ararat-Armenia"
+            ]
+          },
+          {
+            "club": "Olympiacos",
+            "home": [
+              "Milan",
+              "Sparta Prague",
+              "Jagiellonia Białystok",
+              "TSG Hoffenheim"
+            ],
+            "away": [
+              "Marseille",
+              "Rennes",
+              "Celje",
+              "Torreense"
+            ]
+          },
+          {
+            "club": "Real Sociedad",
+            "home": [
+              "Lyon",
+              "Viktoria Plzeň",
+              "Bournemouth",
+              "Torreense"
+            ],
+            "away": [
+              "Juventus",
+              "Union Saint-Gilloise",
+              "Crystal Palace",
+              "Lillestrøm"
+            ]
+          },
+          {
+            "club": "Marseille",
+            "home": [
+              "Olympiacos",
+              "Anderlecht",
+              "Celta Vigo",
+              "Levski Sofia"
+            ],
+            "away": [
+              "Bayer Leverkusen",
+              "Celtic",
+              "Sturm Graz",
+              "Beşiktaş"
+            ]
+          },
+          {
+            "club": "Ferencváros",
+            "home": [
+              "Juventus",
+              "Viktoria Plzeň",
+              "Celje",
+              "Torreense"
+            ],
+            "away": [
+              "Milan",
+              "Celtic",
+              "Lech Poznań",
+              "TSG Hoffenheim"
+            ]
+          },
+          {
+            "club": "Viktoria Plzeň",
+            "home": [
+              "Benfica",
+              "Union Saint-Gilloise",
+              "Jagiellonia Białystok",
+              "Levski Sofia"
+            ],
+            "away": [
+              "Real Sociedad",
+              "Ferencváros",
+              "Bournemouth",
+              "Lillestrøm"
+            ]
+          },
+          {
+            "club": "Union Saint-Gilloise",
+            "home": [
+              "Real Sociedad",
+              "Celtic",
+              "Lech Poznań",
+              "Hapoel Be'er Sheva"
+            ],
+            "away": [
+              "Lyon",
+              "Viktoria Plzeň",
+              "Celta Vigo",
+              "Beşiktaş"
+            ]
+          },
+          {
+            "club": "Dinamo Zagreb",
+            "home": [
+              "Bayer Leverkusen",
+              "Anderlecht",
+              "Sturm Graz",
+              "NEC"
+            ],
+            "away": [
+              "AZ",
+              "Rennes",
+              "Sunderland",
+              "Hapoel Be'er Sheva"
+            ]
+          },
+          {
+            "club": "Red Bull Salzburg",
+            "home": [
+              "Milan",
+              "Sparta Prague",
+              "Crystal Palace",
+              "Ararat-Armenia"
+            ],
+            "away": [
+              "Bayer Leverkusen",
+              "Anderlecht",
+              "Celje",
+              "Levski Sofia"
+            ]
+          },
+          {
+            "club": "Celtic",
+            "home": [
+              "Marseille",
+              "Ferencváros",
+              "Celta Vigo",
+              "Beşiktaş"
+            ],
+            "away": [
+              "Benfica",
+              "Union Saint-Gilloise",
+              "Omonia",
+              "Torreense"
+            ]
+          },
+          {
+            "club": "Sparta Prague",
+            "home": [
+              "AZ",
+              "Rennes",
+              "Bournemouth",
+              "Lillestrøm"
+            ],
+            "away": [
+              "Olympiacos",
+              "Red Bull Salzburg",
+              "Crystal Palace",
+              "Ararat-Armenia"
+            ]
+          },
+          {
+            "club": "Rennes",
+            "home": [
+              "Olympiacos",
+              "Dinamo Zagreb",
+              "Omonia",
+              "OFI"
+            ],
+            "away": [
+              "Juventus",
+              "Sparta Prague",
+              "Sturm Graz",
+              "NEC"
+            ]
+          },
+          {
+            "club": "Anderlecht",
+            "home": [
+              "Lyon",
+              "Red Bull Salzburg",
+              "Sunderland",
+              "TSG Hoffenheim"
+            ],
+            "away": [
+              "Marseille",
+              "Dinamo Zagreb",
+              "Jagiellonia Białystok",
+              "OFI"
+            ]
+          },
+          {
+            "club": "Sturm Graz",
+            "home": [
+              "Marseille",
+              "Rennes",
+              "Celje",
+              "OFI"
+            ],
+            "away": [
+              "AZ",
+              "Dinamo Zagreb",
+              "Bournemouth",
+              "TSG Hoffenheim"
+            ]
+          },
+          {
+            "club": "Lech Poznań",
+            "home": [
+              "Bayer Leverkusen",
+              "Ferencváros",
+              "Sunderland",
+              "Torreense"
+            ],
+            "away": [
+              "Benfica",
+              "Union Saint-Gilloise",
+              "Crystal Palace",
+              "OFI"
+            ]
+          },
+          {
+            "club": "Crystal Palace",
+            "home": [
+              "Real Sociedad",
+              "Sparta Prague",
+              "Lech Poznań",
+              "TSG Hoffenheim"
+            ],
+            "away": [
+              "Lyon",
+              "Red Bull Salzburg",
+              "Jagiellonia Białystok",
+              "Beşiktaş"
+            ]
+          },
+          {
+            "club": "Bournemouth",
+            "home": [
+              "Milan",
+              "Viktoria Plzeň",
+              "Sturm Graz",
+              "Hapoel Be'er Sheva"
+            ],
+            "away": [
+              "Real Sociedad",
+              "Sparta Prague",
+              "Celta Vigo",
+              "Lillestrøm"
+            ]
+          },
+          {
+            "club": "Sunderland",
+            "home": [
+              "AZ",
+              "Dinamo Zagreb",
+              "Jagiellonia Białystok",
+              "Levski Sofia"
+            ],
+            "away": [
+              "Milan",
+              "Anderlecht",
+              "Lech Poznań",
+              "Torreense"
+            ]
+          },
+          {
+            "club": "Celje",
+            "home": [
+              "Olympiacos",
+              "Red Bull Salzburg",
+              "Omonia",
+              "NEC"
+            ],
+            "away": [
+              "Bayer Leverkusen",
+              "Ferencváros",
+              "Sturm Graz",
+              "Ararat-Armenia"
+            ]
+          },
+          {
+            "club": "Jagiellonia Białystok",
+            "home": [
+              "Lyon",
+              "Anderlecht",
+              "Crystal Palace",
+              "Ararat-Armenia"
+            ],
+            "away": [
+              "Olympiacos",
+              "Viktoria Plzeň",
+              "Sunderland",
+              "Levski Sofia"
+            ]
+          },
+          {
+            "club": "Omonia",
+            "home": [
+              "Benfica",
+              "Celtic",
+              "Celta Vigo",
+              "Beşiktaş"
+            ],
+            "away": [
+              "Juventus",
+              "Rennes",
+              "Celje",
+              "NEC"
+            ]
+          },
+          {
+            "club": "Celta Vigo",
+            "home": [
+              "Juventus",
+              "Union Saint-Gilloise",
+              "Bournemouth",
+              "Lillestrøm"
+            ],
+            "away": [
+              "Marseille",
+              "Celtic",
+              "Omonia",
+              "Hapoel Be'er Sheva"
+            ]
+          },
+          {
+            "club": "TSG Hoffenheim",
+            "home": [
+              "Lyon",
+              "Ferencváros",
+              "Sturm Graz",
+              "Beşiktaş"
+            ],
+            "away": [
+              "Olympiacos",
+              "Anderlecht",
+              "Crystal Palace",
+              "OFI"
+            ]
+          },
+          {
+            "club": "Beşiktaş",
+            "home": [
+              "Marseille",
+              "Union Saint-Gilloise",
+              "Crystal Palace",
+              "Hapoel Be'er Sheva"
+            ],
+            "away": [
+              "Bayer Leverkusen",
+              "Celtic",
+              "Omonia",
+              "TSG Hoffenheim"
+            ]
+          },
+          {
+            "club": "Torreense",
+            "home": [
+              "Olympiacos",
+              "Celtic",
+              "Sunderland",
+              "Ararat-Armenia"
+            ],
+            "away": [
+              "Real Sociedad",
+              "Ferencváros",
+              "Lech Poznań",
+              "Lillestrøm"
+            ]
+          },
+          {
+            "club": "Hapoel Be'er Sheva",
+            "home": [
+              "Juventus",
+              "Dinamo Zagreb",
+              "Celta Vigo",
+              "OFI"
+            ],
+            "away": [
+              "AZ",
+              "Union Saint-Gilloise",
+              "Bournemouth",
+              "Beşiktaş"
+            ]
+          },
+          {
+            "club": "NEC",
+            "home": [
+              "Benfica",
+              "Rennes",
+              "Omonia",
+              "Levski Sofia"
+            ],
+            "away": [
+              "Juventus",
+              "Dinamo Zagreb",
+              "Celje",
+              "Ararat-Armenia"
+            ]
+          },
+          {
+            "club": "OFI",
+            "home": [
+              "Bayer Leverkusen",
+              "Anderlecht",
+              "Lech Poznań",
+              "TSG Hoffenheim"
+            ],
+            "away": [
+              "Benfica",
+              "Rennes",
+              "Sturm Graz",
+              "Hapoel Be'er Sheva"
+            ]
+          },
+          {
+            "club": "Lillestrøm",
+            "home": [
+              "Real Sociedad",
+              "Viktoria Plzeň",
+              "Bournemouth",
+              "Torreense"
+            ],
+            "away": [
+              "Lyon",
+              "Sparta Prague",
+              "Celta Vigo",
+              "Levski Sofia"
+            ]
+          },
+          {
+            "club": "Levski Sofia",
+            "home": [
+              "Milan",
+              "Red Bull Salzburg",
+              "Jagiellonia Białystok",
+              "Lillestrøm"
+            ],
+            "away": [
+              "Marseille",
+              "Viktoria Plzeň",
+              "Sunderland",
+              "NEC"
+            ]
+          },
+          {
+            "club": "Ararat-Armenia",
+            "home": [
+              "AZ",
+              "Sparta Prague",
+              "Celje",
+              "NEC"
+            ],
+            "away": [
+              "Milan",
+              "Red Bull Salzburg",
+              "Jagiellonia Białystok",
+              "Torreense"
+            ]
+          }
+        ],
         "matchdays": []
       }
     },
