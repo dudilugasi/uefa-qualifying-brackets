@@ -842,11 +842,139 @@ function leaguePhaseSlots(competition) {
     slot.name = slot.label;
   }
 
+  // The standings table names clubs its own way, so it is matched loosely.
+  const standings = new Map(
+    (competition.leaguePhase?.standings ?? []).map((row) => [looseName(row.name), row])
+  );
+  for (const slot of slots) {
+    if (slot.name) slot.stats = standings.get(looseName(slot.name)) ?? null;
+  }
+
   // Decided first, whatever order they were found in; undecided slots last.
   return [...slots.filter((s) => !s.placeholder), ...slots.filter((s) => s.placeholder)];
 }
 
-const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts"];
+const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts", ""];
+
+/** Club names differ between the tie tables, the Teams table and the standings. */
+const looseName = (name) => (name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+
+const MATCH_DATE = new Intl.DateTimeFormat(undefined, { day: "numeric", month: "short" });
+const matchDate = (iso) => {
+  if (!iso) return "";
+  const date = new Date(`${iso}T00:00:00`);
+  return Number.isNaN(date.getTime()) ? iso : MATCH_DATE.format(date);
+};
+
+/** Flags by club, since the fixture lists carry names only. */
+function clubBadges(competition) {
+  const badges = new Map();
+  for (const slot of leaguePhaseSlots(competition)) {
+    if (slot.name && (slot.flag || slot.code)) badges.set(looseName(slot.name), slot);
+  }
+  return badges;
+}
+
+function gameRow(match, badges) {
+  const flagOf = (name) => {
+    const club = badges?.get(looseName(name));
+    if (club?.flag) return el("span", "flag", club.flag);
+    if (club?.code) return el("span", "flag code", club.code.replace("gb-", "").toUpperCase());
+    return null;
+  };
+
+  const side = (name, awaySide) => {
+    const cell = el("span", "lp-game-team");
+    const flag = flagOf(name);
+    // The away side is right-aligned, so its flag trails the name.
+    if (flag && !awaySide) cell.append(flag);
+    cell.append(el("span", "lp-game-name", name));
+    if (flag && awaySide) cell.append(flag);
+    return cell;
+  };
+
+  const row = el("div", "lp-game");
+  row.append(el("span", "lp-game-date", matchDate(match.date)));
+  row.append(side(match.home, false));
+  row.append(
+    el("span", "lp-game-score", match.score ? `${match.score[0]}–${match.score[1]}` : match.time || "v")
+  );
+  row.append(side(match.away, true));
+  return row;
+}
+
+/**
+ * The pairings the draw produced, for when the matchdays haven't been
+ * calendared yet. Every club's four home opponents cover the whole fixture
+ * list exactly once, which is what the all-clubs view lists.
+ */
+function drawFixtures(competition, club) {
+  const draw = competition.leaguePhase?.draw ?? [];
+  if (!club) {
+    return draw
+      .flatMap((row) => row.home.map((away) => ({ home: row.club, away })))
+      .sort((a, b) => a.home.localeCompare(b.home));
+  }
+
+  const row = draw.find((r) => looseName(r.club) === looseName(club));
+  if (!row) return [];
+  return [
+    ...row.home.map((away) => ({ home: club, away })),
+    ...row.away.map((home) => ({ home, away: club })),
+  ];
+}
+
+/**
+ * Fixtures grouped by matchday, for one club or for the whole competition,
+ * shown in a modal — the list is far too long to sit inside the column.
+ */
+function openFixtures(competition, club) {
+  const dialog = document.getElementById("games-dialog");
+  const days = competition.leaguePhase?.matchdays ?? [];
+  const wanted = looseName(club);
+
+  const badges = clubBadges(competition);
+  const panel = el("div", "lp-games");
+  const head = el("div", "lp-games-head", club ? `${club} — fixtures` : "All fixtures");
+  const close = el("button", "lp-close", "✕");
+  close.type = "button";
+  close.title = "Close";
+  close.addEventListener("click", () => dialog.close());
+  head.append(close);
+  panel.append(head);
+
+  let shown = 0;
+  let dated = false;
+  for (const day of days) {
+    const matches = (day.matches ?? []).filter(
+      (m) => !club || looseName(m.home) === wanted || looseName(m.away) === wanted
+    );
+    if (!matches.length) continue;
+
+    panel.append(el("div", "lp-day", day.name));
+    for (const match of matches) {
+      panel.append(gameRow(match, badges));
+      dated ||= Boolean(match.date);
+    }
+    shown += matches.length;
+  }
+
+  // Nothing calendared: the draw still says who plays whom, and where.
+  if (!shown) {
+    for (const match of drawFixtures(competition, club)) panel.append(gameRow(match, badges));
+  }
+
+  // Without dates the column is dead space, and it pushes the tie off centre.
+  if (!dated) panel.classList.add("no-dates");
+
+  dialog.replaceChildren(panel);
+  dialog.showModal();
+}
+
+/** Clicking the backdrop closes the dialog; Esc is handled by the element. */
+document.getElementById("games-dialog").addEventListener("click", (ev) => {
+  if (ev.target === ev.currentTarget) ev.currentTarget.close();
+});
 
 /**
  * The table is sorted by points, or by country when that sort is cleared.
@@ -881,7 +1009,15 @@ function leaguePhaseColumn(competition, roundIndex) {
   const headRow = el("tr");
   LEAGUE_PHASE_COLUMNS.forEach((label) => {
     const th = el("th");
-    if (label !== "Pts") {
+    if (label === "") {
+      // The games column's header opens every club's fixtures at once.
+      const btn = el("button", "lp-games-btn", "⚽");
+      btn.type = "button";
+      btn.title = "Show every fixture, by matchday";
+      btn.setAttribute("aria-label", btn.title);
+      btn.addEventListener("click", () => openFixtures(competition, null));
+      th.append(btn);
+    } else if (label !== "Pts") {
       th.textContent = label;
     } else {
       const sorting = leagueSort === "points";
@@ -910,8 +1046,10 @@ function leaguePhaseColumn(competition, roundIndex) {
     tr.dataset.team = slot.name ?? "";
     tr.dataset.round = String(roundIndex);
     if (slot.tieKey) tr.dataset.refTie = slot.tieKey;
-    // No standings until the league phase kicks off; the article has no table yet.
-    tr.append(el("td", "lp-place", "–"));
+
+    const stats = slot.stats;
+    const cell = (value) => (value == null ? "–" : String(value));
+    tr.append(el("td", "lp-place", cell(stats?.position)));
 
     const name = el("td", "lp-name");
     if (slot.flag) name.append(el("span", "flag", slot.flag));
@@ -919,7 +1057,23 @@ function leaguePhaseColumn(competition, roundIndex) {
     name.append(el("span", "lp-club", slot.placeholder ? slot.label ?? "Undecided slot" : slot.name));
     tr.append(name);
 
-    for (let i = 0; i < 4; i++) tr.append(el("td", "lp-stat", "–"));
+    for (const value of [stats?.wins, stats?.draws, stats?.losses, stats?.points]) {
+      tr.append(el("td", "lp-stat", cell(value)));
+    }
+
+    const games = el("td", "lp-games-cell");
+    if (!slot.placeholder) {
+      const btn = el("button", "lp-games-btn", "⚽");
+      btn.type = "button";
+      btn.title = `Show ${slot.name}'s fixtures, by matchday`;
+      btn.setAttribute("aria-label", btn.title);
+      btn.addEventListener("click", (ev) => {
+        ev.stopPropagation(); // the row click pins the route; this doesn't
+        openFixtures(competition, slot.name);
+      });
+      games.append(btn);
+    }
+    tr.append(games);
     body.append(tr);
   });
   table.append(body);

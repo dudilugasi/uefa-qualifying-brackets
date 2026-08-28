@@ -264,8 +264,10 @@
 
   /* The round after qualifying: a standings table rather than ties, so it needs
      a wider column than the tie rounds and sits flush with their tops. */
-  .league-round { flex: 0 0 430px; }
-  .subs .league-round { flex: 0 0 430px; }
+  /* Trailing space wide enough that the far-right scroll leaves the table around
+     the middle of the window rather than glued to its edge. */
+  .league-round { flex: 0 0 560px; margin-right: min(34vw, 520px); }
+  .subs .league-round { flex: 0 0 560px; }
   .bracket.subs .league-round {
     padding: 10px 16px 14px;
     border: 1px solid var(--line); border-radius: 12px;
@@ -295,11 +297,73 @@
   }
   .lp-sort:hover { color: var(--text); }
   .lp-arrow { margin-left: 4px; font-size: 8px; vertical-align: 1px; }
-  .lp-table th:last-child, .lp-table td:last-child { width: 54px; }
-  .lp-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
+
+  /* Fixtures: a button per club, one for the lot in the header, and the list
+     itself under the table. */
+  .lp-games-cell { width: 40px; text-align: right; }
+  .lp-games-btn {
+    appearance: none; border: 1px solid transparent; border-radius: 999px;
+    background: none; cursor: pointer;
+    padding: 2px 5px; font: inherit; font-size: 13px; line-height: 1;
+    opacity: 0.55; transition: opacity 120ms ease;
+  }
+  .lp-games-btn:hover { opacity: 1; }
+  .lp-games-btn[aria-pressed="true"] {
+    opacity: 1; border-color: var(--accent); background: var(--accent-soft);
+  }
+
+  .games-dialog {
+    width: min(560px, calc(100vw - 32px));
+    max-height: min(720px, 84dvh);
+    padding: 0; overflow: auto;
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  }
+  .games-dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+
+  .lp-games { padding: 16px 18px 20px; font-size: 13px; }
+  .lp-games-head {
+    display: flex; align-items: baseline; gap: 8px;
+    position: sticky; top: 0; z-index: 1;
+    margin: -16px -18px 8px; padding: 14px 18px 10px;
+    background: var(--panel); border-bottom: 1px solid var(--line);
+    font-size: 15px; font-weight: 700;
+  }
+  .lp-close {
+    appearance: none; background: none; border: none; padding: 0;
+    margin-left: auto; color: var(--muted); cursor: pointer; font: inherit;
+  }
+  .lp-close:hover { color: var(--text); }
+  .lp-day {
+    margin: 12px 0 5px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .lp-day:first-of-type { margin-top: 2px; }
+  .lp-game {
+    display: grid; grid-template-columns: 46px 1fr auto 1fr;
+    align-items: baseline; gap: 8px; padding: 3px 0;
+  }
+  .lp-game-date { color: var(--muted); font-size: 12px; }
+  /* Draw pairings have no dates, so the tie centres in the dialog instead. */
+  .lp-games.no-dates .lp-game { grid-template-columns: 1fr auto 1fr; }
+  .lp-games.no-dates .lp-game-date { display: none; }
+  .lp-game-team {
+    display: flex; align-items: baseline; gap: 6px;
+    min-width: 0; white-space: nowrap;
+  }
+  .lp-game-team:last-child { justify-content: flex-end; }
+  .lp-game-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .lp-game-team .flag { flex: none; width: auto; }
+  .lp-game-score { font-weight: 700; font-variant-numeric: tabular-nums; }
+  /* Every column but the club's is pinned narrow, so the names get the rest. */
+  .lp-table th:nth-child(6) { width: 52px; }
+  .lp-table td { padding: 7px 8px; border-bottom: 1px solid var(--line); }
   .lp-table tr:last-child td { border-bottom: none; }
+  .lp-name { width: auto; }
   .lp-place, .lp-stat {
-    width: 44px;
+    width: 32px;
     color: var(--muted); font-variant-numeric: tabular-nums;
   }
   .lp-place {

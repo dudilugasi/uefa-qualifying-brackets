@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-25T21:41:47.918Z",
+  "fetchedAt": "2026-08-28T10:52:05.592Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -1623,8 +1623,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      0,
+                      4
                     ]
                   ],
+                  "agg": [
+                    0,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "0–4 agg.",
                   "pathId": "champions",
                   "matchNumber": 1,
                   "key": "ucl|champions|Play-off round|1",
@@ -1709,8 +1719,18 @@
                     [
                       2,
                       2
+                    ],
+                    [
+                      1,
+                      3
                     ]
                   ],
+                  "agg": [
+                    3,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "3–5 agg.",
                   "pathId": "champions",
                   "matchNumber": 3,
                   "key": "ucl|champions|Play-off round|3",
@@ -1747,8 +1767,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      2,
+                      1
                     ]
                   ],
+                  "agg": [
+                    3,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "3–2 agg. · a.e.t.",
                   "pathId": "champions",
                   "matchNumber": 4,
                   "key": "ucl|champions|Play-off round|4",
@@ -2143,8 +2173,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      2,
+                      1
                     ]
                   ],
+                  "agg": [
+                    3,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "3–2 agg.",
                   "pathId": "league",
                   "matchNumber": 1,
                   "key": "ucl|league|Play-off round|1",
@@ -2583,6 +2623,880 @@
             "code": "UA",
             "flag": "🇺🇦"
           }
+        ],
+        "standings": [
+          {
+            "name": "Paris Saint-Germain",
+            "position": 1,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Arsenal",
+            "position": 2,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Atlético Madrid",
+            "position": 3,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Bayern Munich",
+            "position": 4,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Real Madrid",
+            "position": 5,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Barcelona",
+            "position": 6,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Inter Milan",
+            "position": 7,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Manchester City",
+            "position": 8,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Borussia Dortmund",
+            "position": 9,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Manchester United",
+            "position": 10,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Liverpool",
+            "position": 11,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Galatasaray",
+            "position": 12,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "PSV Eindhoven",
+            "position": 13,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Club Brugge",
+            "position": 14,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "RB Leipzig",
+            "position": 15,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Aston Villa",
+            "position": 16,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Feyenoord",
+            "position": 17,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Shakhtar Donetsk",
+            "position": 18,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Real Betis",
+            "position": 19,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lens",
+            "position": 20,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Slavia Prague",
+            "position": 21,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Napoli",
+            "position": 22,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lille",
+            "position": 23,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Roma",
+            "position": 24,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Villarreal",
+            "position": 25,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sporting CP",
+            "position": 26,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Porto",
+            "position": 27,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "VfB Stuttgart",
+            "position": 28,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Como",
+            "position": 29,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "AEK Athens",
+            "position": 30,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "LASK",
+            "position": 31,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Viking",
+            "position": 32,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Slovan Bratislava",
+            "position": 33,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sabah",
+            "position": 34,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Fenerbahçe",
+            "position": 35,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Bodø/Glimt",
+            "position": 36,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          }
+        ],
+        "draw": [
+          {
+            "club": "Paris Saint-Germain",
+            "home": [
+              "Barcelona",
+              "Roma",
+              "Galatasaray",
+              "Slovan Bratislava"
+            ],
+            "away": [
+              "Manchester City",
+              "Aston Villa",
+              "Villarreal",
+              "Como"
+            ]
+          },
+          {
+            "club": "Bayern Munich",
+            "home": [
+              "Arsenal",
+              "Real Betis",
+              "Bodø/Glimt",
+              "Slavia Prague"
+            ],
+            "away": [
+              "Atlético Madrid",
+              "Manchester United",
+              "Lille",
+              "Viking"
+            ]
+          },
+          {
+            "club": "Real Madrid",
+            "home": [
+              "Inter Milan",
+              "PSV Eindhoven",
+              "RB Leipzig",
+              "LASK"
+            ],
+            "away": [
+              "Arsenal",
+              "Roma",
+              "Shakhtar Donetsk",
+              "AEK Athens"
+            ]
+          },
+          {
+            "club": "Liverpool",
+            "home": [
+              "Atlético Madrid",
+              "Porto",
+              "Villarreal",
+              "Lens"
+            ],
+            "away": [
+              "Inter Milan",
+              "Club Brugge",
+              "Fenerbahçe",
+              "LASK"
+            ]
+          },
+          {
+            "club": "Inter Milan",
+            "home": [
+              "Liverpool",
+              "Club Brugge",
+              "Shakhtar Donetsk",
+              "VfB Stuttgart"
+            ],
+            "away": [
+              "Real Madrid",
+              "Borussia Dortmund",
+              "Feyenoord",
+              "Slovan Bratislava"
+            ]
+          },
+          {
+            "club": "Manchester City",
+            "home": [
+              "Paris Saint-Germain",
+              "Sporting CP",
+              "Napoli",
+              "AEK Athens"
+            ],
+            "away": [
+              "Barcelona",
+              "Porto",
+              "RB Leipzig",
+              "Lens"
+            ]
+          },
+          {
+            "club": "Arsenal",
+            "home": [
+              "Real Madrid",
+              "Borussia Dortmund",
+              "Lille",
+              "Sabah"
+            ],
+            "away": [
+              "Bayern Munich",
+              "Real Betis",
+              "Napoli",
+              "Slavia Prague"
+            ]
+          },
+          {
+            "club": "Barcelona",
+            "home": [
+              "Manchester City",
+              "Aston Villa",
+              "Feyenoord",
+              "Como"
+            ],
+            "away": [
+              "Paris Saint-Germain",
+              "Sporting CP",
+              "Galatasaray",
+              "Sabah"
+            ]
+          },
+          {
+            "club": "Atlético Madrid",
+            "home": [
+              "Bayern Munich",
+              "Manchester United",
+              "Fenerbahçe",
+              "Viking"
+            ],
+            "away": [
+              "Liverpool",
+              "PSV Eindhoven",
+              "Bodø/Glimt",
+              "VfB Stuttgart"
+            ]
+          },
+          {
+            "club": "Borussia Dortmund",
+            "home": [
+              "Inter Milan",
+              "Real Betis",
+              "Villarreal",
+              "AEK Athens"
+            ],
+            "away": [
+              "Arsenal",
+              "Aston Villa",
+              "Bodø/Glimt",
+              "Sabah"
+            ]
+          },
+          {
+            "club": "Roma",
+            "home": [
+              "Real Madrid",
+              "Sporting CP",
+              "Lille",
+              "Slovan Bratislava"
+            ],
+            "away": [
+              "Paris Saint-Germain",
+              "Manchester United",
+              "Fenerbahçe",
+              "AEK Athens"
+            ]
+          },
+          {
+            "club": "Sporting CP",
+            "home": [
+              "Barcelona",
+              "Manchester United",
+              "Galatasaray",
+              "LASK"
+            ],
+            "away": [
+              "Manchester City",
+              "Roma",
+              "Shakhtar Donetsk",
+              "Lens"
+            ]
+          },
+          {
+            "club": "Aston Villa",
+            "home": [
+              "Paris Saint-Germain",
+              "Borussia Dortmund",
+              "Fenerbahçe",
+              "Viking"
+            ],
+            "away": [
+              "Barcelona",
+              "Club Brugge",
+              "Galatasaray",
+              "Slavia Prague"
+            ]
+          },
+          {
+            "club": "Porto",
+            "home": [
+              "Manchester City",
+              "PSV Eindhoven",
+              "Napoli",
+              "Slavia Prague"
+            ],
+            "away": [
+              "Liverpool",
+              "Real Betis",
+              "Feyenoord",
+              "LASK"
+            ]
+          },
+          {
+            "club": "Manchester United",
+            "home": [
+              "Bayern Munich",
+              "Roma",
+              "RB Leipzig",
+              "Sabah"
+            ],
+            "away": [
+              "Atlético Madrid",
+              "Sporting CP",
+              "Villarreal",
+              "Como"
+            ]
+          },
+          {
+            "club": "Club Brugge",
+            "home": [
+              "Liverpool",
+              "Aston Villa",
+              "Bodø/Glimt",
+              "Lens"
+            ],
+            "away": [
+              "Inter Milan",
+              "PSV Eindhoven",
+              "Napoli",
+              "VfB Stuttgart"
+            ]
+          },
+          {
+            "club": "Real Betis",
+            "home": [
+              "Arsenal",
+              "Porto",
+              "Feyenoord",
+              "Como"
+            ],
+            "away": [
+              "Bayern Munich",
+              "Borussia Dortmund",
+              "Lille",
+              "Slovan Bratislava"
+            ]
+          },
+          {
+            "club": "PSV Eindhoven",
+            "home": [
+              "Atlético Madrid",
+              "Club Brugge",
+              "Shakhtar Donetsk",
+              "VfB Stuttgart"
+            ],
+            "away": [
+              "Real Madrid",
+              "Porto",
+              "RB Leipzig",
+              "Viking"
+            ]
+          },
+          {
+            "club": "Feyenoord",
+            "home": [
+              "Inter Milan",
+              "Porto",
+              "RB Leipzig",
+              "Como"
+            ],
+            "away": [
+              "Barcelona",
+              "Real Betis",
+              "Galatasaray",
+              "Viking"
+            ]
+          },
+          {
+            "club": "Lille",
+            "home": [
+              "Bayern Munich",
+              "Real Betis",
+              "Galatasaray",
+              "Slovan Bratislava"
+            ],
+            "away": [
+              "Arsenal",
+              "Roma",
+              "Bodø/Glimt",
+              "VfB Stuttgart"
+            ]
+          },
+          {
+            "club": "Bodø/Glimt",
+            "home": [
+              "Atlético Madrid",
+              "Borussia Dortmund",
+              "Lille",
+              "LASK"
+            ],
+            "away": [
+              "Bayern Munich",
+              "Club Brugge",
+              "Napoli",
+              "Lens"
+            ]
+          },
+          {
+            "club": "Napoli",
+            "home": [
+              "Arsenal",
+              "Club Brugge",
+              "Bodø/Glimt",
+              "Viking"
+            ],
+            "away": [
+              "Manchester City",
+              "Porto",
+              "Villarreal",
+              "Sabah"
+            ]
+          },
+          {
+            "club": "RB Leipzig",
+            "home": [
+              "Manchester City",
+              "PSV Eindhoven",
+              "Shakhtar Donetsk",
+              "Lens"
+            ],
+            "away": [
+              "Real Madrid",
+              "Manchester United",
+              "Feyenoord",
+              "Como"
+            ]
+          },
+          {
+            "club": "Villarreal",
+            "home": [
+              "Paris Saint-Germain",
+              "Manchester United",
+              "Napoli",
+              "Sabah"
+            ],
+            "away": [
+              "Liverpool",
+              "Borussia Dortmund",
+              "Fenerbahçe",
+              "Slavia Prague"
+            ]
+          },
+          {
+            "club": "Fenerbahçe",
+            "home": [
+              "Liverpool",
+              "Roma",
+              "Villarreal",
+              "Slavia Prague"
+            ],
+            "away": [
+              "Atlético Madrid",
+              "Aston Villa",
+              "Shakhtar Donetsk",
+              "LASK"
+            ]
+          },
+          {
+            "club": "Shakhtar Donetsk",
+            "home": [
+              "Real Madrid",
+              "Sporting CP",
+              "Fenerbahçe",
+              "AEK Athens"
+            ],
+            "away": [
+              "Inter Milan",
+              "PSV Eindhoven",
+              "RB Leipzig",
+              "Slovan Bratislava"
+            ]
+          },
+          {
+            "club": "Galatasaray",
+            "home": [
+              "Barcelona",
+              "Aston Villa",
+              "Feyenoord",
+              "VfB Stuttgart"
+            ],
+            "away": [
+              "Paris Saint-Germain",
+              "Sporting CP",
+              "Lille",
+              "AEK Athens"
+            ]
+          },
+          {
+            "club": "Slavia Prague",
+            "home": [
+              "Arsenal",
+              "Aston Villa",
+              "Villarreal",
+              "Lens"
+            ],
+            "away": [
+              "Bayern Munich",
+              "Porto",
+              "Fenerbahçe",
+              "Sabah"
+            ]
+          },
+          {
+            "club": "Slovan Bratislava",
+            "home": [
+              "Inter Milan",
+              "Real Betis",
+              "Shakhtar Donetsk",
+              "VfB Stuttgart"
+            ],
+            "away": [
+              "Paris Saint-Germain",
+              "Roma",
+              "Lille",
+              "LASK"
+            ]
+          },
+          {
+            "club": "VfB Stuttgart",
+            "home": [
+              "Atlético Madrid",
+              "Club Brugge",
+              "Lille",
+              "Viking"
+            ],
+            "away": [
+              "Inter Milan",
+              "PSV Eindhoven",
+              "Galatasaray",
+              "Slovan Bratislava"
+            ]
+          },
+          {
+            "club": "AEK Athens",
+            "home": [
+              "Real Madrid",
+              "Roma",
+              "Galatasaray",
+              "LASK"
+            ],
+            "away": [
+              "Manchester City",
+              "Borussia Dortmund",
+              "Shakhtar Donetsk",
+              "Como"
+            ]
+          },
+          {
+            "club": "LASK",
+            "home": [
+              "Liverpool",
+              "Porto",
+              "Fenerbahçe",
+              "Slovan Bratislava"
+            ],
+            "away": [
+              "Real Madrid",
+              "Sporting CP",
+              "Bodø/Glimt",
+              "AEK Athens"
+            ]
+          },
+          {
+            "club": "Como",
+            "home": [
+              "Paris Saint-Germain",
+              "Manchester United",
+              "RB Leipzig",
+              "AEK Athens"
+            ],
+            "away": [
+              "Barcelona",
+              "Real Betis",
+              "Feyenoord",
+              "Lens"
+            ]
+          },
+          {
+            "club": "Lens",
+            "home": [
+              "Manchester City",
+              "Sporting CP",
+              "Bodø/Glimt",
+              "Como"
+            ],
+            "away": [
+              "Liverpool",
+              "Club Brugge",
+              "RB Leipzig",
+              "Slavia Prague"
+            ]
+          },
+          {
+            "club": "Viking",
+            "home": [
+              "Bayern Munich",
+              "PSV Eindhoven",
+              "Feyenoord",
+              "Sabah"
+            ],
+            "away": [
+              "Atlético Madrid",
+              "Aston Villa",
+              "Napoli",
+              "VfB Stuttgart"
+            ]
+          },
+          {
+            "club": "Sabah",
+            "home": [
+              "Barcelona",
+              "Borussia Dortmund",
+              "Napoli",
+              "Slavia Prague"
+            ],
+            "away": [
+              "Arsenal",
+              "Manchester United",
+              "Villarreal",
+              "Viking"
+            ]
+          }
+        ],
+        "matchdays": [
+          {
+            "name": "Matchday 1",
+            "matches": []
+          }
         ]
       }
     },
@@ -2968,8 +3882,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      0,
+                      1
                     ]
                   ],
+                  "agg": [
+                    1,
+                    2
+                  ],
+                  "winner": "away",
+                  "note": "1–2 agg.",
                   "pathId": "main",
                   "matchNumber": 2,
                   "key": "uel|main|Play-off round|2",
@@ -3009,8 +3933,18 @@
                     [
                       1,
                       0
+                    ],
+                    [
+                      2,
+                      4
                     ]
                   ],
+                  "agg": [
+                    3,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "3–4 agg.",
                   "pathId": "main",
                   "matchNumber": 3,
                   "key": "uel|main|Play-off round|3",
@@ -3050,8 +3984,18 @@
                     [
                       3,
                       0
+                    ],
+                    [
+                      1,
+                      5
                     ]
                   ],
+                  "agg": [
+                    4,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "4–5 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 4,
                   "key": "uel|main|Play-off round|4",
@@ -3090,8 +4034,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      1,
+                      2
                     ]
                   ],
+                  "agg": [
+                    1,
+                    2
+                  ],
+                  "winner": "away",
+                  "note": "1–2 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 5,
                   "key": "uel|main|Play-off round|5",
@@ -3131,8 +4085,18 @@
                     [
                       4,
                       0
+                    ],
+                    [
+                      2,
+                      1
                     ]
                   ],
+                  "agg": [
+                    6,
+                    1
+                  ],
+                  "winner": "home",
+                  "note": "6–1 agg.",
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uel|main|Play-off round|6",
@@ -3173,8 +4137,18 @@
                     [
                       0,
                       1
+                    ],
+                    [
+                      0,
+                      3
                     ]
                   ],
+                  "agg": [
+                    0,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "0–4 agg.",
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uel|main|Play-off round|7",
@@ -3215,8 +4189,18 @@
                     [
                       0,
                       3
+                    ],
+                    [
+                      0,
+                      3
                     ]
                   ],
+                  "agg": [
+                    0,
+                    6
+                  ],
+                  "winner": "away",
+                  "note": "0–6 agg.",
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uel|main|Play-off round|8",
@@ -3259,8 +4243,18 @@
                     [
                       7,
                       0
+                    ],
+                    [
+                      2,
+                      2
                     ]
                   ],
+                  "agg": [
+                    9,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "9–2 agg.",
                   "pathId": "main",
                   "matchNumber": 9,
                   "key": "uel|main|Play-off round|9",
@@ -3300,8 +4294,18 @@
                     [
                       3,
                       0
+                    ],
+                    [
+                      0,
+                      1
                     ]
                   ],
+                  "agg": [
+                    3,
+                    1
+                  ],
+                  "winner": "home",
+                  "note": "3–1 agg.",
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uel|main|Play-off round|10",
@@ -3342,8 +4346,18 @@
                     [
                       3,
                       1
+                    ],
+                    [
+                      3,
+                      1
                     ]
                   ],
+                  "agg": [
+                    6,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "6–2 agg.",
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uel|main|Play-off round|11",
@@ -4478,8 +5492,18 @@
                     [
                       0,
                       1
+                    ],
+                    [
+                      0,
+                      4
                     ]
                   ],
+                  "agg": [
+                    0,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "0–5 agg.",
                   "pathId": "main",
                   "matchNumber": 1,
                   "key": "uel|main|Play-off round|1",
@@ -4519,8 +5543,18 @@
                     [
                       4,
                       0
+                    ],
+                    [
+                      2,
+                      1
                     ]
                   ],
+                  "agg": [
+                    6,
+                    1
+                  ],
+                  "winner": "home",
+                  "note": "6–1 agg.",
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uel|main|Play-off round|6",
@@ -4561,8 +5595,18 @@
                     [
                       0,
                       1
+                    ],
+                    [
+                      0,
+                      3
                     ]
                   ],
+                  "agg": [
+                    0,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "0–4 agg.",
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uel|main|Play-off round|7",
@@ -4603,8 +5647,18 @@
                     [
                       0,
                       3
+                    ],
+                    [
+                      0,
+                      3
                     ]
                   ],
+                  "agg": [
+                    0,
+                    6
+                  ],
+                  "winner": "away",
+                  "note": "0–6 agg.",
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uel|main|Play-off round|8",
@@ -4645,8 +5699,18 @@
                     [
                       3,
                       0
+                    ],
+                    [
+                      0,
+                      1
                     ]
                   ],
+                  "agg": [
+                    3,
+                    1
+                  ],
+                  "winner": "home",
+                  "note": "3–1 agg.",
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uel|main|Play-off round|10",
@@ -4687,8 +5751,18 @@
                     [
                       3,
                       1
+                    ],
+                    [
+                      3,
+                      1
                     ]
                   ],
+                  "agg": [
+                    6,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "6–2 agg.",
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uel|main|Play-off round|11",
@@ -4725,8 +5799,18 @@
                     [
                       3,
                       0
+                    ],
+                    [
+                      2,
+                      0
                     ]
                   ],
+                  "agg": [
+                    5,
+                    0
+                  ],
+                  "winner": "home",
+                  "note": "5–0 agg.",
                   "pathId": "main",
                   "matchNumber": 12,
                   "key": "uel|main|Play-off round|12",
@@ -4908,42 +5992,6 @@
             "flag": "🇵🇹"
           },
           {
-            "placeholder": true,
-            "entry": {
-              "token": "CL CH PO",
-              "kind": "transfer",
-              "competition": "Champions League",
-              "fromPath": "Champions Path",
-              "round": "play-off round",
-              "entryRound": "League phase",
-              "path": null
-            }
-          },
-          {
-            "placeholder": true,
-            "entry": {
-              "token": "CL CH PO",
-              "kind": "transfer",
-              "competition": "Champions League",
-              "fromPath": "Champions Path",
-              "round": "play-off round",
-              "entryRound": "League phase",
-              "path": null
-            }
-          },
-          {
-            "placeholder": true,
-            "entry": {
-              "token": "CL CH PO",
-              "kind": "transfer",
-              "competition": "Champions League",
-              "fromPath": "Champions Path",
-              "round": "play-off round",
-              "entryRound": "League phase",
-              "path": null
-            }
-          },
-          {
             "name": "Celtic",
             "entry": {
               "token": "CL CH PO",
@@ -4974,7 +6022,52 @@
             "flag": "🇮🇱"
           },
           {
-            "placeholder": true,
+            "name": "Dinamo Zagreb",
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Croatia",
+            "code": "HR",
+            "flag": "🇭🇷"
+          },
+          {
+            "name": "Celje",
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Slovenia",
+            "code": "SI",
+            "flag": "🇸🇮"
+          },
+          {
+            "name": "Levski Sofia",
+            "entry": {
+              "token": "CL CH PO",
+              "kind": "transfer",
+              "competition": "Champions League",
+              "fromPath": "Champions Path",
+              "round": "play-off round",
+              "entryRound": "League phase",
+              "path": null
+            },
+            "country": "Bulgaria",
+            "code": "BG",
+            "flag": "🇧🇬"
+          },
+          {
+            "name": "Lyon",
             "entry": {
               "token": "CL LP PO",
               "kind": "transfer",
@@ -4983,7 +6076,10 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "France",
+            "code": "FR",
+            "flag": "🇫🇷"
           },
           {
             "name": "NEC",
@@ -5060,7 +6156,10 @@
             "code": "AT",
             "flag": "🇦🇹"
           }
-        ]
+        ],
+        "standings": [],
+        "draw": [],
+        "matchdays": []
       }
     },
     {
@@ -5713,8 +6812,18 @@
                     [
                       1,
                       3
+                    ],
+                    [
+                      1,
+                      3
                     ]
                   ],
+                  "agg": [
+                    2,
+                    6
+                  ],
+                  "winner": "away",
+                  "note": "2–6 agg.",
                   "pathId": "champions",
                   "matchNumber": 1,
                   "key": "uecl|champions|Play-off round|1",
@@ -5755,8 +6864,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      0,
+                      1
                     ]
                   ],
+                  "agg": [
+                    1,
+                    2
+                  ],
+                  "winner": "away",
+                  "note": "1–2 agg.",
                   "pathId": "champions",
                   "matchNumber": 2,
                   "key": "uecl|champions|Play-off round|2",
@@ -5796,8 +6915,22 @@
                     [
                       2,
                       2
+                    ],
+                    [
+                      0,
+                      0
                     ]
                   ],
+                  "agg": [
+                    2,
+                    2
+                  ],
+                  "pens": [
+                    2,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "2–2 agg. · 2–4 on pens · a.e.t.",
                   "pathId": "champions",
                   "matchNumber": 3,
                   "key": "uecl|champions|Play-off round|3",
@@ -5838,8 +6971,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      1,
+                      2
                     ]
                   ],
+                  "agg": [
+                    1,
+                    2
+                  ],
+                  "winner": "away",
+                  "note": "1–2 agg.",
                   "pathId": "champions",
                   "matchNumber": 4,
                   "key": "uecl|champions|Play-off round|4",
@@ -5879,8 +7022,18 @@
                     [
                       0,
                       2
+                    ],
+                    [
+                      3,
+                      0
                     ]
                   ],
+                  "agg": [
+                    3,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "3–2 agg. · a.e.t.",
                   "pathId": "champions",
                   "matchNumber": 5,
                   "key": "uecl|champions|Play-off round|5",
@@ -10530,8 +11683,18 @@
                     [
                       1,
                       3
+                    ],
+                    [
+                      1,
+                      4
                     ]
                   ],
+                  "agg": [
+                    2,
+                    7
+                  ],
+                  "winner": "away",
+                  "note": "2–7 agg.",
                   "pathId": "main",
                   "matchNumber": 1,
                   "key": "uecl|main|Play-off round|1",
@@ -10570,8 +11733,18 @@
                     [
                       2,
                       3
+                    ],
+                    [
+                      1,
+                      4
                     ]
                   ],
+                  "agg": [
+                    3,
+                    7
+                  ],
+                  "winner": "away",
+                  "note": "3–7 agg.",
                   "pathId": "main",
                   "matchNumber": 2,
                   "key": "uecl|main|Play-off round|2",
@@ -10607,8 +11780,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      1,
+                      4
                     ]
                   ],
+                  "agg": [
+                    1,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "1–4 agg.",
                   "pathId": "main",
                   "matchNumber": 3,
                   "key": "uecl|main|Play-off round|3",
@@ -10646,8 +11829,22 @@
                     [
                       2,
                       2
+                    ],
+                    [
+                      2,
+                      2
                     ]
                   ],
+                  "agg": [
+                    4,
+                    4
+                  ],
+                  "pens": [
+                    4,
+                    3
+                  ],
+                  "winner": "home",
+                  "note": "4–4 agg. · 4–3 on pens · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 4,
                   "key": "uecl|main|Play-off round|4",
@@ -10686,8 +11883,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      0,
+                      4
                     ]
                   ],
+                  "agg": [
+                    0,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "0–4 agg.",
                   "pathId": "main",
                   "matchNumber": 5,
                   "key": "uecl|main|Play-off round|5",
@@ -10726,8 +11933,18 @@
                     [
                       2,
                       2
+                    ],
+                    [
+                      3,
+                      2
                     ]
                   ],
+                  "agg": [
+                    5,
+                    4
+                  ],
+                  "winner": "home",
+                  "note": "5–4 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 6,
                   "key": "uecl|main|Play-off round|6",
@@ -10766,8 +11983,18 @@
                     [
                       2,
                       2
+                    ],
+                    [
+                      2,
+                      1
                     ]
                   ],
+                  "agg": [
+                    4,
+                    3
+                  ],
+                  "winner": "home",
+                  "note": "4–3 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 7,
                   "key": "uecl|main|Play-off round|7",
@@ -10803,8 +12030,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      3,
+                      2
                     ]
                   ],
+                  "agg": [
+                    3,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "3–2 agg.",
                   "pathId": "main",
                   "matchNumber": 8,
                   "key": "uecl|main|Play-off round|8",
@@ -10843,8 +12080,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      2,
+                      3
                     ]
                   ],
+                  "agg": [
+                    3,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "3–4 agg.",
                   "pathId": "main",
                   "matchNumber": 9,
                   "key": "uecl|main|Play-off round|9",
@@ -10881,8 +12128,18 @@
                     [
                       0,
                       0
+                    ],
+                    [
+                      1,
+                      0
                     ]
                   ],
+                  "agg": [
+                    1,
+                    0
+                  ],
+                  "winner": "home",
+                  "note": "1–0 agg.",
                   "pathId": "main",
                   "matchNumber": 10,
                   "key": "uecl|main|Play-off round|10",
@@ -10921,8 +12178,18 @@
                     [
                       2,
                       0
+                    ],
+                    [
+                      4,
+                      1
                     ]
                   ],
+                  "agg": [
+                    6,
+                    1
+                  ],
+                  "winner": "home",
+                  "note": "6–1 agg.",
                   "pathId": "main",
                   "matchNumber": 11,
                   "key": "uecl|main|Play-off round|11",
@@ -10961,8 +12228,22 @@
                     [
                       1,
                       0
+                    ],
+                    [
+                      0,
+                      1
                     ]
                   ],
+                  "agg": [
+                    1,
+                    1
+                  ],
+                  "pens": [
+                    3,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "1–1 agg. · 3–4 on pens · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 12,
                   "key": "uecl|main|Play-off round|12",
@@ -11001,8 +12282,18 @@
                     [
                       1,
                       0
+                    ],
+                    [
+                      3,
+                      2
                     ]
                   ],
+                  "agg": [
+                    4,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "4–2 agg.",
                   "pathId": "main",
                   "matchNumber": 13,
                   "key": "uecl|main|Play-off round|13",
@@ -11040,8 +12331,18 @@
                     [
                       1,
                       1
+                    ],
+                    [
+                      2,
+                      4
                     ]
                   ],
+                  "agg": [
+                    3,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "3–5 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 14,
                   "key": "uecl|main|Play-off round|14",
@@ -11077,8 +12378,18 @@
                     [
                       2,
                       4
+                    ],
+                    [
+                      3,
+                      5
                     ]
                   ],
+                  "agg": [
+                    5,
+                    9
+                  ],
+                  "winner": "away",
+                  "note": "5–9 agg.",
                   "pathId": "main",
                   "matchNumber": 15,
                   "key": "uecl|main|Play-off round|15",
@@ -11115,8 +12426,18 @@
                     [
                       2,
                       0
+                    ],
+                    [
+                      0,
+                      0
                     ]
                   ],
+                  "agg": [
+                    2,
+                    0
+                  ],
+                  "winner": "home",
+                  "note": "2–0 agg.",
                   "pathId": "main",
                   "matchNumber": 16,
                   "key": "uecl|main|Play-off round|16",
@@ -11157,8 +12478,18 @@
                     [
                       0,
                       1
+                    ],
+                    [
+                      4,
+                      1
                     ]
                   ],
+                  "agg": [
+                    4,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "4–2 agg. · a.e.t.",
                   "pathId": "main",
                   "matchNumber": 17,
                   "key": "uecl|main|Play-off round|17",
@@ -11195,8 +12526,18 @@
                     [
                       3,
                       1
+                    ],
+                    [
+                      1,
+                      2
                     ]
                   ],
+                  "agg": [
+                    4,
+                    3
+                  ],
+                  "winner": "home",
+                  "note": "4–3 agg.",
                   "pathId": "main",
                   "matchNumber": 18,
                   "key": "uecl|main|Play-off round|18",
@@ -11235,8 +12576,18 @@
                     [
                       2,
                       1
+                    ],
+                    [
+                      1,
+                      1
                     ]
                   ],
+                  "agg": [
+                    3,
+                    2
+                  ],
+                  "winner": "home",
+                  "note": "3–2 agg.",
                   "pathId": "main",
                   "matchNumber": 19,
                   "key": "uecl|main|Play-off round|19",
@@ -11251,7 +12602,7 @@
         "name": "League phase",
         "entrants": [
           {
-            "placeholder": true,
+            "name": "Sint-Truiden",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11260,10 +12611,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Belgium",
+            "code": "BE",
+            "flag": "🇧🇪"
           },
           {
-            "placeholder": true,
+            "name": "Trabzonspor",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11272,10 +12626,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Turkey",
+            "code": "TR",
+            "flag": "🇹🇷"
           },
           {
-            "placeholder": true,
+            "name": "AGF",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11284,10 +12641,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Denmark",
+            "code": "DK",
+            "flag": "🇩🇰"
           },
           {
-            "placeholder": true,
+            "name": "Thun",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11296,10 +12656,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Switzerland",
+            "code": "CH",
+            "flag": "🇨🇭"
           },
           {
-            "placeholder": true,
+            "name": "Mjällby AIF",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11308,10 +12671,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Sweden",
+            "code": "SE",
+            "flag": "🇸🇪"
           },
           {
-            "placeholder": true,
+            "name": "Red Star Belgrade",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11320,10 +12686,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Serbia",
+            "code": "RS",
+            "flag": "🇷🇸"
           },
           {
-            "placeholder": true,
+            "name": "Universitatea Craiova",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11332,10 +12701,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Romania",
+            "code": "RO",
+            "flag": "🇷🇴"
           },
           {
-            "placeholder": true,
+            "name": "CSKA Sofia",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11344,10 +12716,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Bulgaria",
+            "code": "BG",
+            "flag": "🇧🇬"
           },
           {
-            "placeholder": true,
+            "name": "Kairat",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11356,10 +12731,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Kazakhstan",
+            "code": "KZ",
+            "flag": "🇰🇿"
           },
           {
-            "placeholder": true,
+            "name": "Kauno Žalgiris",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11368,10 +12746,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Lithuania",
+            "code": "LT",
+            "flag": "🇱🇹"
           },
           {
-            "placeholder": true,
+            "name": "Egnatia",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11380,10 +12761,13 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Albania",
+            "code": "AL",
+            "flag": "🇦🇱"
           },
           {
-            "placeholder": true,
+            "name": "Iberia 1999",
             "entry": {
               "token": "EL PO",
               "kind": "transfer",
@@ -11392,9 +12776,15 @@
               "round": "play-off round",
               "entryRound": "League phase",
               "path": null
-            }
+            },
+            "country": "Georgia (country)",
+            "code": "GE",
+            "flag": "🇬🇪"
           }
-        ]
+        ],
+        "standings": [],
+        "draw": [],
+        "matchdays": []
       }
     }
   ]

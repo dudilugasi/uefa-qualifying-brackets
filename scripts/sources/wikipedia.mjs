@@ -253,6 +253,141 @@ export function parseLeaguePhase(html) {
   return slots;
 }
 
+/**
+ * The league phase standings, from the "League phase table" section. Present as
+ * soon as the draw is made, with every column zeroed until the first matchday.
+ */
+export function parseStandings(html) {
+  const section = sectionAfter(html, "League phase table");
+  if (!section) return [];
+
+  // Headers are abbreviations — <th><abbr title="Points">Pts</abbr></th> — so
+  // the columns are read as text rather than matched in the markup.
+  const table = [...section.matchAll(/<table[^>]*>[\s\S]*?<\/table>/gi)]
+    .map((m) => m[0])
+    .find((t) => cellsOf(rowsOf(t)[0] ?? "").some((c) => c.text.toLowerCase() === "pts"));
+  if (!table) return [];
+
+  const rows = rowsOf(table);
+  const columns = cellsOf(rows[0] ?? "").map((c) => c.text.toLowerCase());
+  const at = (cells, name) => {
+    const i = columns.indexOf(name);
+    const text = i === -1 ? "" : cells[i]?.text ?? "";
+    return /^-?\d+$/.test(text) ? Number(text) : null;
+  };
+
+  const standings = [];
+  for (const row of rows.slice(1)) {
+    const cells = cellsOf(row);
+    const name = cells[columns.indexOf("team")]?.text;
+    if (!name) continue;
+    standings.push({
+      name,
+      position: at(cells, "pos"),
+      played: at(cells, "pld"),
+      wins: at(cells, "w"),
+      draws: at(cells, "d"),
+      losses: at(cells, "l"),
+      points: at(cells, "pts"),
+    });
+  }
+  return standings;
+}
+
+/**
+ * Who plays whom, from the Draw section's opponents grid — known as soon as the
+ * draw is made, months before the matchdays are calendared. One row per club,
+ * with a home and an away opponent from each pot.
+ */
+export function parseDraw(html) {
+  const section = sectionAfter(html, "Draw");
+  if (!section) return [];
+
+  const table = [...section.matchAll(/<table[^>]*>[\s\S]*?<\/table>/gi)]
+    .map((m) => m[0])
+    .find((t) => /pot 1 opponents/i.test(cellText(t)));
+  if (!table) return [];
+
+  const draw = [];
+  for (const row of rowsOf(table)) {
+    const cells = cellsOf(row);
+    // Club, four home/away pairs, coefficient. The two header rows are shorter.
+    if (cells.length < 9) continue;
+
+    const club = cells[0].text;
+    const opponents = cells.slice(1, 9).map((c) => c.text);
+    if (!club || opponents.some((name) => !name)) continue;
+
+    draw.push({
+      club,
+      home: opponents.filter((_, i) => i % 2 === 0),
+      away: opponents.filter((_, i) => i % 2 === 1),
+    });
+  }
+  return draw;
+}
+
+/**
+ * League phase fixtures, grouped by the "Matchday N" headings. Each match is a
+ * `footballbox` — a date block followed by a `fevent` table of home, score and
+ * away — and the sections exist, empty, from the moment the draw is published.
+ */
+export function parseMatchdays(html) {
+  const heads = [...html.matchAll(/<h([234])\b[^>]*>([\s\S]*?)<\/h\1>/gi)];
+  const matchdays = [];
+
+  heads.forEach((head, i) => {
+    const title = cellText(head[2]);
+    if (!/^matchday\s+\d+/i.test(title)) return;
+
+    const end = heads.slice(i + 1).find((h) => Number(h[1]) <= Number(head[1]))?.index ?? html.length;
+    const section = html.slice(head.index, end);
+
+    const matches = [];
+    for (const box of section.matchAll(/<div[^>]*class="footballbox"[\s\S]*?<\/table>/gi)) {
+      const chunk = box[0];
+      const home = chunk.match(/class="fhome"[\s\S]*?<span itemprop="name">([\s\S]*?)<\/span>\s*<\/th>/i);
+      const away = chunk.match(/class="faway"[\s\S]*?<span itemprop="name">([\s\S]*?)<\/span>\s*<\/th>/i);
+      if (!home || !away) continue;
+
+      const date = chunk.match(/class="bday[^"]*">([\d-]+)</i);
+      const time = chunk.match(/class="ftime">([^<]*)</i);
+      const score = chunk.match(/class="fscore"[^>]*>([\s\S]*?)<\/th>/i);
+      matches.push({
+        date: date ? date[1] : null,
+        time: time ? cellText(time[1]) || null : null,
+        home: cellText(home[1]),
+        away: cellText(away[1]),
+        score: score ? parseScore(cellText(score[1]))?.goals ?? null : null,
+      });
+    }
+
+    matchdays.push({ name: title, matches });
+  });
+
+  return matchdays;
+}
+
+/**
+ * Standings and fixtures live in a per-phase article once a season is big
+ * enough to warrant one, and in the season article's League phase section
+ * otherwise — where the per-phase title is a redirect back to it.
+ */
+export async function fetchLeaguePhaseDetail(season, competition, seasonHtml) {
+  let html = seasonHtml;
+  try {
+    const own = await fetchParsed(`${competition.seasonArticle(season)} league phase`);
+    if (!/class="redirectMsg"/i.test(own.html)) html = own.html;
+  } catch {
+    /* no per-phase article: the season article is the source */
+  }
+  return {
+    standings: parseStandings(html),
+    draw: parseDraw(html),
+    matchdays: parseMatchdays(html),
+  };
+}
+
 export async function fetchArticleHtml(season, competition) {
   const errors = [];
   for (const title of candidateTitles(season, competition)) {
@@ -548,7 +683,11 @@ export async function load(season, competition) {
   try {
     const { html: seasonHtml } = await fetchParsed(competition.seasonArticle(season));
     const match = entryMatcher(parseEntries(seasonHtml));
-    data.leaguePhase = { name: "League phase", entrants: parseLeaguePhase(seasonHtml) };
+    data.leaguePhase = {
+      name: "League phase",
+      entrants: parseLeaguePhase(seasonHtml),
+      ...(await fetchLeaguePhaseDetail(season, competition, seasonHtml)),
+    };
     const missing = [];
     let matched = 0;
     let placeholders = 0;
