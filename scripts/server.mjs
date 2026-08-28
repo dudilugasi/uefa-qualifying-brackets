@@ -88,7 +88,9 @@ const server = createServer(async (req, res) => {
   await serveStatic(req, res, url.pathname);
 });
 
-server.listen(PORT, () => {
+// Loopback only: /api/refresh rewrites data.json with no authentication, and
+// this is a local dev server — nothing should reach it from the network.
+server.listen(PORT, "127.0.0.1", () => {
   console.log(`bracket:  http://localhost:${PORT}`);
   console.log(`season:   ${DEFAULT_SEASON}  (override with --season)`);
 });
