@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-28T12:22:37.661Z",
+  "fetchedAt": "2026-08-28T15:42:57.874Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -3948,7 +3948,8 @@
                   "pathId": "main",
                   "matchNumber": 3,
                   "key": "uel|main|Play-off round|3",
-                  "crossPath": false,
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
                   "feeds": null
                 },
                 {
@@ -3999,7 +4000,8 @@
                   "pathId": "main",
                   "matchNumber": 4,
                   "key": "uel|main|Play-off round|4",
-                  "crossPath": false,
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
                   "feeds": null
                 },
                 {
@@ -4049,7 +4051,8 @@
                   "pathId": "main",
                   "matchNumber": 5,
                   "key": "uel|main|Play-off round|5",
-                  "crossPath": false,
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
                   "feeds": null
                 },
                 {
@@ -5212,7 +5215,7 @@
                   "matchNumber": 2,
                   "key": "uel|main|Third qualifying round|2",
                   "crossPath": false,
-                  "feeds": 1
+                  "feeds": 4
                 },
                 {
                   "home": {
@@ -5260,7 +5263,7 @@
                   "matchNumber": 4,
                   "key": "uel|main|Third qualifying round|4",
                   "crossPath": false,
-                  "feeds": 2
+                  "feeds": 5
                 },
                 {
                   "home": {
@@ -5309,7 +5312,7 @@
                   "matchNumber": 3,
                   "key": "uel|main|Third qualifying round|3",
                   "crossPath": false,
-                  "feeds": 3
+                  "feeds": 6
                 },
                 {
                   "home": {
@@ -5358,7 +5361,7 @@
                   "matchNumber": 1,
                   "key": "uel|main|Third qualifying round|1",
                   "crossPath": false,
-                  "feeds": 4
+                  "feeds": 7
                 },
                 {
                   "home": {
@@ -5409,7 +5412,7 @@
                   "matchNumber": 5,
                   "key": "uel|main|Third qualifying round|5",
                   "crossPath": false,
-                  "feeds": 5
+                  "feeds": 8
                 },
                 {
                   "home": {
@@ -5456,7 +5459,7 @@
                   "matchNumber": 6,
                   "key": "uel|main|Third qualifying round|6",
                   "crossPath": false,
-                  "feeds": 6
+                  "feeds": 9
                 }
               ]
             },
@@ -5508,6 +5511,161 @@
                   "matchNumber": 1,
                   "key": "uel|main|Play-off round|1",
                   "crossPath": false,
+                  "feeds": null
+                },
+                {
+                  "home": {
+                    "name": "Sint-Truiden",
+                    "country": "Belgium",
+                    "code": "BE",
+                    "flag": "🇧🇪",
+                    "entry": {
+                      "token": "3rd",
+                      "kind": "league",
+                      "position": "3rd",
+                      "entryRound": "Play-off round",
+                      "path": null
+                    }
+                  },
+                  "away": {
+                    "name": "Omonia",
+                    "country": "Cyprus",
+                    "code": "CY",
+                    "flag": "🇨🇾",
+                    "entry": {
+                      "token": "CL CH Q2",
+                      "kind": "transfer",
+                      "competition": "Champions League",
+                      "fromPath": "Champions Path",
+                      "round": "second qualifying round",
+                      "entryRound": "Third qualifying round",
+                      "path": "champions"
+                    }
+                  },
+                  "legs": [
+                    [
+                      1,
+                      0
+                    ],
+                    [
+                      2,
+                      4
+                    ]
+                  ],
+                  "agg": [
+                    3,
+                    4
+                  ],
+                  "winner": "away",
+                  "note": "3–4 agg.",
+                  "pathId": "main",
+                  "matchNumber": 3,
+                  "key": "uel|main|Play-off round|3",
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
+                  "feeds": null
+                },
+                {
+                  "home": {
+                    "name": "Red Star Belgrade",
+                    "country": "Serbia",
+                    "code": "RS",
+                    "flag": "🇷🇸",
+                    "entry": {
+                      "token": "CL CH Q3",
+                      "kind": "transfer",
+                      "competition": "Champions League",
+                      "fromPath": "Champions Path",
+                      "round": "third qualifying round",
+                      "entryRound": "Play-off round",
+                      "path": null
+                    }
+                  },
+                  "away": {
+                    "name": "Viktoria Plzeň",
+                    "country": "Czech Republic",
+                    "code": "CZ",
+                    "flag": "🇨🇿",
+                    "entry": {
+                      "token": "3rd",
+                      "kind": "league",
+                      "position": "3rd",
+                      "entryRound": "Play-off round",
+                      "path": null
+                    }
+                  },
+                  "legs": [
+                    [
+                      3,
+                      0
+                    ],
+                    [
+                      1,
+                      5
+                    ]
+                  ],
+                  "agg": [
+                    4,
+                    5
+                  ],
+                  "winner": "away",
+                  "note": "4–5 agg. · a.e.t.",
+                  "pathId": "main",
+                  "matchNumber": 4,
+                  "key": "uel|main|Play-off round|4",
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
+                  "feeds": null
+                },
+                {
+                  "home": {
+                    "name": "Egnatia",
+                    "country": "Albania",
+                    "code": "AL",
+                    "flag": "🇦🇱",
+                    "entry": {
+                      "token": "CL CH Q2",
+                      "kind": "transfer",
+                      "competition": "Champions League",
+                      "fromPath": "Champions Path",
+                      "round": "second qualifying round",
+                      "entryRound": "Third qualifying round",
+                      "path": "champions"
+                    }
+                  },
+                  "away": {
+                    "name": "Lillestrøm",
+                    "country": "Norway",
+                    "code": "NO",
+                    "flag": "🇳🇴",
+                    "entry": {
+                      "token": "CW",
+                      "kind": "cup",
+                      "entryRound": "Play-off round",
+                      "path": null
+                    }
+                  },
+                  "legs": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      1,
+                      2
+                    ]
+                  ],
+                  "agg": [
+                    1,
+                    2
+                  ],
+                  "winner": "away",
+                  "note": "1–2 agg. · a.e.t.",
+                  "pathId": "main",
+                  "matchNumber": 5,
+                  "key": "uel|main|Play-off round|5",
+                  "crossPath": true,
+                  "group": "Champions + Main Path",
                   "feeds": null
                 },
                 {
