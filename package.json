@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node scripts/server.mjs",
     "dev": "node --watch scripts/server.mjs",
-    "refresh": "node scripts/refresh.mjs"
+    "refresh": "node scripts/refresh.mjs",
+    "refresh:remote": "gh workflow run 'Refresh data' --repo dudilugasi/uefa-qualifying-brackets"
   }
 }

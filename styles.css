@@ -46,7 +46,8 @@
     margin: 0; background: var(--bg); color: var(--text);
     font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  header, main { max-width: 1500px; margin: 0 auto; }
+  /* No width cap: zoomed out, the bracket should use whatever room there is. */
+  header, main { width: 100%; }
   header { padding: 28px 24px 0; }
   main { padding: 8px 24px 96px; }
 
@@ -78,7 +79,7 @@
 
   /* The competition tabs stay put on desktop, so the league can be switched
      from anywhere down a long bracket. The path tabs scroll away with the page. */
-  .tab-bar { max-width: 1500px; margin: 0 auto; padding: 0 24px 6px; }
+  .tab-bar { padding: 0 24px 6px; }
   @media (min-width: 701px) {
     .tab-bar { position: sticky; top: 0; z-index: 20; background: var(--bg); }
   }
@@ -140,6 +141,31 @@
   .subs .round { flex: 0 0 250px; }
   .subs .round-head { padding: 2px 2px 8px; font-size: 11px; }
   .subs .groups { gap: 14px; }
+  /* Compact: the same columns with everything but the names taken out, sized so
+     the whole bracket and the league table fit on one screen. */
+  .bracket.compact { gap: 22px; }
+  .compact .round { flex: 0 0 200px; }
+  /* Everything hangs from the bottom of the canvas: the ties in their columns,
+     and the table in its own, so the two line up whichever is taller. */
+  .compact .groups { gap: 8px; justify-content: flex-end; }
+  .compact .league-round { justify-content: flex-end; }
+  .compact .pair { gap: 3px; }
+  .compact .round-head { padding: 2px 2px 6px; font-size: 11px; }
+  .compact .team {
+    grid-template-columns: auto 1fr;
+    gap: 6px; padding: 0 6px; font-size: 12.5px;
+  }
+  .compact .tie-group, .compact .tie-foot, .compact .leg, .compact .agg { display: none; }
+  .compact .flag { font-size: 12px; }
+  .compact .league-round { flex: 0 0 260px; margin-right: 0; }
+  .compact .lp-table { font-size: 12px; }
+  .compact .lp-table th { padding: 4px 6px; }
+  .compact .lp-table td { padding: 2px 6px; }
+  .compact .lp-place { width: 26px; }
+  /* Records go, so a club name keeps to one line. */
+  .compact .lp-stat,
+  .compact .lp-table th:nth-child(n + 3) { display: none; }
+
   /* Columns stretch to the tallest round so shorter ones can centre. */
   .round { flex: 0 0 290px; display: flex; flex-direction: column; }
   .round-head {
@@ -300,17 +326,14 @@
 
   /* Fixtures: a button per club, one for the lot in the header, and the list
      itself under the table. */
-  .lp-games-cell { width: 40px; text-align: right; }
+  /* Sits at the head of the club cell, before the flag. */
   .lp-games-btn {
-    appearance: none; border: 1px solid transparent; border-radius: 999px;
-    background: none; cursor: pointer;
-    padding: 2px 5px; font: inherit; font-size: 13px; line-height: 1;
-    opacity: 0.55; transition: opacity 120ms ease;
+    appearance: none; border: none; background: none; cursor: pointer;
+    padding: 0; margin-right: 7px;
+    font: inherit; font-size: 13px; line-height: 1;
+    opacity: 0.5; transition: opacity 120ms ease;
   }
   .lp-games-btn:hover { opacity: 1; }
-  .lp-games-btn[aria-pressed="true"] {
-    opacity: 1; border-color: var(--accent); background: var(--accent-soft);
-  }
 
   .games-dialog {
     width: min(560px, calc(100vw - 32px));

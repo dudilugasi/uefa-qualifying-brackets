@@ -215,7 +215,9 @@ function renderPath(path) {
   const bracket = document.getElementById("bracket");
   activePath = path;
   bracket.replaceChildren();
-  bracket.className = layout === "sub" ? "bracket subs" : "bracket";
+  bracket.className = `bracket${layout === "sub" ? " subs" : ""}${
+    layout === "compact" ? " compact" : ""
+  }`;
 
   if (layout === "sub") {
     // The boxes stack in their own column, so the league phase can sit beside
@@ -657,9 +659,15 @@ function initTraceEvents() {
 
   // Hover doesn't exist on touch, so a tap pins the route instead. The bar is
   // pointer-transparent, so a click on it lands on the row behind: drop those.
-  bracket.addEventListener("click", (ev) => {
+  addEventListener("click", (ev) => {
+    if (card.classList.contains("show") && hits(card, ev.clientX, ev.clientY)) return;
+
     const row = ev.target.closest(HOVERABLE);
-    if (!row || (card.classList.contains("show") && hits(card, ev.clientX, ev.clientY))) return;
+    // A click anywhere else — the gaps, the page around the tree — clears it.
+    if (!row) {
+      if (pinned && !ev.target.closest("button, a, dialog")) unpin();
+      return;
+    }
     if (pinned && traced === row.dataset.team) {
       unpin();
     } else {
@@ -681,13 +689,17 @@ const selection = { competitionId: null, pathId: null };
 /** The whole loaded payload, so one competition's card can read another's. */
 let payload = null;
 
-/** "columns" — one column per round; "sub" — a small bracket per tie. */
+/**
+ * "columns" — one column per round; "sub" — a small bracket per tie;
+ * "compact" — the columns stripped to names, sized to fit the window.
+ */
 let layout = "columns";
 let activePath = null; // re-rendered in place when the layout switches
 
 const LAYOUTS = [
   ["columns", "Columns", "One column per round, every tie stacked"],
   ["sub", "Sub-brackets", "One bracket per tie, with everything that feeds it"],
+  ["compact", "Compact", "Names only, tight enough to fit on one screen"],
 ];
 
 function renderLayoutSwitch() {
@@ -854,7 +866,7 @@ function leaguePhaseSlots(competition) {
   return [...slots.filter((s) => !s.placeholder), ...slots.filter((s) => s.placeholder)];
 }
 
-const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts", ""];
+const LEAGUE_PHASE_COLUMNS = ["#", "Team", "W", "D", "L", "Pts"];
 
 /** Club names differ between the tie tables, the Teams table and the standings. */
 const looseName = (name) => (name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -977,16 +989,17 @@ document.getElementById("games-dialog").addEventListener("click", (ev) => {
 });
 
 /**
- * The table is sorted by points, or by country when that sort is cleared.
+ * The table is sorted by points, or left in the order it was built when that
+ * sort is cleared.
  * Undecided slots stay at the bottom either way — they have neither.
  */
 let leagueSort = "points";
 
 const LEAGUE_SORTS = {
   points: (a, b) => (b.stats?.points ?? 0) - (a.stats?.points ?? 0),
-  country: (a, b) =>
-    (a.country ?? "").localeCompare(b.country ?? "") ||
-    (a.name ?? "").localeCompare(b.name ?? ""),
+  // Cleared: the order the slots were built in — the article's entrants, then
+  // the play-off winners. Array.sort is stable, so returning 0 keeps it.
+  none: () => 0,
 };
 
 function sortLeagueSlots(slots) {
@@ -1009,14 +1022,14 @@ function leaguePhaseColumn(competition, roundIndex) {
   const headRow = el("tr");
   LEAGUE_PHASE_COLUMNS.forEach((label) => {
     const th = el("th");
-    if (label === "") {
-      // The games column's header opens every club's fixtures at once.
+    if (label === "Team") {
+      // Sits where each club's own button sits, and opens the whole fixture list.
       const btn = el("button", "lp-games-btn", "⚽");
       btn.type = "button";
       btn.title = "Show every fixture, by matchday";
       btn.setAttribute("aria-label", btn.title);
       btn.addEventListener("click", () => openFixtures(competition, null));
-      th.append(btn);
+      th.append(btn, label);
     } else if (label !== "Pts") {
       th.textContent = label;
     } else {
@@ -1024,10 +1037,10 @@ function leaguePhaseColumn(competition, roundIndex) {
       const btn = el("button", "lp-sort", "Pts");
       if (sorting) btn.append(el("span", "lp-arrow", "▼"));
       btn.type = "button";
-      btn.title = sorting ? "Sort by country instead" : "Sort by points";
+      btn.title = sorting ? "Clear the sort" : "Sort by points";
       btn.setAttribute("aria-pressed", String(sorting));
       btn.addEventListener("click", () => {
-        leagueSort = sorting ? "country" : "points";
+        leagueSort = sorting ? "none" : "points";
         if (activePath) renderPath(activePath);
       });
       th.append(btn);
@@ -1052,16 +1065,6 @@ function leaguePhaseColumn(competition, roundIndex) {
     tr.append(el("td", "lp-place", cell(stats?.position)));
 
     const name = el("td", "lp-name");
-    if (slot.flag) name.append(el("span", "flag", slot.flag));
-    else if (slot.code) name.append(el("span", "flag code", slot.code.replace("gb-", "").toUpperCase()));
-    name.append(el("span", "lp-club", slot.placeholder ? slot.label ?? "Undecided slot" : slot.name));
-    tr.append(name);
-
-    for (const value of [stats?.wins, stats?.draws, stats?.losses, stats?.points]) {
-      tr.append(el("td", "lp-stat", cell(value)));
-    }
-
-    const games = el("td", "lp-games-cell");
     if (!slot.placeholder) {
       const btn = el("button", "lp-games-btn", "⚽");
       btn.type = "button";
@@ -1071,9 +1074,17 @@ function leaguePhaseColumn(competition, roundIndex) {
         ev.stopPropagation(); // the row click pins the route; this doesn't
         openFixtures(competition, slot.name);
       });
-      games.append(btn);
+      name.append(btn);
     }
-    tr.append(games);
+    if (slot.flag) name.append(el("span", "flag", slot.flag));
+    else if (slot.code) name.append(el("span", "flag code", slot.code.replace("gb-", "").toUpperCase()));
+    name.append(el("span", "lp-club", slot.placeholder ? slot.label ?? "Undecided slot" : slot.name));
+    tr.append(name);
+
+    for (const value of [stats?.wins, stats?.draws, stats?.losses, stats?.points]) {
+      tr.append(el("td", "lp-stat", cell(value)));
+    }
+
     body.append(tr);
   });
   table.append(body);
