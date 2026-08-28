@@ -19,6 +19,10 @@ import {
 } from "../competitions.mjs";
 
 const API = "https://en.wikipedia.org/w/api.php";
+// Wikipedia asks automated clients to identify themselves and say where to
+// complain — it matters more from a CI runner than from a laptop.
+const USER_AGENT =
+  "uefa-qualifying-brackets/1.0 (+https://github.com/dudilugasi/uefa-qualifying-brackets)";
 
 const KEYCHAINS = [
   "/Library/Keychains/System.keychain",
@@ -64,7 +68,7 @@ function getWithCa(url, ca) {
   return new Promise((resolve, reject) => {
     const req = httpsGet(
       url,
-      { ca, headers: { "user-agent": "ucl-bracket/1.0 (local dev tool)" } },
+      { ca, headers: { "user-agent": USER_AGENT } },
       (res) => {
         let body = "";
         res.setEncoding("utf8");
@@ -90,7 +94,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function request(url) {
   try {
     const res = await fetch(url, {
-      headers: { "user-agent": "ucl-bracket/1.0 (local dev tool)" },
+      headers: { "user-agent": USER_AGENT },
     });
     return {
       status: res.status,

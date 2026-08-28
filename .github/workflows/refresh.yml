@@ -1,0 +1,45 @@
+name: Refresh data
+
+on:
+  schedule:
+    # Every six hours, offset off the hour so it isn't queued with everyone else's.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - run: npm run refresh
+
+      - name: Commit data.json if the bracket actually changed
+        run: |
+          # Every run rewrites fetchedAt, so a diff of only that line is noise.
+          changes=$(git diff -U0 -- data.json \
+            | grep -E '^[+-]' \
+            | grep -Ev '^(\+\+\+|---)' \
+            | grep -v '"fetchedAt"' || true)
+
+          if [ -z "$changes" ]; then
+            echo "No change beyond the timestamp."
+            git checkout -- data.json
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qm "Refresh data" -- data.json
+          git push
