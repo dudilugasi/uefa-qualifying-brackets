@@ -2,8 +2,10 @@ name: Refresh data
 
 on:
   schedule:
-    # Every six hours, offset off the hour so it isn't queued with everyone else's.
-    - cron: "17 */6 * * *"
+    # Tue/Wed/Thu 21:00 UTC — midnight in Israel, once each match night is over.
+    # Cron is UTC and has no idea about DST, so this drifts to 23:00 local when
+    # the clocks go back in late October.
+    - cron: "0 21 * * 2,3,4"
   workflow_dispatch:
 
 permissions:
