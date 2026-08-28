@@ -298,10 +298,16 @@ export function parseStandings(html) {
   return standings;
 }
 
+const VENUE_CELL = /^\((H|A)\)$/i;
+
 /**
  * Who plays whom, from the Draw section's opponents grid — known as soon as the
- * draw is made, months before the matchdays are calendared. One row per club,
- * with a home and an away opponent from each pot.
+ * draw is made, months before the matchdays are calendared. One row per club.
+ *
+ * The grid comes in two shapes. UCL and UEL draw two opponents from each of
+ * four pots and split them across Home and Away sub-columns, so the cells run
+ * home, away, home, away. UECL draws one from each of six pots and marks the
+ * venue in a cell of its own after the name: "Ajax", "(A)".
  */
 export function parseDraw(html) {
   const section = sectionAfter(html, "Draw");
@@ -309,24 +315,36 @@ export function parseDraw(html) {
 
   const table = [...section.matchAll(/<table[^>]*>[\s\S]*?<\/table>/gi)]
     .map((m) => m[0])
-    .find((t) => /pot 1 opponents/i.test(cellText(t)));
+    .find((t) => /pot 1 opponent/i.test(cellText(t)));
   if (!table) return [];
 
   const draw = [];
   for (const row of rowsOf(table)) {
     const cells = cellsOf(row);
-    // Club, four home/away pairs, coefficient. The two header rows are shorter.
+    // Club, the opponents, and a coefficient. Header rows are shorter than that.
     if (cells.length < 9) continue;
 
     const club = cells[0].text;
-    const opponents = cells.slice(1, 9).map((c) => c.text);
-    if (!club || opponents.some((name) => !name)) continue;
+    if (!club) continue;
+    const rest = cells.slice(1).map((c) => c.text);
 
-    draw.push({
-      club,
-      home: opponents.filter((_, i) => i % 2 === 0),
-      away: opponents.filter((_, i) => i % 2 === 1),
-    });
+    const home = [];
+    const away = [];
+
+    if (rest.some((text) => VENUE_CELL.test(text))) {
+      for (let i = 0; i < rest.length - 1; i++) {
+        const venue = rest[i + 1].match(VENUE_CELL);
+        if (!rest[i] || !venue) continue;
+        (venue[1].toUpperCase() === "H" ? home : away).push(rest[i]);
+        i++; // the marker belongs to the name just read
+      }
+    } else {
+      const opponents = rest.slice(0, 8);
+      if (opponents.some((name) => !name)) continue;
+      opponents.forEach((name, i) => (i % 2 === 0 ? home : away).push(name));
+    }
+
+    if (home.length || away.length) draw.push({ club, home, away });
   }
   return draw;
 }

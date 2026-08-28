@@ -2,10 +2,10 @@ name: Refresh data
 
 on:
   schedule:
-    # Tue/Wed/Thu 21:00 UTC — midnight in Israel, once each match night is over.
-    # Cron is UTC and has no idea about DST, so this drifts to 23:00 local when
-    # the clocks go back in late October.
-    - cron: "0 21 * * 2,3,4"
+    # Tue/Wed/Thu 22:00 UTC — after full time whether Europe is on summer time
+    # (late kick-off 19:00 UTC, done by 20:50) or winter (20:00, done by 21:50).
+    # Cron has no idea about DST, so this is 01:00 in Israel now, midnight later.
+    - cron: "0 22 * * 2,3,4"
   workflow_dispatch:
 
 permissions:

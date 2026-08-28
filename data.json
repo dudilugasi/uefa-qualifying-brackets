@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-28T15:42:57.874Z",
+  "fetchedAt": "2026-08-28T15:51:14.235Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -13482,7 +13482,476 @@
           }
         ],
         "standings": [],
-        "draw": [],
+        "draw": [
+          {
+            "club": "Atalanta",
+            "home": [
+              "Pafos",
+              "Kairat",
+              "Mjällby AIF"
+            ],
+            "away": [
+              "Ajax",
+              "Borac Banja Luka",
+              "Riga"
+            ]
+          },
+          {
+            "club": "Braga",
+            "home": [
+              "Gent",
+              "KuPS",
+              "Egnatia"
+            ],
+            "away": [
+              "Copenhagen",
+              "Brann",
+              "AGF"
+            ]
+          },
+          {
+            "club": "Ajax",
+            "home": [
+              "Atalanta",
+              "Getafe",
+              "Thun"
+            ],
+            "away": [
+              "Midtjylland",
+              "Sint-Truiden",
+              "Hajduk Split"
+            ]
+          },
+          {
+            "club": "SC Freiburg",
+            "home": [
+              "Panathinaikos",
+              "Twente",
+              "Jablonec"
+            ],
+            "away": [
+              "Monaco",
+              "Trabzonspor",
+              "Kauno Žalgiris"
+            ]
+          },
+          {
+            "club": "Monaco",
+            "home": [
+              "SC Freiburg",
+              "Lincoln Red Imps",
+              "Nordsjælland"
+            ],
+            "away": [
+              "Brighton & Hove Albion",
+              "Heart of Midlothian",
+              "CSKA Sofia"
+            ]
+          },
+          {
+            "club": "Copenhagen",
+            "home": [
+              "Braga",
+              "Lugano",
+              "Iberia 1999"
+            ],
+            "away": [
+              "Red Star Belgrade",
+              "Universitatea Craiova",
+              "Inter Club d'Escaldes"
+            ]
+          },
+          {
+            "club": "Midtjylland",
+            "home": [
+              "Ajax",
+              "Sint-Truiden",
+              "Hajduk Split"
+            ],
+            "away": [
+              "Pafos",
+              "Lincoln Red Imps",
+              "Egnatia"
+            ]
+          },
+          {
+            "club": "Red Star Belgrade",
+            "home": [
+              "Copenhagen",
+              "Trabzonspor",
+              "Inter Club d'Escaldes"
+            ],
+            "away": [
+              "Gent",
+              "Lugano",
+              "Iberia 1999"
+            ]
+          },
+          {
+            "club": "Gent",
+            "home": [
+              "Red Star Belgrade",
+              "Brann",
+              "AGF"
+            ],
+            "away": [
+              "Braga",
+              "KuPS",
+              "Thun"
+            ]
+          },
+          {
+            "club": "Panathinaikos",
+            "home": [
+              "Brighton & Hove Albion",
+              "Borac Banja Luka",
+              "CSKA Sofia"
+            ],
+            "away": [
+              "SC Freiburg",
+              "Kairat",
+              "Nordsjælland"
+            ]
+          },
+          {
+            "club": "Pafos",
+            "home": [
+              "Midtjylland",
+              "Heart of Midlothian",
+              "Riga"
+            ],
+            "away": [
+              "Atalanta",
+              "Twente",
+              "Mjällby AIF"
+            ]
+          },
+          {
+            "club": "Brighton & Hove Albion",
+            "home": [
+              "Monaco",
+              "Universitatea Craiova",
+              "Kauno Žalgiris"
+            ],
+            "away": [
+              "Panathinaikos",
+              "Getafe",
+              "Jablonec"
+            ]
+          },
+          {
+            "club": "Lugano",
+            "home": [
+              "Red Star Belgrade",
+              "Sint-Truiden",
+              "Kauno Žalgiris"
+            ],
+            "away": [
+              "Copenhagen",
+              "Getafe",
+              "Jablonec"
+            ]
+          },
+          {
+            "club": "Getafe",
+            "home": [
+              "Brighton & Hove Albion",
+              "Lugano",
+              "Inter Club d'Escaldes"
+            ],
+            "away": [
+              "Ajax",
+              "Universitatea Craiova",
+              "Iberia 1999"
+            ]
+          },
+          {
+            "club": "KuPS",
+            "home": [
+              "Gent",
+              "Trabzonspor",
+              "CSKA Sofia"
+            ],
+            "away": [
+              "Braga",
+              "Borac Banja Luka",
+              "Nordsjælland"
+            ]
+          },
+          {
+            "club": "Twente",
+            "home": [
+              "Pafos",
+              "Kairat",
+              "Thun"
+            ],
+            "away": [
+              "SC Freiburg",
+              "Lincoln Red Imps",
+              "AGF"
+            ]
+          },
+          {
+            "club": "Lincoln Red Imps",
+            "home": [
+              "Midtjylland",
+              "Twente",
+              "Hajduk Split"
+            ],
+            "away": [
+              "Monaco",
+              "Brann",
+              "Egnatia"
+            ]
+          },
+          {
+            "club": "Borac Banja Luka",
+            "home": [
+              "Atalanta",
+              "KuPS",
+              "Riga"
+            ],
+            "away": [
+              "Panathinaikos",
+              "Heart of Midlothian",
+              "Mjällby AIF"
+            ]
+          },
+          {
+            "club": "Sint-Truiden",
+            "home": [
+              "Ajax",
+              "Brann",
+              "Iberia 1999"
+            ],
+            "away": [
+              "Midtjylland",
+              "Lugano",
+              "Hajduk Split"
+            ]
+          },
+          {
+            "club": "Brann",
+            "home": [
+              "Braga",
+              "Lincoln Red Imps",
+              "AGF"
+            ],
+            "away": [
+              "Gent",
+              "Sint-Truiden",
+              "Kauno Žalgiris"
+            ]
+          },
+          {
+            "club": "Heart of Midlothian",
+            "home": [
+              "Monaco",
+              "Borac Banja Luka",
+              "Nordsjælland"
+            ],
+            "away": [
+              "Pafos",
+              "Trabzonspor",
+              "Thun"
+            ]
+          },
+          {
+            "club": "Kairat",
+            "home": [
+              "Panathinaikos",
+              "Universitatea Craiova",
+              "Mjällby AIF"
+            ],
+            "away": [
+              "Atalanta",
+              "Twente",
+              "Riga"
+            ]
+          },
+          {
+            "club": "Trabzonspor",
+            "home": [
+              "SC Freiburg",
+              "Heart of Midlothian",
+              "Jablonec"
+            ],
+            "away": [
+              "Red Star Belgrade",
+              "KuPS",
+              "CSKA Sofia"
+            ]
+          },
+          {
+            "club": "Universitatea Craiova",
+            "home": [
+              "Copenhagen",
+              "Getafe",
+              "Egnatia"
+            ],
+            "away": [
+              "Brighton & Hove Albion",
+              "Kairat",
+              "Inter Club d'Escaldes"
+            ]
+          },
+          {
+            "club": "Riga",
+            "home": [
+              "Atalanta",
+              "Kairat",
+              "Jablonec"
+            ],
+            "away": [
+              "Pafos",
+              "Borac Banja Luka",
+              "Kauno Žalgiris"
+            ]
+          },
+          {
+            "club": "Hajduk Split",
+            "home": [
+              "Ajax",
+              "Sint-Truiden",
+              "Nordsjælland"
+            ],
+            "away": [
+              "Midtjylland",
+              "Lincoln Red Imps",
+              "Thun"
+            ]
+          },
+          {
+            "club": "Jablonec",
+            "home": [
+              "Brighton & Hove Albion",
+              "Lugano",
+              "Iberia 1999"
+            ],
+            "away": [
+              "SC Freiburg",
+              "Trabzonspor",
+              "Riga"
+            ]
+          },
+          {
+            "club": "Nordsjælland",
+            "home": [
+              "Panathinaikos",
+              "KuPS",
+              "CSKA Sofia"
+            ],
+            "away": [
+              "Monaco",
+              "Heart of Midlothian",
+              "Hajduk Split"
+            ]
+          },
+          {
+            "club": "AGF",
+            "home": [
+              "Braga",
+              "Twente",
+              "Egnatia"
+            ],
+            "away": [
+              "Gent",
+              "Brann",
+              "Inter Club d'Escaldes"
+            ]
+          },
+          {
+            "club": "Inter Club d'Escaldes",
+            "home": [
+              "Copenhagen",
+              "Universitatea Craiova",
+              "AGF"
+            ],
+            "away": [
+              "Red Star Belgrade",
+              "Getafe",
+              "Mjällby AIF"
+            ]
+          },
+          {
+            "club": "Thun",
+            "home": [
+              "Gent",
+              "Heart of Midlothian",
+              "Hajduk Split"
+            ],
+            "away": [
+              "Ajax",
+              "Twente",
+              "CSKA Sofia"
+            ]
+          },
+          {
+            "club": "CSKA Sofia",
+            "home": [
+              "Monaco",
+              "Trabzonspor",
+              "Thun"
+            ],
+            "away": [
+              "Panathinaikos",
+              "KuPS",
+              "Nordsjælland"
+            ]
+          },
+          {
+            "club": "Kauno Žalgiris",
+            "home": [
+              "SC Freiburg",
+              "Brann",
+              "Riga"
+            ],
+            "away": [
+              "Brighton & Hove Albion",
+              "Lugano",
+              "Egnatia"
+            ]
+          },
+          {
+            "club": "Mjällby AIF",
+            "home": [
+              "Pafos",
+              "Borac Banja Luka",
+              "Inter Club d'Escaldes"
+            ],
+            "away": [
+              "Atalanta",
+              "Kairat",
+              "Iberia 1999"
+            ]
+          },
+          {
+            "club": "Iberia 1999",
+            "home": [
+              "Red Star Belgrade",
+              "Getafe",
+              "Mjällby AIF"
+            ],
+            "away": [
+              "Copenhagen",
+              "Sint-Truiden",
+              "Jablonec"
+            ]
+          },
+          {
+            "club": "Egnatia",
+            "home": [
+              "Midtjylland",
+              "Lincoln Red Imps",
+              "Kauno Žalgiris"
+            ],
+            "away": [
+              "Braga",
+              "Universitatea Craiova",
+              "AGF"
+            ]
+          }
+        ],
         "matchdays": []
       }
     }
