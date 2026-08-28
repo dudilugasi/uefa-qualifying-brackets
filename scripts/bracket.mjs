@@ -65,14 +65,16 @@ const PATH_OF_LABEL = {
  *   placeholder — the article spells it out: "Winner of CP match 3".
  *   known club  — the path of the tie it won earlier, else how it entered
  *                 (Teams-table CH/MP header, or a transfer out of UCL).
- * An empty result means "no signal": a domestic entrant, which falls back to
- * the competition's default path.
+ * No signal means a domestic entrant, which belongs to the default path. That
+ * has to be decided per side, not per tie: a fresh play-off entrant paired with
+ * a Champions Path drop-out is a genuinely mixed tie, and treating the entrant
+ * as silent would file the whole tie under the drop-out's path.
  */
-function sidePaths(side, winners) {
+function sidePaths(side, winners, fallback) {
   if (isPlaceholder(side)) {
     if (/\bCP\b/i.test(side.name)) return ["champions"];
     if (/\bMP\b/i.test(side.name)) return ["main"];
-    return [];
+    return [fallback];
   }
   const earlier = winners.get(nameOf(side));
   if (earlier) return [...earlier];
@@ -82,7 +84,7 @@ function sidePaths(side, winners) {
   if (entry?.kind === "transfer") {
     return [/champions/i.test(entry.fromPath ?? "") ? "champions" : "main"];
   }
-  return [];
+  return [fallback];
 }
 
 /**
@@ -107,10 +109,9 @@ export function derivePaths(data, competition) {
         paths.add(stated);
       } else {
         for (const side of [tie.home, tie.away]) {
-          for (const p of sidePaths(side, winners)) paths.add(p);
+          for (const p of sidePaths(side, winners, competition.defaultPath)) paths.add(p);
         }
       }
-      if (!paths.size) paths.add(competition.defaultPath);
 
       assigned.set(tie, paths);
       tie.crossPath = paths.size > 1;
