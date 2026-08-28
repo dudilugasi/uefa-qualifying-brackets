@@ -98,7 +98,7 @@
   .comp-tab .stale-dot { color: var(--err); margin-left: 5px; }
 
   /* Path filters on the left, layout switch pushed to the right of the same row. */
-  .tab-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+  .tab-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
   .tabs { display: flex; gap: 8px; margin: 14px 0 0; flex-wrap: wrap; }
   .tabs[hidden] { display: none; }
 
@@ -108,7 +108,18 @@
     background: var(--panel); padding: 2px;
   }
   .layout-switch .tab { border: none; background: none; padding: 6px 14px; font-size: 13px; }
-  .layout-switch .tab[aria-selected="true"] { background: var(--accent-soft); }
+  /* Density is a toggle rather than one of the layouts, so it gets its own
+     control alongside the switch instead of sitting inside it. */
+  .density-switch {
+    display: flex; margin: 14px 0 0;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--panel); padding: 2px;
+  }
+  .density-switch .tab { border: none; background: none; padding: 6px 14px; font-size: 13px; }
+  .layout-switch .tab[aria-selected="true"],
+  .density-switch .tab[aria-pressed="true"] {
+    background: var(--accent-soft); color: var(--accent);
+  }
   .tab {
     appearance: none; border: 1px solid var(--line);
     background: var(--panel); color: var(--text);
@@ -117,6 +128,48 @@
   }
   .tab[aria-selected="true"] {
     background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
+  }
+
+  /* Find-in-bracket, over the sticky tabs so it is never scrolled away. */
+  .search {
+    position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+    z-index: 40;
+  }
+  .search[hidden] { display: none; }
+  .search-input {
+    width: min(420px, calc(100vw - 32px));
+    padding: 9px 14px; font: inherit; font-size: 14px;
+    color: var(--text); background: var(--panel);
+    border: 1px solid var(--trace); border-radius: 999px;
+    box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.5);
+  }
+  .search-input:focus { outline: none; box-shadow: 0 0 0 3px var(--trace-glow); }
+
+  /* Up to five name matches, to pick instead of finishing the word. */
+  .search-list {
+    display: flex; flex-direction: column;
+    margin: 6px auto 0; width: min(420px, calc(100vw - 32px));
+    background: var(--panel);
+    border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  .search-list:empty { display: none; }
+  .search-option {
+    display: flex; align-items: baseline; gap: 8px;
+    appearance: none; border: none; background: none;
+    padding: 8px 14px; font: inherit; font-size: 13.5px;
+    color: var(--text); text-align: left; cursor: pointer;
+  }
+  .search-option + .search-option { border-top: 1px solid var(--line); }
+  .search-option:hover,
+  .search-option[aria-selected="true"] { background: var(--accent-soft); }
+  .search-country { margin-left: auto; color: var(--muted); font-size: 12px; }
+
+  /* A search dims everything it didn't match, so the hits read at a glance. */
+  .canvas.searching .team:not(.hit), .canvas.searching .lp-row:not(.hit) { opacity: 0.25; }
+  .canvas.searching .team.hit, .canvas.searching .lp-row.hit {
+    background: var(--trace-soft); color: var(--trace);
   }
 
   .bracket-scroll { overflow-x: auto; padding-bottom: 12px; }
@@ -146,8 +199,10 @@
   .bracket.compact { gap: 22px; }
   .compact .round { flex: 0 0 200px; }
   /* Everything hangs from the bottom of the canvas: the ties in their columns,
-     and the table in its own, so the two line up whichever is taller. */
-  .compact .groups { gap: 8px; justify-content: flex-end; }
+     and the table in its own, so the two line up whichever is taller. Inside a
+     sub-bracket box the ties centre against their own feeders instead. */
+  .compact .groups { gap: 8px; }
+  .compact:not(.subs) .groups { justify-content: flex-end; }
   .compact .league-round { justify-content: flex-end; }
   .compact .pair { gap: 3px; }
   .compact .round-head { padding: 2px 2px 6px; font-size: 11px; }
@@ -158,6 +213,10 @@
   .compact .tie-group, .compact .tie-foot, .compact .leg, .compact .agg { display: none; }
   .compact .flag { font-size: 12px; }
   .compact .league-round { flex: 0 0 260px; margin-right: 0; }
+  /* UECL only: its qualifying columns run far deeper than everything else, so
+     hanging from the foot leaves the rest stranded — centre it all instead. */
+  .bracket.compact[data-competition="uecl"] .groups,
+  .bracket.compact[data-competition="uecl"] .league-round { justify-content: center; }
   .compact .lp-table { font-size: 12px; }
   .compact .lp-table th { padding: 4px 6px; }
   .compact .lp-table td { padding: 2px 6px; }

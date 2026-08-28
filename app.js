@@ -215,9 +215,7 @@ function renderPath(path) {
   const bracket = document.getElementById("bracket");
   activePath = path;
   bracket.replaceChildren();
-  bracket.className = `bracket${layout === "sub" ? " subs" : ""}${
-    layout === "compact" ? " compact" : ""
-  }`;
+  bracket.className = `bracket${layout === "sub" ? " subs" : ""}${compact ? " compact" : ""}`;
 
   if (layout === "sub") {
     // The boxes stack in their own column, so the league phase can sit beside
@@ -236,8 +234,12 @@ function renderPath(path) {
   const leaguePhase = competition && leaguePhaseColumn(competition, path.rounds.length);
   if (leaguePhase) bracket.append(leaguePhase);
 
+  // ucl / uel / uecl, for styling that only applies to one competition.
+  bracket.dataset.competition = competition?.id ?? "";
+
   drawWires();
   resyncTrace();
+  applySearch(); // the rows are new, the query isn't
   scrollToLatest();
 }
 
@@ -678,9 +680,200 @@ function initTraceEvents() {
     }
   });
 
-  addEventListener("keydown", (ev) => {
-    if (ev.key === "Escape" && pinned) unpin();
+  const search = document.getElementById("search-input");
+  // Typing only narrows the options: the bracket is marked on the pick, so it
+  // doesn't flicker through every club that shares the first two letters.
+  search.addEventListener("input", () => {
+    typed = search.value.trim().toLowerCase();
+    activeSuggestion = -1;
+    setQuery("");
+    applySearch();
+    renderSuggestions();
   });
+
+  search.addEventListener("keydown", (ev) => {
+    if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+      ev.preventDefault(); // the caret stays put; the list moves
+      moveSuggestion(ev.key === "ArrowDown" ? 1 : -1);
+    } else if (ev.key === "Enter") {
+      ev.preventDefault();
+      // Nothing walked to with the arrows: take the top option, so "isr" commits
+      // as "Israel" rather than leaving a fragment in the box.
+      chooseSuggestion(suggestions[activeSuggestion] ?? suggestions[0] ?? search.value.trim());
+    }
+  });
+
+  addEventListener("keydown", (ev) => {
+    if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "f") {
+      ev.preventDefault(); // the bracket is the thing worth searching, not the page
+      toggleSearch(true);
+      return;
+    }
+    if (ev.key !== "Escape") return;
+    if (!document.getElementById("search").hidden) toggleSearch(false);
+    else if (pinned) unpin();
+  });
+}
+
+/**
+ * Ctrl/Cmd+F searches the bracket rather than the page. A row matches on its
+ * club, its country, or its route in — the same prose the entry bar shows — so
+ * "cup winner", "champions", "runners-up" or "Israel" all find something.
+ */
+let query = "";
+/** What is in the box, which filters the options but doesn't mark the bracket. */
+let typed = "";
+/**
+ * Names match on any fragment, so a club is found from a few letters. The route
+ * prose has to match whole words — an optional plural aside — so "champions"
+ * finds every champion and "cham" doesn't.
+ */
+let routePattern = null;
+
+function setQuery(text) {
+  query = text.trim().toLowerCase();
+  // "3rd place" is how you'd say it; the article just says "Finished 3rd".
+  const words = query.replace(/\bplaces?\b/g, "").trim();
+  const escaped = words.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  routePattern = words ? new RegExp(`\\b${escaped}s?\\b`) : null;
+}
+
+function matchesSearch(row) {
+  const team = row.team;
+  if (!team) return false;
+
+  const name = [team.name, team.label, team.country].filter(Boolean).join(" ").toLowerCase();
+  if (name.includes(query)) return true;
+
+  const route = howQualified(team);
+  const prose = [route?.how, route?.sub].filter(Boolean).join(" ").toLowerCase();
+  return Boolean(routePattern?.test(prose));
+}
+
+function applySearch() {
+  const canvas = document.getElementById("canvas");
+  const rows = [...canvas.querySelectorAll(HOVERABLE)];
+  const hits = new Set(query ? rows.filter(matchesSearch) : []);
+
+  for (const row of rows) row.classList.toggle("hit", hits.has(row));
+  // A query that matches nothing leaves the bracket alone: dimming every row at
+  // once reads as breakage rather than as an empty result.
+  canvas.classList.toggle("searching", hits.size > 0);
+}
+
+function toggleSearch(open) {
+  const box = document.getElementById("search");
+  const input = document.getElementById("search-input");
+  box.hidden = !open;
+
+  if (open) {
+    input.select();
+    input.focus();
+    return;
+  }
+  input.value = "";
+  typed = "";
+  setQuery("");
+  applySearch();
+  renderSuggestions();
+}
+
+/** How many matches the box offers, to pick from rather than type out in full. */
+const SUGGESTION_LIMIT = 10;
+let suggestions = [];
+let activeSuggestion = -1;
+
+/** Routes worth searching by, in the words the entry bar uses for them. */
+const ROUTE_PHRASES = [
+  { value: "champions", icon: "🥇" },
+  { value: "runners-up", icon: "🥈" },
+  { value: "3rd place", icon: "🥉" },
+  { value: "4th place", icon: "🏅" },
+  { value: "5th place", icon: "🏅" },
+  { value: "6th place", icon: "🏅" },
+  { value: "7th place", icon: "🏅" },
+  { value: "cup winners", icon: "🏆" },
+  { value: "title holders", icon: "🏆" },
+  { value: "qualification play-off" },
+  { value: "dropped in" },
+  { value: "champions path" },
+  { value: "league path" },
+  { value: "main path" },
+];
+
+/** Clubs, then countries, then routes — whatever the query is a fragment of. */
+function searchOptions() {
+  const clubs = new Map();
+  const countries = new Map();
+
+  for (const row of document.querySelectorAll(`#canvas ${HOVERABLE}`)) {
+    const team = row.team;
+    if (!team) continue;
+    if (team.name && !team.placeholder && team.name.toLowerCase().includes(typed)) {
+      if (!clubs.has(team.name)) clubs.set(team.name, team);
+    }
+    if (team.country && team.country.toLowerCase().includes(typed)) {
+      if (!countries.has(team.country)) countries.set(team.country, team);
+    }
+  }
+
+  return [
+    ...[...clubs].map(([name, team]) => ({ value: name, flag: team.flag, hint: team.country })),
+    ...[...countries].map(([country, team]) => ({ value: country, flag: team.flag })),
+    ...ROUTE_PHRASES.filter((phrase) => phrase.value.includes(typed)).map((phrase) => ({
+      value: phrase.value,
+      flag: phrase.icon,
+    })),
+  ].slice(0, SUGGESTION_LIMIT);
+}
+
+function renderSuggestions() {
+  const list = document.getElementById("search-list");
+  list.replaceChildren();
+  suggestions = [];
+  if (!typed) {
+    activeSuggestion = -1;
+    return;
+  }
+
+  const options = searchOptions();
+  suggestions = options.map((option) => option.value);
+  if (activeSuggestion >= suggestions.length) activeSuggestion = suggestions.length - 1;
+
+  options.forEach((option, i) => {
+    const button = el("button", "search-option");
+    button.type = "button";
+    button.setAttribute("aria-selected", String(i === activeSuggestion));
+    if (option.flag) button.append(el("span", "flag", option.flag));
+    button.append(el("span", null, option.value));
+    if (option.hint) button.append(el("span", "search-country", option.hint));
+    button.addEventListener("click", () => chooseSuggestion(option.value));
+    list.append(button);
+  });
+}
+
+function chooseSuggestion(name) {
+  if (!name) return;
+  const input = document.getElementById("search-input");
+  input.value = name;
+  typed = name.toLowerCase();
+  setQuery(name);
+  applySearch();
+
+  // The pick is the answer, so the list closes rather than offering it again.
+  suggestions = [];
+  activeSuggestion = -1;
+  document.getElementById("search-list").replaceChildren();
+  input.focus();
+}
+
+/** Cycles through the options and back to the typed text, which is index -1. */
+function moveSuggestion(step) {
+  if (!suggestions.length) return;
+  const places = suggestions.length + 1;
+  const next = (((activeSuggestion + 1 + step) % places) + places) % places;
+  activeSuggestion = next - 1;
+  renderSuggestions();
 }
 
 /** Survives refreshes so the view doesn't jump back to the first tab. */
@@ -689,17 +882,15 @@ const selection = { competitionId: null, pathId: null };
 /** The whole loaded payload, so one competition's card can read another's. */
 let payload = null;
 
-/**
- * "columns" — one column per round; "sub" — a small bracket per tie;
- * "compact" — the columns stripped to names, sized to fit the window.
- */
+/** "columns" — one column per round; "sub" — a small bracket per tie. */
 let layout = "columns";
-let activePath = null; // re-rendered in place when the layout switches
+/** Density, independent of the layout: names only, sized to fit the window. */
+let compact = true;
+let activePath = null; // re-rendered in place when either switches
 
 const LAYOUTS = [
   ["columns", "Columns", "One column per round, every tie stacked"],
   ["sub", "Sub-brackets", "One bracket per tie, with everything that feeds it"],
-  ["compact", "Compact", "Names only, tight enough to fit on one screen"],
 ];
 
 function renderLayoutSwitch() {
@@ -719,6 +910,19 @@ function renderLayoutSwitch() {
     });
     wrap.append(btn);
   }
+
+  // Density rides on top of either layout, so it toggles rather than selects,
+  // and sits in its own control beside them.
+  const density = el("button", "tab", "Compact");
+  density.type = "button";
+  density.title = "Names only, tight enough to fit on one screen";
+  density.setAttribute("aria-pressed", String(compact));
+  density.addEventListener("click", () => {
+    compact = !compact;
+    renderLayoutSwitch();
+    if (activePath) renderPath(activePath);
+  });
+  document.getElementById("density-switch").replaceChildren(density);
 }
 
 const ROUND_SEQUENCE = [
