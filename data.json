@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-08-28T15:51:14.235Z",
+  "fetchedAt": "2026-09-01T23:50:07.285Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -2626,7 +2626,7 @@
         ],
         "standings": [
           {
-            "name": "Paris Saint-Germain",
+            "name": "AEK Athens",
             "position": 1,
             "played": 0,
             "wins": 0,
@@ -2644,7 +2644,7 @@
             "points": 0
           },
           {
-            "name": "Atlético Madrid",
+            "name": "Aston Villa",
             "position": 3,
             "played": 0,
             "wins": 0,
@@ -2653,7 +2653,7 @@
             "points": 0
           },
           {
-            "name": "Bayern Munich",
+            "name": "Atlético Madrid",
             "position": 4,
             "played": 0,
             "wins": 0,
@@ -2662,7 +2662,7 @@
             "points": 0
           },
           {
-            "name": "Real Madrid",
+            "name": "Barcelona",
             "position": 5,
             "played": 0,
             "wins": 0,
@@ -2671,7 +2671,7 @@
             "points": 0
           },
           {
-            "name": "Barcelona",
+            "name": "Bayern Munich",
             "position": 6,
             "played": 0,
             "wins": 0,
@@ -2680,7 +2680,7 @@
             "points": 0
           },
           {
-            "name": "Inter Milan",
+            "name": "Bodø/Glimt",
             "position": 7,
             "played": 0,
             "wins": 0,
@@ -2689,7 +2689,7 @@
             "points": 0
           },
           {
-            "name": "Manchester City",
+            "name": "Borussia Dortmund",
             "position": 8,
             "played": 0,
             "wins": 0,
@@ -2698,7 +2698,7 @@
             "points": 0
           },
           {
-            "name": "Borussia Dortmund",
+            "name": "Club Brugge",
             "position": 9,
             "played": 0,
             "wins": 0,
@@ -2707,7 +2707,7 @@
             "points": 0
           },
           {
-            "name": "Manchester United",
+            "name": "Como",
             "position": 10,
             "played": 0,
             "wins": 0,
@@ -2716,7 +2716,7 @@
             "points": 0
           },
           {
-            "name": "Liverpool",
+            "name": "Fenerbahçe",
             "position": 11,
             "played": 0,
             "wins": 0,
@@ -2725,7 +2725,7 @@
             "points": 0
           },
           {
-            "name": "Galatasaray",
+            "name": "Feyenoord",
             "position": 12,
             "played": 0,
             "wins": 0,
@@ -2734,7 +2734,7 @@
             "points": 0
           },
           {
-            "name": "PSV Eindhoven",
+            "name": "Galatasaray",
             "position": 13,
             "played": 0,
             "wins": 0,
@@ -2743,7 +2743,7 @@
             "points": 0
           },
           {
-            "name": "Club Brugge",
+            "name": "Inter Milan",
             "position": 14,
             "played": 0,
             "wins": 0,
@@ -2752,7 +2752,7 @@
             "points": 0
           },
           {
-            "name": "RB Leipzig",
+            "name": "LASK",
             "position": 15,
             "played": 0,
             "wins": 0,
@@ -2761,7 +2761,7 @@
             "points": 0
           },
           {
-            "name": "Aston Villa",
+            "name": "Lens",
             "position": 16,
             "played": 0,
             "wins": 0,
@@ -2770,7 +2770,7 @@
             "points": 0
           },
           {
-            "name": "Feyenoord",
+            "name": "Lille",
             "position": 17,
             "played": 0,
             "wins": 0,
@@ -2779,7 +2779,7 @@
             "points": 0
           },
           {
-            "name": "Shakhtar Donetsk",
+            "name": "Liverpool",
             "position": 18,
             "played": 0,
             "wins": 0,
@@ -2788,7 +2788,7 @@
             "points": 0
           },
           {
-            "name": "Real Betis",
+            "name": "Manchester City",
             "position": 19,
             "played": 0,
             "wins": 0,
@@ -2797,7 +2797,7 @@
             "points": 0
           },
           {
-            "name": "Lens",
+            "name": "Manchester United",
             "position": 20,
             "played": 0,
             "wins": 0,
@@ -2806,7 +2806,7 @@
             "points": 0
           },
           {
-            "name": "Slavia Prague",
+            "name": "Napoli",
             "position": 21,
             "played": 0,
             "wins": 0,
@@ -2815,7 +2815,7 @@
             "points": 0
           },
           {
-            "name": "Napoli",
+            "name": "Paris Saint-Germain",
             "position": 22,
             "played": 0,
             "wins": 0,
@@ -2824,7 +2824,7 @@
             "points": 0
           },
           {
-            "name": "Lille",
+            "name": "Porto",
             "position": 23,
             "played": 0,
             "wins": 0,
@@ -2833,7 +2833,7 @@
             "points": 0
           },
           {
-            "name": "Roma",
+            "name": "PSV Eindhoven",
             "position": 24,
             "played": 0,
             "wins": 0,
@@ -2842,7 +2842,7 @@
             "points": 0
           },
           {
-            "name": "Villarreal",
+            "name": "RB Leipzig",
             "position": 25,
             "played": 0,
             "wins": 0,
@@ -2851,7 +2851,7 @@
             "points": 0
           },
           {
-            "name": "Sporting CP",
+            "name": "Real Betis",
             "position": 26,
             "played": 0,
             "wins": 0,
@@ -2860,7 +2860,7 @@
             "points": 0
           },
           {
-            "name": "Porto",
+            "name": "Real Madrid",
             "position": 27,
             "played": 0,
             "wins": 0,
@@ -2869,7 +2869,7 @@
             "points": 0
           },
           {
-            "name": "VfB Stuttgart",
+            "name": "Roma",
             "position": 28,
             "played": 0,
             "wins": 0,
@@ -2878,7 +2878,7 @@
             "points": 0
           },
           {
-            "name": "Como",
+            "name": "Sabah",
             "position": 29,
             "played": 0,
             "wins": 0,
@@ -2887,7 +2887,7 @@
             "points": 0
           },
           {
-            "name": "AEK Athens",
+            "name": "Shakhtar Donetsk",
             "position": 30,
             "played": 0,
             "wins": 0,
@@ -2896,7 +2896,7 @@
             "points": 0
           },
           {
-            "name": "LASK",
+            "name": "Slavia Prague",
             "position": 31,
             "played": 0,
             "wins": 0,
@@ -2905,7 +2905,7 @@
             "points": 0
           },
           {
-            "name": "Viking",
+            "name": "Slovan Bratislava",
             "position": 32,
             "played": 0,
             "wins": 0,
@@ -2914,7 +2914,7 @@
             "points": 0
           },
           {
-            "name": "Slovan Bratislava",
+            "name": "Sporting CP",
             "position": 33,
             "played": 0,
             "wins": 0,
@@ -2923,7 +2923,7 @@
             "points": 0
           },
           {
-            "name": "Sabah",
+            "name": "VfB Stuttgart",
             "position": 34,
             "played": 0,
             "wins": 0,
@@ -2932,7 +2932,7 @@
             "points": 0
           },
           {
-            "name": "Fenerbahçe",
+            "name": "Viking",
             "position": 35,
             "played": 0,
             "wins": 0,
@@ -2941,7 +2941,7 @@
             "points": 0
           },
           {
-            "name": "Bodø/Glimt",
+            "name": "Villarreal",
             "position": 36,
             "played": 0,
             "wins": 0,
@@ -3495,7 +3495,1051 @@
         "matchdays": [
           {
             "name": "Matchday 1",
-            "matches": []
+            "matches": [
+              {
+                "date": "2026-09-08",
+                "time": "18:45",
+                "home": "AEK Athens",
+                "away": "LASK",
+                "score": null
+              },
+              {
+                "date": "2026-09-08",
+                "time": "18:45",
+                "home": "Club Brugge",
+                "away": "Aston Villa",
+                "score": null
+              },
+              {
+                "date": "2026-09-08",
+                "time": "21:00",
+                "home": "Borussia Dortmund",
+                "away": "Villarreal",
+                "score": null
+              },
+              {
+                "date": "2026-09-08",
+                "time": "21:00",
+                "home": "Porto",
+                "away": "Manchester City",
+                "score": null
+              },
+              {
+                "date": "2026-09-08",
+                "time": "21:00",
+                "home": "Lille",
+                "away": "Real Betis",
+                "score": null
+              },
+              {
+                "date": "2026-09-08",
+                "time": "21:00",
+                "home": "Real Madrid",
+                "away": "Inter Milan",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "18:45",
+                "home": "Barcelona",
+                "away": "Feyenoord",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "18:45",
+                "home": "VfB Stuttgart",
+                "away": "Viking",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "21:00",
+                "home": "Liverpool",
+                "away": "Atlético Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "21:00",
+                "home": "Paris Saint-Germain",
+                "away": "Slovan Bratislava",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "21:00",
+                "home": "Sporting CP",
+                "away": "Galatasaray",
+                "score": null
+              },
+              {
+                "date": "2026-09-09",
+                "time": "21:00",
+                "home": "Napoli",
+                "away": "Arsenal",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "18:45",
+                "home": "Fenerbahçe",
+                "away": "Roma",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "18:45",
+                "home": "PSV Eindhoven",
+                "away": "Shakhtar Donetsk",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "21:00",
+                "home": "Como",
+                "away": "RB Leipzig",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "21:00",
+                "home": "Bayern Munich",
+                "away": "Bodø/Glimt",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "21:00",
+                "home": "Manchester United",
+                "away": "Sabah",
+                "score": null
+              },
+              {
+                "date": "2026-09-10",
+                "time": "21:00",
+                "home": "Slavia Prague",
+                "away": "Lens",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 2",
+            "matches": [
+              {
+                "date": "2026-10-13",
+                "time": "18:45",
+                "home": "Lens",
+                "away": "Sporting CP",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "18:45",
+                "home": "Sabah",
+                "away": "Slavia Prague",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Arsenal",
+                "away": "Lille",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Atlético Madrid",
+                "away": "Manchester United",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Inter Milan",
+                "away": "Club Brugge",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Galatasaray",
+                "away": "Barcelona",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "RB Leipzig",
+                "away": "PSV Eindhoven",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Viking",
+                "away": "Bayern Munich",
+                "score": null
+              },
+              {
+                "date": "2026-10-13",
+                "time": "21:00",
+                "home": "Villarreal",
+                "away": "Napoli",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "18:45",
+                "home": "Feyenoord",
+                "away": "Como",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "18:45",
+                "home": "LASK",
+                "away": "Liverpool",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Roma",
+                "away": "Real Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Aston Villa",
+                "away": "Fenerbahçe",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Shakhtar Donetsk",
+                "away": "AEK Athens",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Bodø/Glimt",
+                "away": "Borussia Dortmund",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Manchester City",
+                "away": "Paris Saint-Germain",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Real Betis",
+                "away": "Porto",
+                "score": null
+              },
+              {
+                "date": "2026-10-14",
+                "time": "21:00",
+                "home": "Slovan Bratislava",
+                "away": "VfB Stuttgart",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 3",
+            "matches": [
+              {
+                "date": "2026-10-20",
+                "time": "18:45",
+                "home": "Fenerbahçe",
+                "away": "Slavia Prague",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "18:45",
+                "home": "Sabah",
+                "away": "Borussia Dortmund",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Roma",
+                "away": "Slovan Bratislava",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Porto",
+                "away": "PSV Eindhoven",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Liverpool",
+                "away": "Villarreal",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Manchester City",
+                "away": "AEK Athens",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Paris Saint-Germain",
+                "away": "Barcelona",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "Napoli",
+                "away": "Bodø/Glimt",
+                "score": null
+              },
+              {
+                "date": "2026-10-20",
+                "time": "21:00",
+                "home": "VfB Stuttgart",
+                "away": "Atlético Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "18:45",
+                "home": "Como",
+                "away": "Manchester United",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "18:45",
+                "home": "Lille",
+                "away": "Galatasaray",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Aston Villa",
+                "away": "Viking",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Club Brugge",
+                "away": "Lens",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Bayern Munich",
+                "away": "Arsenal",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Inter Milan",
+                "away": "Shakhtar Donetsk",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Real Madrid",
+                "away": "RB Leipzig",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Real Betis",
+                "away": "Feyenoord",
+                "score": null
+              },
+              {
+                "date": "2026-10-21",
+                "time": "21:00",
+                "home": "Sporting CP",
+                "away": "LASK",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 4",
+            "matches": [
+              {
+                "date": "2026-11-03",
+                "time": "18:45",
+                "home": "Shakhtar Donetsk",
+                "away": "Sporting CP",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "18:45",
+                "home": "Galatasaray",
+                "away": "VfB Stuttgart",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Atlético Madrid",
+                "away": "Bayern Munich",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Barcelona",
+                "away": "Aston Villa",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Feyenoord",
+                "away": "Inter Milan",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Bodø/Glimt",
+                "away": "Lille",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "LASK",
+                "away": "Slovan Bratislava",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Manchester United",
+                "away": "Roma",
+                "score": null
+              },
+              {
+                "date": "2026-11-03",
+                "time": "21:00",
+                "home": "Villarreal",
+                "away": "Paris Saint-Germain",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "18:45",
+                "home": "AEK Athens",
+                "away": "Real Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "18:45",
+                "home": "Fenerbahçe",
+                "away": "Liverpool",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "Borussia Dortmund",
+                "away": "Real Betis",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "Porto",
+                "away": "Napoli",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "PSV Eindhoven",
+                "away": "Club Brugge",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "RB Leipzig",
+                "away": "Manchester City",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "Lens",
+                "away": "Como",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "Slavia Prague",
+                "away": "Arsenal",
+                "score": null
+              },
+              {
+                "date": "2026-11-04",
+                "time": "21:00",
+                "home": "Viking",
+                "away": "Sabah",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 5",
+            "matches": [
+              {
+                "date": "2026-11-24",
+                "time": "18:45",
+                "home": "Bodø/Glimt",
+                "away": "LASK",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "18:45",
+                "home": "Galatasaray",
+                "away": "Aston Villa",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Arsenal",
+                "away": "Borussia Dortmund",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Como",
+                "away": "AEK Athens",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Feyenoord",
+                "away": "Porto",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Manchester City",
+                "away": "Napoli",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "RB Leipzig",
+                "away": "Lens",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Real Madrid",
+                "away": "PSV Eindhoven",
+                "score": null
+              },
+              {
+                "date": "2026-11-24",
+                "time": "21:00",
+                "home": "Slovan Bratislava",
+                "away": "Real Betis",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "18:45",
+                "home": "Sabah",
+                "away": "Barcelona",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "18:45",
+                "home": "Slavia Prague",
+                "away": "Villarreal",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Atlético Madrid",
+                "away": "Viking",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Club Brugge",
+                "away": "Liverpool",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Inter Milan",
+                "away": "VfB Stuttgart",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Shakhtar Donetsk",
+                "away": "Fenerbahçe",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Lille",
+                "away": "Bayern Munich",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Paris Saint-Germain",
+                "away": "Roma",
+                "score": null
+              },
+              {
+                "date": "2026-11-25",
+                "time": "21:00",
+                "home": "Sporting CP",
+                "away": "Manchester United",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 6",
+            "matches": [
+              {
+                "date": "2026-12-08",
+                "time": "18:45",
+                "home": "Viking",
+                "away": "Feyenoord",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "18:45",
+                "home": "Villarreal",
+                "away": "Sabah",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "AEK Athens",
+                "away": "Galatasaray",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Roma",
+                "away": "Sporting CP",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Aston Villa",
+                "away": "Paris Saint-Germain",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Barcelona",
+                "away": "Manchester City",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Bayern Munich",
+                "away": "Slavia Prague",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Manchester United",
+                "away": "RB Leipzig",
+                "score": null
+              },
+              {
+                "date": "2026-12-08",
+                "time": "21:00",
+                "home": "Napoli",
+                "away": "Club Brugge",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "18:45",
+                "home": "Real Betis",
+                "away": "Como",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "18:45",
+                "home": "Slovan Bratislava",
+                "away": "Shakhtar Donetsk",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "Arsenal",
+                "away": "Real Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "Borussia Dortmund",
+                "away": "Inter Milan",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "LASK",
+                "away": "Fenerbahçe",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "Liverpool",
+                "away": "Porto",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "PSV Eindhoven",
+                "away": "Atlético Madrid",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "Lens",
+                "away": "Bodø/Glimt",
+                "score": null
+              },
+              {
+                "date": "2026-12-09",
+                "time": "21:00",
+                "home": "VfB Stuttgart",
+                "away": "Lille",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 7",
+            "matches": [
+              {
+                "date": "2027-01-19",
+                "time": "18:45",
+                "home": "Bodø/Glimt",
+                "away": "Atlético Madrid",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "18:45",
+                "home": "Galatasaray",
+                "away": "Feyenoord",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "AEK Athens",
+                "away": "Roma",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "Aston Villa",
+                "away": "Borussia Dortmund",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "Inter Milan",
+                "away": "Liverpool",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "Porto",
+                "away": "Slavia Prague",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "Lille",
+                "away": "Slovan Bratislava",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "Real Madrid",
+                "away": "LASK",
+                "score": null
+              },
+              {
+                "date": "2027-01-19",
+                "time": "21:00",
+                "home": "VfB Stuttgart",
+                "away": "Club Brugge",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "18:45",
+                "home": "Fenerbahçe",
+                "away": "Villarreal",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "18:45",
+                "home": "Sabah",
+                "away": "Napoli",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Como",
+                "away": "Paris Saint-Germain",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Manchester United",
+                "away": "Bayern Munich",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "RB Leipzig",
+                "away": "Shakhtar Donetsk",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Lens",
+                "away": "Manchester City",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Real Betis",
+                "away": "Arsenal",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Sporting CP",
+                "away": "Barcelona",
+                "score": null
+              },
+              {
+                "date": "2027-01-20",
+                "time": "21:00",
+                "home": "Viking",
+                "away": "PSV Eindhoven",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 8",
+            "matches": [
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Arsenal",
+                "away": "Sabah",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Roma",
+                "away": "Lille",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Atlético Madrid",
+                "away": "Fenerbahçe",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Borussia Dortmund",
+                "away": "AEK Athens",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Club Brugge",
+                "away": "Bodø/Glimt",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Bayern Munich",
+                "away": "Real Betis",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Barcelona",
+                "away": "Como",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Shakhtar Donetsk",
+                "away": "Real Madrid",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Feyenoord",
+                "away": "RB Leipzig",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "LASK",
+                "away": "Porto",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Liverpool",
+                "away": "Lens",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Manchester City",
+                "away": "Sporting CP",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Paris Saint-Germain",
+                "away": "Galatasaray",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "PSV Eindhoven",
+                "away": "VfB Stuttgart",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Slavia Prague",
+                "away": "Aston Villa",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Napoli",
+                "away": "Viking",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Villarreal",
+                "away": "Manchester United",
+                "score": null
+              },
+              {
+                "date": "2027-01-27",
+                "time": "21:00",
+                "home": "Slovan Bratislava",
+                "away": "Inter Milan",
+                "score": null
+              }
+            ]
           }
         ]
       }
@@ -6315,7 +7359,332 @@
             "flag": "🇦🇹"
           }
         ],
-        "standings": [],
+        "standings": [
+          {
+            "name": "Anderlecht",
+            "position": 1,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Ararat-Armenia",
+            "position": 2,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "AZ",
+            "position": 3,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Bayer Leverkusen",
+            "position": 4,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Benfica",
+            "position": 5,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Beşiktaş",
+            "position": 6,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Bournemouth",
+            "position": 7,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Celje",
+            "position": 8,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Celta Vigo",
+            "position": 9,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Celtic",
+            "position": 10,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Crystal Palace",
+            "position": 11,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Dinamo Zagreb",
+            "position": 12,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Ferencváros",
+            "position": 13,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Hapoel Be'er Sheva",
+            "position": 14,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Jagiellonia Białystok",
+            "position": 15,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Juventus",
+            "position": 16,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lech Poznań",
+            "position": 17,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Levski Sofia",
+            "position": 18,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lillestrøm",
+            "position": 19,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lyon",
+            "position": 20,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Marseille",
+            "position": 21,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Milan",
+            "position": 22,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "NEC",
+            "position": 23,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "OFI",
+            "position": 24,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Olympiacos",
+            "position": 25,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Omonia",
+            "position": 26,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Real Sociedad",
+            "position": 27,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Red Bull Salzburg",
+            "position": 28,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Rennes",
+            "position": 29,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sparta Prague",
+            "position": 30,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sturm Graz",
+            "position": 31,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sunderland",
+            "position": 32,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Torreense",
+            "position": 33,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "TSG Hoffenheim",
+            "position": 34,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Union Saint-Gilloise",
+            "position": 35,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Viktoria Plzeň",
+            "position": 36,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          }
+        ],
         "draw": [
           {
             "club": "Bayer Leverkusen",
@@ -6858,7 +8227,1056 @@
             ]
           }
         ],
-        "matchdays": []
+        "matchdays": [
+          {
+            "name": "Matchday 1",
+            "matches": [
+              {
+                "date": "2026-09-16",
+                "time": "18:45",
+                "home": "Ararat-Armenia",
+                "away": "Sparta Prague",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "18:45",
+                "home": "Omonia",
+                "away": "Celta Vigo",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Milan",
+                "away": "Benfica",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Bayer Leverkusen",
+                "away": "Celje",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Hapoel Be'er Sheva",
+                "away": "Dinamo Zagreb",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Olympiacos",
+                "away": "Jagiellonia Białystok",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Anderlecht",
+                "away": "Lyon",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Sturm Graz",
+                "away": "Rennes",
+                "score": null
+              },
+              {
+                "date": "2026-09-16",
+                "time": "21:00",
+                "home": "Sunderland",
+                "away": "AZ",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "18:45",
+                "home": "OFI",
+                "away": "TSG Hoffenheim",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "18:45",
+                "home": "Levski Sofia",
+                "away": "Red Bull Salzburg",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Beşiktaş",
+                "away": "Marseille",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Celtic",
+                "away": "Ferencváros",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Crystal Palace",
+                "away": "Lech Poznań",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Viktoria Plzeň",
+                "away": "Union Saint-Gilloise",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Juventus",
+                "away": "NEC",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Lillestrøm",
+                "away": "Torreense",
+                "score": null
+              },
+              {
+                "date": "2026-09-17",
+                "time": "21:00",
+                "home": "Real Sociedad",
+                "away": "Bournemouth",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 2",
+            "matches": [
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Sparta Prague",
+                "away": "Lillestrøm",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "AZ",
+                "away": "Hapoel Be'er Sheva",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Red Bull Salzburg",
+                "away": "Milan",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Lech Poznań",
+                "away": "Bayer Leverkusen",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Celje",
+                "away": "Omonia",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Lyon",
+                "away": "Crystal Palace",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Union Saint-Gilloise",
+                "away": "Real Sociedad",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Torreense",
+                "away": "Sunderland",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Bournemouth",
+                "away": "Sturm Graz",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Ferencváros",
+                "away": "Viktoria Plzeň",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Dinamo Zagreb",
+                "away": "Anderlecht",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Jagiellonia Białystok",
+                "away": "Ararat-Armenia",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "NEC",
+                "away": "Levski Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Marseille",
+                "away": "Olympiacos",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Celta Vigo",
+                "away": "Juventus",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Benfica",
+                "away": "Celtic",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Rennes",
+                "away": "OFI",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "TSG Hoffenheim",
+                "away": "Beşiktaş",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 3",
+            "matches": [
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Ararat-Armenia",
+                "away": "AZ",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Ferencváros",
+                "away": "Torreense",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Dinamo Zagreb",
+                "away": "NEC",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Juventus",
+                "away": "Rennes",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Lech Poznań",
+                "away": "Sunderland",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "OFI",
+                "away": "Bayer Leverkusen",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Union Saint-Gilloise",
+                "away": "Hapoel Be'er Sheva",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Sturm Graz",
+                "away": "Marseille",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Bournemouth",
+                "away": "Milan",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Beşiktaş",
+                "away": "Crystal Palace",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Celtic",
+                "away": "Celta Vigo",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Viktoria Plzeň",
+                "away": "Levski Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Jagiellonia Białystok",
+                "away": "Anderlecht",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Lillestrøm",
+                "away": "Real Sociedad",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Celje",
+                "away": "Red Bull Salzburg",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Olympiacos",
+                "away": "Sparta Prague",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Omonia",
+                "away": "Benfica",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "TSG Hoffenheim",
+                "away": "Lyon",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 4",
+            "matches": [
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Milan",
+                "away": "Ferencváros",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Sparta Prague",
+                "away": "Bournemouth",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Crystal Palace",
+                "away": "TSG Hoffenheim",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Lillestrøm",
+                "away": "Viktoria Plzeň",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "NEC",
+                "away": "Omonia",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Levski Sofia",
+                "away": "Jagiellonia Białystok",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Real Sociedad",
+                "away": "Lyon",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Anderlecht",
+                "away": "Red Bull Salzburg",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Rennes",
+                "away": "Olympiacos",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "AZ",
+                "away": "Juventus",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Bayer Leverkusen",
+                "away": "Marseille",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Celtic",
+                "away": "Beşiktaş",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Hapoel Be'er Sheva",
+                "away": "OFI",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Celta Vigo",
+                "away": "Union Saint-Gilloise",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Torreense",
+                "away": "Ararat-Armenia",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Sturm Graz",
+                "away": "Celje",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Benfica",
+                "away": "Lech Poznań",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Sunderland",
+                "away": "Dinamo Zagreb",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 5",
+            "matches": [
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Beşiktaş",
+                "away": "Hapoel Be'er Sheva",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Red Bull Salzburg",
+                "away": "Ararat-Armenia",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Viktoria Plzeň",
+                "away": "Benfica",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Dinamo Zagreb",
+                "away": "Bayer Leverkusen",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Olympiacos",
+                "away": "Milan",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Marseille",
+                "away": "Levski Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Union Saint-Gilloise",
+                "away": "Lech Poznań",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Celta Vigo",
+                "away": "Bournemouth",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Sparta Prague",
+                "away": "AZ",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Crystal Palace",
+                "away": "Real Sociedad",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Ferencváros",
+                "away": "Celje",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Juventus",
+                "away": "Omonia",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "NEC",
+                "away": "Rennes",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "OFI",
+                "away": "Anderlecht",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Lyon",
+                "away": "Lillestrøm",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Torreense",
+                "away": "Celtic",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Sunderland",
+                "away": "Jagiellonia Białystok",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "TSG Hoffenheim",
+                "away": "Sturm Graz",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 6",
+            "matches": [
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "AZ",
+                "away": "Sturm Graz",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Ararat-Armenia",
+                "away": "NEC",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Hapoel Be'er Sheva",
+                "away": "Juventus",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Jagiellonia Białystok",
+                "away": "Crystal Palace",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Marseille",
+                "away": "Celta Vigo",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Omonia",
+                "away": "Celtic",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Anderlecht",
+                "away": "TSG Hoffenheim",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Rennes",
+                "away": "Dinamo Zagreb",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Milan",
+                "away": "Sunderland",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Bournemouth",
+                "away": "Viktoria Plzeň",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Bayer Leverkusen",
+                "away": "Beşiktaş",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Red Bull Salzburg",
+                "away": "Sparta Prague",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Lech Poznań",
+                "away": "Ferencváros",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Celje",
+                "away": "Olympiacos",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Lyon",
+                "away": "Union Saint-Gilloise",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Levski Sofia",
+                "away": "Lillestrøm",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Real Sociedad",
+                "away": "Torreense",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Benfica",
+                "away": "OFI",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 7",
+            "matches": [
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Beşiktaş",
+                "away": "Union Saint-Gilloise",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Ararat-Armenia",
+                "away": "Celje",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Ferencváros",
+                "away": "Juventus",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Jagiellonia Białystok",
+                "away": "Lyon",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Lillestrøm",
+                "away": "Bournemouth",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "NEC",
+                "away": "Benfica",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Olympiacos",
+                "away": "TSG Hoffenheim",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Real Sociedad",
+                "away": "Viktoria Plzeň",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "18:45",
+                "home": "Sturm Graz",
+                "away": "OFI",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "AZ",
+                "away": "Dinamo Zagreb",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Bayer Leverkusen",
+                "away": "Red Bull Salzburg",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Celtic",
+                "away": "Marseille",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Crystal Palace",
+                "away": "Sparta Prague",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Hapoel Be'er Sheva",
+                "away": "Celta Vigo",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Lech Poznań",
+                "away": "Torreense",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Levski Sofia",
+                "away": "Milan",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Anderlecht",
+                "away": "Sunderland",
+                "score": null
+              },
+              {
+                "date": "2027-01-21",
+                "time": "21:00",
+                "home": "Rennes",
+                "away": "Omonia",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 8",
+            "matches": [
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Milan",
+                "away": "Ararat-Armenia",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Sparta Prague",
+                "away": "Rennes",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Bournemouth",
+                "away": "Hapoel Be'er Sheva",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Red Bull Salzburg",
+                "away": "Crystal Palace",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Viktoria Plzeň",
+                "away": "Jagiellonia Białystok",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Dinamo Zagreb",
+                "away": "Sturm Graz",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Juventus",
+                "away": "Real Sociedad",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Celje",
+                "away": "NEC",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "OFI",
+                "away": "Lech Poznań",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Marseille",
+                "away": "Anderlecht",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Lyon",
+                "away": "Bayer Leverkusen",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Omonia",
+                "away": "Beşiktaş",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Union Saint-Gilloise",
+                "away": "Celtic",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Celta Vigo",
+                "away": "Lillestrøm",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Torreense",
+                "away": "Olympiacos",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Benfica",
+                "away": "AZ",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "Sunderland",
+                "away": "Levski Sofia",
+                "score": null
+              },
+              {
+                "date": "2027-01-28",
+                "time": "21:00",
+                "home": "TSG Hoffenheim",
+                "away": "Ferencváros",
+                "score": null
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -13481,7 +15899,332 @@
             "flag": "🇬🇪"
           }
         ],
-        "standings": [],
+        "standings": [
+          {
+            "name": "AGF",
+            "position": 1,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Ajax",
+            "position": 2,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Atalanta",
+            "position": 3,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Borac Banja Luka",
+            "position": 4,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Braga",
+            "position": 5,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Brann",
+            "position": 6,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Brighton & Hove Albion",
+            "position": 7,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Copenhagen",
+            "position": 8,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "CSKA Sofia",
+            "position": 9,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Egnatia",
+            "position": 10,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Gent",
+            "position": 11,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Getafe",
+            "position": 12,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Hajduk Split",
+            "position": 13,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Heart of Midlothian",
+            "position": 14,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Iberia 1999",
+            "position": 15,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Inter Club d'Escaldes",
+            "position": 16,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Jablonec",
+            "position": 17,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Kairat",
+            "position": 18,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Kauno Žalgiris",
+            "position": 19,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "KuPS",
+            "position": 20,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lincoln Red Imps",
+            "position": 21,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Lugano",
+            "position": 22,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Midtjylland",
+            "position": 23,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Mjällby AIF",
+            "position": 24,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Monaco",
+            "position": 25,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Nordsjælland",
+            "position": 26,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Pafos",
+            "position": 27,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Panathinaikos",
+            "position": 28,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Red Star Belgrade",
+            "position": 29,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Riga",
+            "position": 30,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "SC Freiburg",
+            "position": 31,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Sint-Truiden",
+            "position": 32,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Thun",
+            "position": 33,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Trabzonspor",
+            "position": 34,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Twente",
+            "position": 35,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          },
+          {
+            "name": "Universitatea Craiova",
+            "position": 36,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "points": 0
+          }
+        ],
         "draw": [
           {
             "club": "Atalanta",
@@ -13952,7 +16695,794 @@
             ]
           }
         ],
-        "matchdays": []
+        "matchdays": [
+          {
+            "name": "Matchday 1",
+            "matches": [
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Lugano",
+                "away": "Red Star Belgrade",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Hajduk Split",
+                "away": "Ajax",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Gent",
+                "away": "AGF",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Egnatia",
+                "away": "Midtjylland",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "KuPS",
+                "away": "Trabzonspor",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Mjällby AIF",
+                "away": "Inter Club d'Escaldes",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Panathinaikos",
+                "away": "Borac Banja Luka",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "CSKA Sofia",
+                "away": "Monaco",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Riga",
+                "away": "Kairat",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "18:45",
+                "home": "Universitatea Craiova",
+                "away": "Getafe",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Atalanta",
+                "away": "Pafos",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Brighton & Hove Albion",
+                "away": "Kauno Žalgiris",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Copenhagen",
+                "away": "Braga",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Twente",
+                "away": "Thun",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Heart of Midlothian",
+                "away": "Nordsjælland",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Sint-Truiden",
+                "away": "Iberia 1999",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "SC Freiburg",
+                "away": "Jablonec",
+                "score": null
+              },
+              {
+                "date": "2026-10-15",
+                "time": "21:00",
+                "home": "Brann",
+                "away": "Lincoln Red Imps",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 2",
+            "matches": [
+              {
+                "date": "2026-10-22",
+                "time": "16:30",
+                "home": "Kairat",
+                "away": "Panathinaikos",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Iberia 1999",
+                "away": "Mjällby AIF",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Nordsjælland",
+                "away": "CSKA Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Red Star Belgrade",
+                "away": "Copenhagen",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Jablonec",
+                "away": "Brighton & Hove Albion",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Kauno Žalgiris",
+                "away": "Brann",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Getafe",
+                "away": "Lugano",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Inter Club d'Escaldes",
+                "away": "Universitatea Craiova",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Pafos",
+                "away": "Riga",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "18:45",
+                "home": "Trabzonspor",
+                "away": "Heart of Midlothian",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Ajax",
+                "away": "Atalanta",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "AGF",
+                "away": "Egnatia",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Monaco",
+                "away": "SC Freiburg",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Midtjylland",
+                "away": "Sint-Truiden",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Thun",
+                "away": "Hajduk Split",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Borac Banja Luka",
+                "away": "KuPS",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Lincoln Red Imps",
+                "away": "Twente",
+                "score": null
+              },
+              {
+                "date": "2026-10-22",
+                "time": "21:00",
+                "home": "Braga",
+                "away": "Gent",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 3",
+            "matches": [
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "AGF",
+                "away": "Braga",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Atalanta",
+                "away": "Kairat",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Midtjylland",
+                "away": "Ajax",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Thun",
+                "away": "Heart of Midlothian",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Red Star Belgrade",
+                "away": "Inter Club d'Escaldes",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "KuPS",
+                "away": "Gent",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Lincoln Red Imps",
+                "away": "Hajduk Split",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Mjällby AIF",
+                "away": "Borac Banja Luka",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "18:45",
+                "home": "Trabzonspor",
+                "away": "SC Freiburg",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Monaco",
+                "away": "Nordsjælland",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Copenhagen",
+                "away": "Iberia 1999",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Lugano",
+                "away": "Kauno Žalgiris",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Twente",
+                "away": "Pafos",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Getafe",
+                "away": "Brighton & Hove Albion",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Sint-Truiden",
+                "away": "Brann",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Panathinaikos",
+                "away": "CSKA Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Riga",
+                "away": "Jablonec",
+                "score": null
+              },
+              {
+                "date": "2026-11-05",
+                "time": "21:00",
+                "home": "Universitatea Craiova",
+                "away": "Egnatia",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 4",
+            "matches": [
+              {
+                "date": "2026-11-26",
+                "time": "16:30",
+                "home": "Kairat",
+                "away": "Mjällby AIF",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Ajax",
+                "away": "Thun",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Brighton & Hove Albion",
+                "away": "Universitatea Craiova",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Iberia 1999",
+                "away": "Getafe",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Jablonec",
+                "away": "Lugano",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Kauno Žalgiris",
+                "away": "Riga",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Heart of Midlothian",
+                "away": "Monaco",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Egnatia",
+                "away": "Lincoln Red Imps",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Pafos",
+                "away": "Midtjylland",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "18:45",
+                "home": "Brann",
+                "away": "AGF",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Nordsjælland",
+                "away": "Panathinaikos",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Borac Banja Luka",
+                "away": "Atalanta",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Hajduk Split",
+                "away": "Sint-Truiden",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Inter Club d'Escaldes",
+                "away": "Copenhagen",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Gent",
+                "away": "Red Star Belgrade",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "CSKA Sofia",
+                "away": "Trabzonspor",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "Braga",
+                "away": "KuPS",
+                "score": null
+              },
+              {
+                "date": "2026-11-26",
+                "time": "21:00",
+                "home": "SC Freiburg",
+                "away": "Twente",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 5",
+            "matches": [
+              {
+                "date": "2026-12-10",
+                "time": "16:30",
+                "home": "Kairat",
+                "away": "Universitatea Craiova",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Copenhagen",
+                "away": "Lugano",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Iberia 1999",
+                "away": "Red Star Belgrade",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Getafe",
+                "away": "Inter Club d'Escaldes",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "KuPS",
+                "away": "CSKA Sofia",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Lincoln Red Imps",
+                "away": "Midtjylland",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Riga",
+                "away": "Atalanta",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "SC Freiburg",
+                "away": "Panathinaikos",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Brann",
+                "away": "Braga",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "18:45",
+                "home": "Trabzonspor",
+                "away": "Jablonec",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "AGF",
+                "away": "Twente",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Brighton & Hove Albion",
+                "away": "Monaco",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Thun",
+                "away": "Gent",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Heart of Midlothian",
+                "away": "Borac Banja Luka",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Hajduk Split",
+                "away": "Nordsjælland",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Sint-Truiden",
+                "away": "Ajax",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Egnatia",
+                "away": "Kauno Žalgiris",
+                "score": null
+              },
+              {
+                "date": "2026-12-10",
+                "time": "21:00",
+                "home": "Mjällby AIF",
+                "away": "Pafos",
+                "score": null
+              }
+            ]
+          },
+          {
+            "name": "Matchday 6",
+            "matches": [
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Ajax",
+                "away": "Getafe",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Monaco",
+                "away": "Lincoln Red Imps",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Atalanta",
+                "away": "Mjällby AIF",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Lugano",
+                "away": "Sint-Truiden",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Midtjylland",
+                "away": "Hajduk Split",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Nordsjælland",
+                "away": "KuPS",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Twente",
+                "away": "Kairat",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Borac Banja Luka",
+                "away": "Riga",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Red Star Belgrade",
+                "away": "Trabzonspor",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Jablonec",
+                "away": "Iberia 1999",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Kauno Žalgiris",
+                "away": "SC Freiburg",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Inter Club d'Escaldes",
+                "away": "AGF",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Gent",
+                "away": "Brann",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Pafos",
+                "away": "Heart of Midlothian",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Panathinaikos",
+                "away": "Brighton & Hove Albion",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "CSKA Sofia",
+                "away": "Thun",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Braga",
+                "away": "Egnatia",
+                "score": null
+              },
+              {
+                "date": "2026-12-17",
+                "time": "21:00",
+                "home": "Universitatea Craiova",
+                "away": "Copenhagen",
+                "score": null
+              }
+            ]
+          }
+        ]
       }
     }
   ]
