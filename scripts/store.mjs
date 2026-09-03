@@ -19,6 +19,12 @@ async function writeData(data) {
   await rename(tmp, DATA_FILE);
 }
 
+/** The payload minus the one field that changes on every single run. */
+function withoutTimestamp(payload) {
+  const { fetchedAt, ...rest } = payload;
+  return JSON.stringify(rest);
+}
+
 async function previous() {
   try {
     return JSON.parse(await readFile(DATA_FILE, "utf8"));
@@ -125,6 +131,11 @@ export async function refresh(season) {
     ...(errors.length ? { errors } : {}),
     ...(entryWarnings.length ? { entryWarnings } : {}),
   };
+
+  // A scrape that found nothing new leaves the file alone, timestamp included:
+  // otherwise every run rewrites data.json and reads as a change to git.
+  if (old && withoutTimestamp(old) === withoutTimestamp(data)) return old;
+
   await writeData(data);
   return data;
 }

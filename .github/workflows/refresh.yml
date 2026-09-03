@@ -29,15 +29,10 @@ jobs:
 
       - name: Commit data.json if the bracket actually changed
         run: |
-          # Every run rewrites fetchedAt, so a diff of only that line is noise.
-          changes=$(git diff -U0 -- data.json \
-            | grep -E '^[+-]' \
-            | grep -Ev '^(\+\+\+|---)' \
-            | grep -v '"fetchedAt"' || true)
-
-          if [ -z "$changes" ]; then
-            echo "No change beyond the timestamp."
-            git checkout -- data.json
+          # refresh() leaves the file untouched when the scrape found nothing
+          # new, timestamp included, so any diff at all is a real change.
+          if git diff --quiet -- data.json; then
+            echo "Nothing new."
             exit 0
           fi
 
