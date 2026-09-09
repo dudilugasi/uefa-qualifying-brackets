@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-09-08T23:53:06.294Z",
+  "fetchedAt": "2026-09-09T23:51:20.640Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -2626,7 +2626,7 @@
         ],
         "standings": [
           {
-            "name": "Manchester City",
+            "name": "Paris Saint-Germain",
             "position": 1,
             "played": 1,
             "wins": 1,
@@ -2635,7 +2635,7 @@
             "points": 3
           },
           {
-            "name": "Aston Villa",
+            "name": "Barcelona",
             "position": 2,
             "played": 1,
             "wins": 1,
@@ -2644,7 +2644,7 @@
             "points": 3
           },
           {
-            "name": "Real Betis",
+            "name": "Sporting CP",
             "position": 3,
             "played": 1,
             "wins": 1,
@@ -2653,8 +2653,8 @@
             "points": 3
           },
           {
-            "name": "Borussia Dortmund",
-            "position": 4,
+            "name": "VfB Stuttgart",
+            "position": 3,
             "played": 1,
             "wins": 1,
             "draws": 0,
@@ -2662,7 +2662,7 @@
             "points": 3
           },
           {
-            "name": "Real Madrid",
+            "name": "Manchester City",
             "position": 5,
             "played": 1,
             "wins": 1,
@@ -2671,7 +2671,7 @@
             "points": 3
           },
           {
-            "name": "AEK Athens",
+            "name": "Aston Villa",
             "position": 6,
             "played": 1,
             "wins": 1,
@@ -2680,61 +2680,61 @@
             "points": 3
           },
           {
-            "name": "Arsenal",
-            "position": 7,
-            "played": 0,
-            "wins": 0,
+            "name": "Real Betis",
+            "position": 6,
+            "played": 1,
+            "wins": 1,
             "draws": 0,
             "losses": 0,
-            "points": 0
+            "points": 3
           },
           {
-            "name": "Atlético Madrid",
+            "name": "Borussia Dortmund",
             "position": 8,
-            "played": 0,
-            "wins": 0,
+            "played": 1,
+            "wins": 1,
             "draws": 0,
             "losses": 0,
-            "points": 0
+            "points": 3
           },
           {
-            "name": "Barcelona",
+            "name": "Liverpool",
             "position": 9,
-            "played": 0,
-            "wins": 0,
+            "played": 1,
+            "wins": 1,
             "draws": 0,
             "losses": 0,
-            "points": 0
+            "points": 3
+          },
+          {
+            "name": "Real Madrid",
+            "position": 9,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Arsenal",
+            "position": 11,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "AEK Athens",
+            "position": 12,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
           },
           {
             "name": "Bayern Munich",
-            "position": 10,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Bodø/Glimt",
-            "position": 11,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Como",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Fenerbahçe",
             "position": 13,
             "played": 0,
             "wins": 0,
@@ -2743,7 +2743,7 @@
             "points": 0
           },
           {
-            "name": "Feyenoord",
+            "name": "Bodø/Glimt",
             "position": 14,
             "played": 0,
             "wins": 0,
@@ -2752,7 +2752,7 @@
             "points": 0
           },
           {
-            "name": "Galatasaray",
+            "name": "Como",
             "position": 15,
             "played": 0,
             "wins": 0,
@@ -2761,7 +2761,7 @@
             "points": 0
           },
           {
-            "name": "Lens",
+            "name": "Fenerbahçe",
             "position": 16,
             "played": 0,
             "wins": 0,
@@ -2770,7 +2770,7 @@
             "points": 0
           },
           {
-            "name": "Liverpool",
+            "name": "Lens",
             "position": 17,
             "played": 0,
             "wins": 0,
@@ -2788,7 +2788,7 @@
             "points": 0
           },
           {
-            "name": "Napoli",
+            "name": "PSV Eindhoven",
             "position": 19,
             "played": 0,
             "wins": 0,
@@ -2797,7 +2797,7 @@
             "points": 0
           },
           {
-            "name": "Paris Saint-Germain",
+            "name": "RB Leipzig",
             "position": 20,
             "played": 0,
             "wins": 0,
@@ -2806,7 +2806,7 @@
             "points": 0
           },
           {
-            "name": "PSV Eindhoven",
+            "name": "Roma",
             "position": 21,
             "played": 0,
             "wins": 0,
@@ -2815,7 +2815,7 @@
             "points": 0
           },
           {
-            "name": "RB Leipzig",
+            "name": "Sabah",
             "position": 22,
             "played": 0,
             "wins": 0,
@@ -2824,7 +2824,7 @@
             "points": 0
           },
           {
-            "name": "Roma",
+            "name": "Shakhtar Donetsk",
             "position": 23,
             "played": 0,
             "wins": 0,
@@ -2833,7 +2833,7 @@
             "points": 0
           },
           {
-            "name": "Sabah",
+            "name": "Slavia Prague",
             "position": 24,
             "played": 0,
             "wins": 0,
@@ -2842,62 +2842,8 @@
             "points": 0
           },
           {
-            "name": "Shakhtar Donetsk",
-            "position": 25,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Slavia Prague",
-            "position": 26,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Slovan Bratislava",
-            "position": 27,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Sporting CP",
-            "position": 28,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "VfB Stuttgart",
-            "position": 29,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Viking",
-            "position": 30,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
             "name": "Villarreal",
-            "position": 31,
+            "position": 25,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -2906,7 +2852,7 @@
           },
           {
             "name": "Club Brugge",
-            "position": 32,
+            "position": 26,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -2915,7 +2861,16 @@
           },
           {
             "name": "Lille",
-            "position": 33,
+            "position": 26,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Atlético Madrid",
+            "position": 28,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -2924,7 +2879,7 @@
           },
           {
             "name": "Inter Milan",
-            "position": 34,
+            "position": 28,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -2933,7 +2888,34 @@
           },
           {
             "name": "LASK",
-            "position": 35,
+            "position": 30,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Napoli",
+            "position": 30,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Galatasaray",
+            "position": 32,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Viking",
+            "position": 32,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -2942,6 +2924,24 @@
           },
           {
             "name": "Porto",
+            "position": 34,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Feyenoord",
+            "position": 35,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Slovan Bratislava",
             "position": 36,
             "played": 1,
             "wins": 0,
@@ -3561,42 +3561,60 @@
                 "time": "18:45",
                 "home": "Barcelona",
                 "away": "Feyenoord",
-                "score": null
+                "score": [
+                  5,
+                  1
+                ]
               },
               {
                 "date": "2026-09-09",
                 "time": "18:45",
                 "home": "VfB Stuttgart",
                 "away": "Viking",
-                "score": null
+                "score": [
+                  3,
+                  1
+                ]
               },
               {
                 "date": "2026-09-09",
                 "time": "21:00",
                 "home": "Liverpool",
                 "away": "Atlético Madrid",
-                "score": null
+                "score": [
+                  2,
+                  1
+                ]
               },
               {
                 "date": "2026-09-09",
                 "time": "21:00",
                 "home": "Paris Saint-Germain",
                 "away": "Slovan Bratislava",
-                "score": null
+                "score": [
+                  6,
+                  1
+                ]
               },
               {
                 "date": "2026-09-09",
                 "time": "21:00",
                 "home": "Sporting CP",
                 "away": "Galatasaray",
-                "score": null
+                "score": [
+                  3,
+                  1
+                ]
               },
               {
                 "date": "2026-09-09",
                 "time": "21:00",
                 "home": "Napoli",
                 "away": "Arsenal",
-                "score": null
+                "score": [
+                  0,
+                  1
+                ]
               },
               {
                 "date": "2026-09-10",
