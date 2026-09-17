@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-09-17T00:10:07.178Z",
+  "fetchedAt": "2026-09-17T23:56:20.931Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -7090,7 +7090,7 @@
         ],
         "standings": [
           {
-            "name": "Sparta Prague",
+            "name": "Juventus",
             "position": 1,
             "played": 1,
             "wins": 1,
@@ -7099,7 +7099,7 @@
             "points": 3
           },
           {
-            "name": "Benfica",
+            "name": "Crystal Palace",
             "position": 2,
             "played": 1,
             "wins": 1,
@@ -7108,7 +7108,7 @@
             "points": 3
           },
           {
-            "name": "Bayer Leverkusen",
+            "name": "Sparta Prague",
             "position": 3,
             "played": 1,
             "wins": 1,
@@ -7117,7 +7117,7 @@
             "points": 3
           },
           {
-            "name": "Lyon",
+            "name": "Beşiktaş",
             "position": 4,
             "played": 1,
             "wins": 1,
@@ -7126,7 +7126,7 @@
             "points": 3
           },
           {
-            "name": "Olympiacos",
+            "name": "Union Saint-Gilloise",
             "position": 5,
             "played": 1,
             "wins": 1,
@@ -7135,8 +7135,89 @@
             "points": 3
           },
           {
-            "name": "Omonia",
+            "name": "Ferencváros",
             "position": 6,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Benfica",
+            "position": 7,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Bayer Leverkusen",
+            "position": 8,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "OFI",
+            "position": 8,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Bournemouth",
+            "position": 10,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Lyon",
+            "position": 10,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Torreense",
+            "position": 10,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Olympiacos",
+            "position": 13,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Red Bull Salzburg",
+            "position": 14,
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "points": 3
+          },
+          {
+            "name": "Omonia",
+            "position": 15,
             "played": 1,
             "wins": 1,
             "draws": 0,
@@ -7145,7 +7226,7 @@
           },
           {
             "name": "Sunderland",
-            "position": 6,
+            "position": 15,
             "played": 1,
             "wins": 1,
             "draws": 0,
@@ -7154,7 +7235,7 @@
           },
           {
             "name": "Dinamo Zagreb",
-            "position": 8,
+            "position": 17,
             "played": 1,
             "wins": 0,
             "draws": 1,
@@ -7163,7 +7244,7 @@
           },
           {
             "name": "Hapoel Be'er Sheva",
-            "position": 8,
+            "position": 17,
             "played": 1,
             "wins": 0,
             "draws": 1,
@@ -7172,7 +7253,7 @@
           },
           {
             "name": "Rennes",
-            "position": 8,
+            "position": 17,
             "played": 1,
             "wins": 0,
             "draws": 1,
@@ -7181,7 +7262,7 @@
           },
           {
             "name": "Sturm Graz",
-            "position": 8,
+            "position": 17,
             "played": 1,
             "wins": 0,
             "draws": 1,
@@ -7189,170 +7270,8 @@
             "points": 1
           },
           {
-            "name": "Beşiktaş",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Bournemouth",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Celtic",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Crystal Palace",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Ferencváros",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Juventus",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Lech Poznań",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Levski Sofia",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Lillestrøm",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Marseille",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "NEC",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "OFI",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Real Sociedad",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Red Bull Salzburg",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Torreense",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "TSG Hoffenheim",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Union Saint-Gilloise",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
-            "name": "Viktoria Plzeň",
-            "position": 12,
-            "played": 0,
-            "wins": 0,
-            "draws": 0,
-            "losses": 0,
-            "points": 0
-          },
-          {
             "name": "Jagiellonia Białystok",
-            "position": 30,
+            "position": 21,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7361,7 +7280,25 @@
           },
           {
             "name": "Anderlecht",
-            "position": 31,
+            "position": 22,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Lillestrøm",
+            "position": 22,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Real Sociedad",
+            "position": 22,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7370,7 +7307,7 @@
           },
           {
             "name": "AZ",
-            "position": 32,
+            "position": 25,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7379,7 +7316,25 @@
           },
           {
             "name": "Celta Vigo",
-            "position": 32,
+            "position": 25,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Levski Sofia",
+            "position": 25,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Celtic",
+            "position": 28,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7388,7 +7343,7 @@
           },
           {
             "name": "Celje",
-            "position": 34,
+            "position": 29,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7397,7 +7352,25 @@
           },
           {
             "name": "Milan",
-            "position": 34,
+            "position": 29,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "TSG Hoffenheim",
+            "position": 29,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Marseille",
+            "position": 32,
             "played": 1,
             "wins": 0,
             "draws": 0,
@@ -7406,6 +7379,33 @@
           },
           {
             "name": "Ararat-Armenia",
+            "position": 33,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Viktoria Plzeň",
+            "position": 34,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "Lech Poznań",
+            "position": 35,
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "points": 0
+          },
+          {
+            "name": "NEC",
             "position": 36,
             "played": 1,
             "wins": 0,
@@ -8055,63 +8055,90 @@
                 "time": "18:45",
                 "home": "OFI",
                 "away": "TSG Hoffenheim",
-                "score": null
+                "score": [
+                  2,
+                  0
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "18:45",
                 "home": "Levski Sofia",
                 "away": "Red Bull Salzburg",
-                "score": null
+                "score": [
+                  0,
+                  1
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Beşiktaş",
                 "away": "Marseille",
-                "score": null
+                "score": [
+                  4,
+                  1
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Celtic",
                 "away": "Ferencváros",
-                "score": null
+                "score": [
+                  1,
+                  3
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Crystal Palace",
                 "away": "Lech Poznań",
-                "score": null
+                "score": [
+                  4,
+                  0
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Viktoria Plzeň",
                 "away": "Union Saint-Gilloise",
-                "score": null
+                "score": [
+                  0,
+                  3
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Juventus",
                 "away": "NEC",
-                "score": null
+                "score": [
+                  5,
+                  0
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Lillestrøm",
                 "away": "Torreense",
-                "score": null
+                "score": [
+                  1,
+                  2
+                ]
               },
               {
                 "date": "2026-09-17",
                 "time": "21:00",
                 "home": "Real Sociedad",
                 "away": "Bournemouth",
-                "score": null
+                "score": [
+                  1,
+                  2
+                ]
               }
             ]
           },
