@@ -1,6 +1,6 @@
 {
   "season": "2026–27",
-  "fetchedAt": "2026-11-06T02:00:14.871Z",
+  "fetchedAt": "2026-11-25T04:48:18.127Z",
   "references": {
     "resolved": 0,
     "labelled": 0,
@@ -3916,63 +3916,90 @@
                 "time": "18:45",
                 "home": "Bodø/Glimt",
                 "away": "LASK",
-                "score": null
+                "score": [
+                  1,
+                  0
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "18:45",
                 "home": "Galatasaray",
                 "away": "Aston Villa",
-                "score": null
+                "score": [
+                  1,
+                  0
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Arsenal",
                 "away": "Borussia Dortmund",
-                "score": null
+                "score": [
+                  1,
+                  1
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Como",
                 "away": "AEK Athens",
-                "score": null
+                "score": [
+                  1,
+                  0
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Feyenoord",
                 "away": "Porto",
-                "score": null
+                "score": [
+                  0,
+                  1
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Manchester City",
                 "away": "Napoli",
-                "score": null
+                "score": [
+                  2,
+                  2
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "RB Leipzig",
                 "away": "Lens",
-                "score": null
+                "score": [
+                  3,
+                  1
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Real Madrid",
                 "away": "PSV Eindhoven",
-                "score": null
+                "score": [
+                  5,
+                  1
+                ]
               },
               {
                 "date": "2026-11-24",
                 "time": "21:00",
                 "home": "Slovan Bratislava",
                 "away": "Real Betis",
-                "score": null
+                "score": [
+                  0,
+                  2
+                ]
               },
               {
                 "date": "2026-11-25",
